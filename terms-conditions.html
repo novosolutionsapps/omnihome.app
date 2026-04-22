@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms &amp; Conditions — Omni Home</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B1420;
+    --bg-alt: #0F1A2A;
+    --surface: #131F31;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+    --ink: #F4F1EB;
+    --ink-dim: #A9B2C0;
+    --ink-mute: #6B7788;
+    --accent: #3C8BFF;
+    --accent-glow: rgba(60, 139, 255, 0.35);
+    --display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+    --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --gutter: clamp(24px, 4vw, 64px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: var(--sans); font-weight: 300; font-size: 16px;
+    line-height: 1.55; letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  img, video { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+  /* ─── Nav ─── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px var(--gutter);
+    display: flex; align-items: center; justify-content: space-between;
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    background: color-mix(in oklab, var(--bg) 72%, transparent);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s ease;
+  }
+  .nav.scrolled { border-bottom-color: var(--border); }
+  .nav-logo { display: flex; align-items: center; height: 26px; }
+  .nav-logo img { height: 100%; width: auto; display: block; }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a {
+    font-size: 13px; color: var(--ink-dim); letter-spacing: 0.01em;
+    transition: color .15s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* ─── Page header ─── */
+  .page-header {
+    padding: clamp(140px, 18vh, 220px) var(--gutter) clamp(60px, 8vh, 100px);
+    position: relative;
+  }
+  .page-header-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .page-header .eyebrow {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-dim);
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px;
+  }
+  .page-header .eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+  .page-header h1 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.98; letter-spacing: -0.03em;
+    text-wrap: balance;
+    font-variation-settings: "opsz" 72;
+    margin-bottom: 24px;
+  }
+  .page-header .lead {
+    font-size: clamp(16px, 1.15vw, 18px);
+    line-height: 1.55; color: var(--ink-dim);
+    max-width: 60ch;
+  }
+
+  /* ─── Legal content ─── */
+  .legal-content {
+    padding: 0 var(--gutter) clamp(80px, 12vh, 160px);
+  }
+  .legal-content-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .legal-content h2 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 28px; line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-top: 48px; margin-bottom: 16px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+  .legal-content h2:first-child {
+    margin-top: 0; padding-top: 0; border-top: none;
+  }
+  .legal-content h3 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 22px; line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-top: 36px; margin-bottom: 12px;
+  }
+  .legal-content h4 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 18px; line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-top: 28px; margin-bottom: 10px;
+  }
+  .legal-content p {
+    font-size: 15px; line-height: 1.65;
+    color: var(--ink-dim);
+    margin-bottom: 16px;
+  }
+  .legal-content p strong {
+    color: var(--ink); font-weight: 500;
+  }
+  .legal-content ul {
+    list-style: none;
+    padding: 0; margin: 0 0 16px 0;
+  }
+  .legal-content li {
+    font-size: 15px; line-height: 1.65;
+    color: var(--ink-dim);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+  .legal-content li::before {
+    content: "";
+    position: absolute; left: 0; top: 10px;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0;
+  }
+  .legal-content li strong {
+    color: var(--ink); font-weight: 500;
+  }
+  .legal-content a {
+    color: var(--accent);
+    transition: color .15s;
+  }
+  .legal-content a:hover {
+    color: var(--ink);
+  }
+
+  /* ─── Footer ─── */
+  footer {
+    padding: 80px var(--gutter) 48px;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 48px; padding-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+  }
+  .footer-top h5 {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-mute);
+    margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-top ul { list-style: none; }
+  .footer-top li { margin-bottom: 12px; }
+  .footer-top a { font-size: 14px; color: var(--ink-dim); transition: color .15s; }
+  .footer-top a:hover { color: var(--ink); }
+  .footer-brand p { font-size: 14px; color: var(--ink-dim); max-width: 32ch; }
+  .footer-bot {
+    padding-top: 32px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    color: var(--ink-mute);
+  }
+  .footer-bot a { color: var(--ink-mute); }
+  .footer-bot a:hover { color: var(--ink); }
+  @media (max-width: 820px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+
+  /* ─── Reveal ─── */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo" aria-label="Omni Home"><img src="assets/logo.png" alt="Omni Home"></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#content">Content Home Apps</a>
+    <a href="index.html#carriers">Carriers &amp; OEMs</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a href="contact.html" class="nav-cta">Get in touch &rarr;</a>
+</nav>
+
+<!-- ─── PAGE HEADER ─── -->
+<header class="page-header">
+  <div class="page-header-inner reveal">
+    <div class="eyebrow">Legal</div>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="lead">Effective Date: May 7, 2025</p>
+  </div>
+</header>
+
+<!-- ─── LEGAL CONTENT ─── -->
+<main class="legal-content">
+  <div class="legal-content-inner">
+
+    <div class="reveal">
+      <h2>Omni Home Apps &ndash; Terms of Service</h2>
+      <p><strong>Effective Date:</strong> May 7, 2025</p>
+      <p>These Terms of Service ("<strong>Terms</strong>") are a legally binding agreement between you ("<strong>you</strong>" or "<strong>User</strong>") and <strong>Airfind Corp</strong>, doing business as <strong>Omni Home Apps</strong> ("<strong>Company</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"). Omni Home Apps provides a mobile launcher application and related services (collectively, the "<strong>Services</strong>"), including via our website <strong>OmniHome.app</strong> ("<strong>Website</strong>"). By downloading, installing, or using our Services, you agree to be bound by these Terms. If you do not agree, you must not use the Services.</p>
+      <p><strong>PLEASE READ THESE TERMS CAREFULLY.</strong> They include important information about your rights, obligations, and restrictions, including provisions regarding subscriptions, data usage, warranty disclaimers, limitations of liability, and a dispute resolution clause with an arbitration agreement and class action waiver.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing or using Omni Home Apps, you confirm that you accept these Terms and agree to comply with them. You may not use the Services if you do not agree to these Terms. If you are under the age of 18 (or under the age of legal majority in your jurisdiction), you may only use our Services under the supervision and with the consent of a parent or legal guardian who has read and agreed to these Terms on your behalf. The Services are not intended for children under 13, and you must not use Omni Home Apps if you are under 13 years old.</p>
+      <p>Your use of the Services is also subject to our <strong>Privacy Policy</strong> (available at OmniHome.app/privacy), which describes how we collect, use, and protect your information. By using the Services, you acknowledge that you have read our Privacy Policy and agree to the collection and use of data as described therein.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>2. License and Intellectual Property</h2>
+      <p><strong>License Grant:</strong> Subject to your compliance with these Terms, we grant you a personal, limited, non-exclusive, non-transferable, revocable license to download, install, and use the Omni Home Apps mobile application (the "<strong>App</strong>") on your Android device solely for your own personal, non-commercial use. This license is provided <strong>for use of the Services only</strong> and does not transfer any ownership or intellectual property rights to you.</p>
+      <p><strong>Intellectual Property Rights:</strong> The App, Website, and all content and materials provided through our Services (including but not limited to software, text, graphics, logos, images, designs, trademarks, and databases) are owned by us or our licensors and are protected by copyright, trademark, patent, and other intellectual property laws. We (and our licensors) retain all right, title, and interest in and to the Services and their content. You may not use the Omni Home Apps name, logos, or any of our brand elements without our prior written permission. All rights not expressly granted to you in these Terms are reserved by the Company.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>3. Acceptable Use and Restrictions</h2>
+      <p>You agree to use Omni Home Apps only for lawful purposes and in accordance with these Terms. <strong>You must not:</strong></p>
+      <ul>
+        <li><strong>Reverse Engineer or Copy:</strong> Disassemble, decompile, attempt to derive source code from, or create derivative works of the App or any part of our Services. You also must not copy, modify, or distribute any portion of the Services except as expressly allowed by us.</li>
+        <li><strong>Circumvent Security:</strong> Bypass, disable, or interfere with any security or technical features of the App, or attempt to gain unauthorized access to the Services or its related systems or networks.</li>
+        <li><strong>Misuse the Services:</strong> Use the Services in any manner that could damage, disable, overburden, or impair our servers or networks, or interfere with any other party's use of the Services. This includes not using any automated system (e.g., robots or scripts) to send requests to the App or Website.</li>
+        <li><strong>Unlawful or Harmful Activities:</strong> Use the Services for any illegal or fraudulent purpose, or to transmit, store, or distribute any viruses, malware, or other harmful computer code. You must not use Omni Home Apps to violate any applicable law or regulation, or to infringe the rights of any third party.</li>
+        <li><strong>Export Violations:</strong> Use, export, or re-export the App in violation of any U.S. or international export control laws or sanctions. (For example, you represent that you are not located in a country subject to a U.S. government embargo or on any U.S. government list of prohibited or restricted parties.)</li>
+      </ul>
+      <p>We reserve the right to monitor usage of the Services for compliance with these Terms. If we (in our sole discretion) determine that you have violated any provision of these Terms or engaged in prohibited conduct, we may take action including terminating or suspending your access to the Services (see Section 8 below).</p>
+    </div>
+
+    <div class="reveal">
+      <h2>4. Purchases and Subscriptions</h2>
+      <p><strong>Paid Features:</strong> Omni Home Apps may offer certain premium features or content accessible through in-app purchases or subscription plans ("<strong>Paid Services</strong>"). For example, you might have the option to subscribe to unlock additional launcher themes, remove ads, or gain access to advanced functionalities. When you choose to make a purchase or subscribe, you will be charged the fees displayed in the App (such as a monthly or annual subscription fee) through the app store platform (e.g., Google Play) associated with your device.</p>
+      <p><strong>Payment Processing:</strong> All purchases are processed by the third-party platform you use (such as Google Play Store). You must have a valid account with the platform and a valid payment method on file. Fees and billing terms are as set by the platform's payment system. We do not collect or store your payment credentials; any payment information you provide will be handled by the app store under its terms and privacy policy.</p>
+      <p><strong>Subscriptions and Auto-Renewal:</strong> If you purchase a subscription, it will automatically renew at the end of each billing cycle (e.g., monthly or annually) <strong>unless</strong> you cancel the subscription <strong>before</strong> the end of the current cycle. The renewal will charge the same payment method and at the then-current subscription price (unless otherwise stated at the time of purchase). You are responsible for any recurring charges until you cancel. To avoid future charges, you must cancel your subscription in your app store account settings at least 24 hours before the renewal date. <strong>Uninstalling the App will not automatically cancel a subscription</strong> &ndash; you must actively cancel the subscription via the Google Play Store (or applicable platform) to stop recurring charges.</p>
+      <p><strong>Free Trials and Promotions:</strong> Omni Home Apps may occasionally offer free trials or promotional subscriptions. Unless otherwise stated, free trials automatically convert to paid subscriptions at the end of the trial period. If you do not want to be charged, you must cancel the subscription before the trial ends. Only one free trial per user is permitted, unless we specify otherwise.</p>
+      <p><strong>No Refunds:</strong> <strong>All sales are final.</strong> Fees for in-app purchases and subscriptions (including partial periods) are non-refundable, except as required by law or as permitted by the app store's refund policies. For example, Google Play may allow cancellations of subscriptions within a short grace period or as required under local consumer protection laws. If you believe you are entitled to a refund due to an error or applicable law, you can contact us at <strong>Support@OmniHome.app</strong>, but we reserve the right to approve or deny refund requests at our discretion, consistent with platform policies and legal requirements.</p>
+      <p><strong>Price Changes:</strong> We reserve the right to change the pricing of any Paid Services. If the price of your subscription changes, we will notify you in advance (for example, through the app or via email). Price changes for subscriptions will not apply retroactively and will become effective at the start of the next subscription period following the notice, provided you have been given at least 30 days' prior notice. If you do not agree to a price change, you may cancel the subscription before the new price takes effect. Continuing to use the Paid Service after the price change takes effect constitutes your acceptance of the new price.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>5. Third-Party Services and Links</h2>
+      <p>Our Services may contain links to third-party websites, services, or content that are not owned or controlled by us (for example, an in-app web search, third-party widgets, advertisements, or links to content such as news or weather information provided by others). Additionally, we may integrate or use third-party services or software as part of our App (such as analytics providers or advertising networks).</p>
+      <p><strong>No Endorsement or Control:</strong> These third-party sites and services are provided for your convenience, and the inclusion of any link or integration does not imply endorsement or sponsorship by us. We do not have control over third-party content, websites, or services, and we are not responsible for their availability, accuracy, or legality. Different terms of service and privacy policies may apply to your use of third-party content.</p>
+      <p><strong>Use at Your Own Risk:</strong> If you access a third-party website or service from our App or Website, you do so at your own risk. Any dealings you have with third parties (including advertisers or other service providers) found while using Omni Home Apps are solely between you and that third party. For example, if you click a link and purchase an item from a third-party site, that transaction is strictly between you and the third party, and Omni Home Apps has no responsibility or liability for it.</p>
+      <p><strong>Third-Party Software and Content:</strong> The App may display, include, or make available third-party content (including data, information, applications, or other products services) or provide links to third-party websites or services. All third-party content is the property of its respective owners. You agree that we are <strong>not liable</strong> for any such third-party materials or your reliance on them. We also do not guarantee that any third-party content will be free of viruses or other harmful components; you should use appropriate caution and discretion when accessing third-party links.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>6. User Content and Contributions</h2>
+      <p>Omni Home Apps may allow you to interact with the Services by submitting or posting content such as customization preferences, feedback, suggestions, reviews, support requests, or other materials ("<strong>User Content</strong>"). For example, our Website might host community forums or allow you to submit ideas, or the App may allow you to customize settings that involve providing information. <strong>By submitting any User Content, you agree to the following terms:</strong></p>
+      <ul>
+        <li><strong>Your Responsibility:</strong> You are solely responsible for any User Content that you create, post, or share through our Services. You represent and warrant that you own all necessary rights to the content you provide, or that you have obtained all necessary permissions or licenses to share the content, and that our use of such content as permitted by these Terms will not infringe or violate the rights of any third party. Please do not share anything that you do not have the right to share.</li>
+        <li><strong>Content Standards:</strong> You agree that you will not submit or transmit any User Content that: (i) is illegal, defamatory, libelous, harassing, threatening, or hateful; (ii) is obscene, pornographic, or otherwise offensive (for example, content that promotes violence, bigotry, or discrimination against any group); (iii) infringes or violates the intellectual property rights or privacy rights of others; (iv) contains viruses, malware, or any harmful code; (v) constitutes unsolicited advertising, spam, or junk mail; or (vi) otherwise violates these Terms or any applicable law. We reserve the right (but have no obligation) to remove or disable access to any User Content that we deem in violation of these standards or that we find objectionable, at our sole discretion.</li>
+        <li><strong>License to Company:</strong> <strong>You retain ownership</strong> of your User Content. However, by submitting, posting, or sharing User Content through our Services, you grant Omni Home Apps (Airfind Corp.) a worldwide, perpetual, royalty-free, irrevocable, non-exclusive, sublicensable and transferable license to use, reproduce, distribute, adapt, modify, translate, create derivative works from, publicly display, and otherwise exploit your User Content in connection with operating, improving, or promoting our Services. This license allows us, for example, to display your reviews or feedback on our websites, use your suggestions to improve the App, and make backups of content if needed. We will not compensate you for any User Content or suggestions you provide, and you agree that we may use them without any obligation or attribution to you, except as prohibited by law.</li>
+        <li><strong>No Confidentiality:</strong> Any feedback, ideas, or suggestions you submit are provided on a non-confidential basis. We have no obligation to keep any User Content confidential. Please do not share sensitive personal information or proprietary ideas you wish to keep private via our general feedback channels.</li>
+        <li><strong>No Liability for User Content:</strong> We are not responsible or liable for User Content provided by you or other users. We do not pre-screen User Content, and any views or opinions expressed in User Content belong solely to the original author and do not necessarily reflect our views. <strong>Use caution</strong> and common sense when viewing or posting content online.</li>
+      </ul>
+      <p>If you believe that another user's content violates your rights (for example, you believe it is infringing your copyright or other IP rights), please notify us at <strong>Support@OmniHome.app</strong> with details. We respect intellectual property rights and will respond to proper notices of alleged infringement in accordance with applicable law (such as the Digital Millennium Copyright Act for U.S. copyright claims).</p>
+    </div>
+
+    <div class="reveal">
+      <h2>7. Privacy and Data Collection</h2>
+      <p>Your privacy is important to us. Our collection and use of personal information in connection with the Services is described in our <strong>Privacy Policy</strong> (OmniHome.app/privacy). By using the App or Website, you acknowledge that personal data will be collected and used as described in that policy. This may include data such as your device information, usage statistics, and interactions with advertisements or features. We use this information to operate and improve our Services, provide customer support, serve personalized content or ads, and for analytics purposes.</p>
+      <p><strong>Analytics and Advertising:</strong> We may use third-party analytics tools to understand how users interact with the App and to improve functionality. We also partner with advertising networks and partners who may collect certain information about your device or usage over time (for example, advertising identifiers, general location, or other App usage data) to provide advertisements that may be relevant to you. These partners may use cookies or similar tracking technologies within the App to facilitate advertising and analytics. By using our Services, you consent to the use of such technologies and data collection for analytics and personalized advertising as outlined in our Privacy Policy. If required by law (for instance, if you are in the European Union), we will request your consent before enabling certain types of data collection or personalized ads. You can adjust your preferences or opt-out of certain data collection as described in the Privacy Policy or via your device settings (for example, by resetting your advertising ID or opting out of interest-based ads).</p>
+      <p><strong>GDPR Compliance (European Users):</strong> If you are located in the European Economic Area (EEA), United Kingdom, or another jurisdiction with comprehensive data protection laws, you have certain rights and we ensure compliance with the EU General Data Protection Regulation ("<strong>GDPR</strong>") and similar laws. In particular, you have the right to access the personal data we hold about you, to request correction or deletion of your data, to object to or restrict our processing of your data, and to <strong>withdraw any consent</strong> you have given. You also have the right to data portability and the right to lodge a complaint with your local data protection authority. Omni Home Apps only processes your personal data when we have a lawful basis to do so &ndash; for example, to provide the Services you requested, with your consent (such as for personalized ads, where required), or to fulfill legitimate interests such as improving our products (balanced with your data protection rights). For more details on how we process personal data and how you can exercise your rights, please review our Privacy Policy. If you need to contact us about your personal data or privacy concerns, you can reach us at <strong>Support@OmniHome.app</strong>.</p>
+      <p>By using the Services, you agree that we can collect and use your information in accordance with our Privacy Policy and applicable data protection laws. If you do not agree with our data practices, please do not use the App. We will take reasonable and appropriate measures to safeguard personal information, but you understand that no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>8. Service Availability and Changes</h2>
+      <p><strong>Availability:</strong> We strive to keep Omni Home Apps running smoothly and reliably, but we do not guarantee that the Services will always be available or error-free. The App's availability can be affected by factors outside of our control, such as internet connectivity, device compatibility, or third-party service outages. There may be times when the Services are interrupted for scheduled maintenance, upgrades, or emergency repairs, or due to failure of telecommunications links and equipment. We will try to give you advance notice of any significant downtime or maintenance when feasible (for example, by posting a notice on our Website or within the App), but we are not obligated to do so.</p>
+      <p><strong>Updates and Changes to the App:</strong> We may from time to time develop patches, bug fixes, updates, upgrades, or other modifications to improve the performance or functionality of the App ("<strong>Updates</strong>"). We reserve the right to deploy and apply such Updates automatically, with or without notice to you, and you agree that the App may automatically download and install Updates on your device. These Updates may change or remove certain features or functionality of the App. You acknowledge that we may also need to discontinue, temporarily or permanently, the Services (or any part thereof) at any time. For example, we may decide to stop supporting an older version of Android or discontinue a particular feature or service for business or technical reasons.</p>
+      <p><strong>Changes to Features:</strong> We have the right to introduce new features or remove existing features in our sole discretion. Any new feature that enhances or modifies the current Services (including the release of new tools, resources, or content) will be subject to these Terms. We are not liable to you or any third party for any modification, suspension, or discontinuation of any part of the Services. If you are unhappy with any changes to the App or Services, your only recourse is to stop using the Services or, if applicable, cancel any subscription (subject to the cancellation terms in Section 4).</p>
+      <p><strong>Support:</strong> While we aim to provide helpful support and address issues that arise, we do not guarantee any specific response times or resolutions for support requests. Support can be requested via our support email <strong>Support@OmniHome.app</strong>. We may also offer self-help resources on our Website.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>9. Termination and Uninstallation</h2>
+      <p><strong>Termination by You:</strong> You are free to stop using Omni Home Apps at any time. If you wish to terminate your use of the Services, you may simply uninstall the App from your device. You can uninstall Omni Home Apps using the standard application uninstall process for your device (for example, by long-pressing the app icon and selecting "Uninstall," or via your Android device settings under Apps). Uninstalling the App will remove it from your device and cease further use. If you have an active subscription, remember that uninstalling <strong>does not</strong> automatically cancel your subscription &mdash; you must follow the steps in Section 4 to cancel any active subscription to avoid ongoing charges.</p>
+      <p><strong>Termination by Company:</strong> We reserve the right to suspend or terminate your access to the Services (or certain features of the Services) at any time, with or without notice, if you violate these Terms or if we determine suspension/termination is necessary to protect the Services, our users, or our business. For example, we may terminate your use without notice if we believe you are engaging in fraud, abusing the Services, or infringing on others' rights. In most cases of minor violations, we will attempt to provide you with a warning and an opportunity to correct the issue, but we are not obligated to do so.</p>
+      <p><strong>Effect of Termination:</strong> Upon termination of your rights under these Terms, for any reason: (a) the license granted to you to use the App (Section 2) will automatically end, and you must cease all use of the Services and uninstall/delete any copies of the App in your possession; (b) any pending obligations you have to pay fees (if any) will still be due (for example, we will not refund any prepaid fees for the remaining portion of a subscription term upon termination initiated by you, except as required by law); and (c) the following sections of these Terms will survive termination: Sections 2 (Intellectual Property), 4 (to the extent of outstanding payment obligations and no-refund policy), 6 (User Content license granted to us, which is perpetual), 9 (Termination &ndash; as applicable), 10 (Disclaimers), 11 (Limitation of Liability), 12 (Indemnification), 13 (Dispute Resolution), 14 (Governing Law), 15 (Changes to Terms), 16 (Miscellaneous), and 17 (Contact Information), as well as any other provision that by its nature should survive termination.</p>
+      <p>We are not liable to you or any third party for termination of your access to the Services under these Terms. If your account or access is terminated by us and you believe it was in error, you may contact Support to request reconsideration, but we make no guarantee of reinstatement.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>10. Disclaimer of Warranties</h2>
+      <p><strong>USE AT YOUR OWN RISK:</strong> Omni Home Apps and all Services are provided on an "<strong>AS IS</strong>" and "<strong>AS AVAILABLE</strong>" basis. To the fullest extent permitted by applicable law, the Company disclaims all warranties, express or implied, in connection with the Services and your use of them. This means that <strong>we make no promises or guarantees</strong> about the Services, including but not limited to:</p>
+      <ul>
+        <li><strong>No Warranty of Function or Accuracy:</strong> We do not warrant that the App or Services will meet your requirements or expectations, or that they will achieve any intended results. We make no guarantee that information provided through the Services (such as weather data, content recommendations, or search results) is accurate, complete, or up-to-date.</li>
+        <li><strong>No Guarantee of Error-Free Operation:</strong> We do not warrant that the Services will be uninterrupted, timely, secure, or free of errors, viruses, or other harmful components. Any download or use of content from our Services is at your own discretion and risk. You are solely responsible for any damage to your device or loss of data that may result from using the App.</li>
+        <li><strong>Implied Warranties Disclaimed:</strong> We expressly disclaim any and all implied warranties or conditions of merchantability, fitness for a particular purpose, title, and non-infringement. We provide no warranty that the Services will be compatible with your device or that any defects in the software will be corrected.</li>
+      </ul>
+      <p>No advice or information, whether oral or written, obtained by you from us or through the Services shall create any warranty not expressly stated in these Terms. Some jurisdictions do not allow the exclusion of certain warranties, so some of the above disclaimers may <strong>not apply to you</strong>. In such cases, any implied warranties are limited to the minimum scope and duration permitted by applicable law.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>11. Limitation of Liability</h2>
+      <p><strong>Limited Liability:</strong> To the maximum extent permitted by law, in no event will the Company (Airfind Corp), its owners, directors, officers, employees, affiliates, agents, contractors, or licensors be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages arising out of or related to your use of (or inability to use) Omni Home Apps or the Services. This includes, without limitation, damages for personal injury, property damage, loss of profits, loss of data, loss of goodwill, business interruption, device failure or malfunction, or any other tangible or intangible losses, even if we have been advised of the possibility of such damages.</p>
+      <p><strong>Cap on Liability:</strong> In addition to the above, if we are found liable for any claim arising out of or related to the Services, our aggregate liability to you <strong>will not exceed the amount (if any) that you paid to us for the Service in the three (3) months immediately preceding the event giving rise to your claim, or fifty U.S. dollars (US $50), whichever is greater</strong>. If you have not paid any amount to us in that time, our liability to you for any damages will not exceed US $50.</p>
+      <p>This limitation applies to any and all claims however arising, whether in contract, tort (including negligence), strict liability, or any other legal theory.</p>
+      <p><strong>Exceptions:</strong> Some jurisdictions do not allow the exclusion or limitation of certain damages, so the above limitation or exclusions may not apply to you if prohibited by law. In particular, we do not seek to exclude or limit liability for <strong>gross negligence, willful misconduct, or for death or personal injury caused by our negligence or that of our employees, or for any other liability that cannot be lawfully excluded or limited.</strong> If applicable law imposes a duty that cannot be disclaimed, you agree that our total liability for a breach of that duty will be limited to the extent permitted by law.</p>
+      <p>You agree that the limitations and exclusions of liability and disclaimers specified in these Terms are fair and reasonable and that they enable the Services to be offered at reasonable rates (often free of charge). You acknowledge that absent your agreement to these limitations, the Company would not be able to offer the Services.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>12. Indemnification</h2>
+      <p>You agree to <strong>indemnify, defend, and hold harmless</strong> Omni Home Apps (Airfind Corp) and its affiliates, officers, directors, employees, and agents, from and against any and all claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees and costs) that arise out of or relate to: (a) your use or misuse of the Services; (b) your violation of any term of these Terms; (c) your violation of any applicable law or regulation or any rights of a third party; or (d) any User Content or feedback that you submit or transmit through the Services (including claims that your content infringes or misappropriates any third-party rights).</p>
+      <p>We reserve the right, at our own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you (without limiting your indemnification obligations with respect to that matter), in which case you agree to cooperate with our defense of such claim. You agree not to settle any such matter without the prior written consent of the Company. This indemnification obligation will survive any termination of your use of the Services or these Terms.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>13. Dispute Resolution and Arbitration</h2>
+      <p><strong>PLEASE READ THIS SECTION CAREFULLY</strong> &ndash; it affects your legal rights by requiring arbitration of disputes and waiving certain rights, including the right to a jury trial and the right to participate in a class action.</p>
+
+      <h3>13.1 Informal Resolution</h3>
+      <p>Most concerns or disputes can be resolved quickly and effectively by contacting our customer support at <strong>Support@OmniHome.app</strong>. You agree to first try to resolve any dispute, claim, or controversy arising out of or relating to these Terms or the Services (collectively, "<strong>Disputes</strong>") informally by contacting us and providing a brief written description of the issue and your contact information. We will attempt to resolve the dispute informally with you by email or phone. If a Dispute cannot be resolved informally within a reasonable time (not less than 30 days from when you first contacted us), then the provisions below will apply.</p>
+
+      <h3>13.2 Arbitration Agreement</h3>
+      <p><strong>Agreement to Arbitrate:</strong> Except for the exceptions stated in Section 13.4 below, you and the Company agree that any Dispute (defined above) <strong>shall be resolved through binding arbitration</strong> on an individual basis, rather than in court. This means that <strong>you and we are each waiving the right to a trial by jury or to participate in a class action lawsuit</strong> for such disputes. This arbitration provision is governed by the U.S. Federal Arbitration Act (FAA) and shall apply to any Dispute arising out of or relating to the interpretation, applicability, enforceability, or formation of this arbitration agreement, including any claim that all or part of this arbitration agreement is void or voidable.</p>
+      <p><strong>Arbitration Procedures:</strong> The arbitration will be administered by a neutral arbitrator through a recognized arbitration provider. Unless you and we agree otherwise, the arbitration will be administered by the <strong>American Arbitration Association (AAA)</strong> under its <strong>Consumer Arbitration Rules</strong> in effect at the time the arbitration is initiated. If AAA is not available or declines to arbitrate, the parties will agree on an alternative arbitration provider or arbitrator.</p>
+      <p>The arbitration shall be conducted in English. If your claim is for US $10,000 or less, you may choose whether the arbitration will be conducted solely on the basis of documents submitted to the arbitrator, through a telephonic or video hearing, or by an in-person hearing. If your claim exceeds US $10,000, the right to a hearing will be determined by the AAA rules. The arbitrator will have authority to award the same damages and relief that a court could award (subject to any limitations in these Terms). The arbitrator will provide a reasoned written decision. Judgment on the arbitration award may be entered in any court having jurisdiction.</p>
+      <p><strong>Arbitration Costs:</strong> Payment of all filing, administration, and arbitrator fees will be governed by the AAA's rules. We will reimburse your arbitration filing fee if your claim is $10,000 or less, <strong>unless</strong> the arbitrator finds your Dispute frivolous or brought for an improper purpose (under the standards of Federal Rule of Civil Procedure 11(b)). Each party will bear their own attorneys' fees and costs unless the arbitrator rules otherwise or applicable law requires otherwise.</p>
+
+      <h3>13.3 Class Action Waiver</h3>
+      <p><strong>Individual Actions Only:</strong> You and the Company agree that any arbitration (or, if allowed, court litigation) will be conducted <strong>only on an individual basis</strong> and <strong>not</strong> on a class, collective, consolidated, or representative basis. <strong>The arbitrator shall have no authority to consider or resolve any Dispute or issue any relief on any basis other than an individual basis.</strong> The arbitrator cannot preside over any form of a representative or class proceeding. In addition, <strong>you and the Company expressly waive the right to a jury trial</strong> and the ability to participate in a class action in court or arbitration.</p>
+      <p>If this class action waiver is found unenforceable or invalid, then the entire arbitration agreement (Section 13) shall be null and void (but the rest of the Terms will remain in effect), and the Dispute will be resolved in court as set forth in Section 14 below.</p>
+
+      <h3>13.4 Exceptions to Arbitration</h3>
+      <p>While we prefer to resolve all issues through arbitration, <strong>either party may choose to pursue the following types of actions outside of arbitration:</strong></p>
+      <ul>
+        <li><strong>Small Claims:</strong> If your claim qualifies, you may elect to file a lawsuit in a <strong>small claims court</strong> in your county of residence (or in Sheridan, Wyoming, where we are located) instead of proceeding with arbitration, as long as the claim remains in small claims court and is pursued only on an individual (non-class, non-representative) basis.</li>
+        <li><strong>Intellectual Property and Injunctive Relief:</strong> Either party may bring a lawsuit <strong>solely for injunctive relief</strong> (for example, to stop unauthorized use or abuse of the Services, or to address an intellectual property infringement claim) in a court of competent jurisdiction. This means that if you violate our intellectual property rights or engage in misuse of the Services that threatens irreparable harm, we are permitted to seek an injunction in court to stop you, without going through arbitration first. Similarly, this arbitration agreement does not bar you from seeking a public injunction or other non-monetary relief where the law requires that such a claim be heard by a court.</li>
+      </ul>
+
+      <h3>13.5 Opt-Out Right</h3>
+      <p><strong>Opt-Out Procedure:</strong> We understand that some users may not want to agree to arbitrate disputes. If you <strong>do not wish to be bound by this arbitration agreement and class action waiver</strong>, you must notify us by email at <strong>Support@OmniHome.app</strong> <strong>within 30 days</strong> of first accepting these Terms (either by first installing or using the App, or by agreeing to updated Terms). You must include your name, address, the email associated with your account (if any), and a clear statement that you want to opt out of the arbitration agreement in these Terms.</p>
+      <p><strong>Opt-Out Effect:</strong> If you properly opt out of arbitration as described above, then Sections 13.2 and 13.3 (arbitration and class waiver) will not apply to you. If you do not opt out, you will be bound to arbitrate disputes in accordance with this Section 13. Opting out of this arbitration agreement will not affect any other provisions of these Terms, including the governing law or venue provisions in Section 14.</p>
+
+      <h3>13.6 Severability of Arbitration Provisions</h3>
+      <p>Except for the class action waiver clause in Section 13.3, if any part of this arbitration agreement is found to be invalid or unenforceable, the remaining parts shall remain in effect. If the class action waiver is deemed unenforceable, the entirety of the arbitration agreement shall be null and void, but the rest of these Terms (including all other dispute resolution and governing law provisions) will remain in full force.</p>
+
+      <h3>13.7 Jurisdiction for Non-Arbitrable Claims</h3>
+      <p>In the event that a Dispute is for any reason not subject to arbitration (either because you opted out, or because this arbitration agreement is found unenforceable, or falls under one of the exceptions in 13.4), then Section 14 (Governing Law and Jurisdiction) will apply to any court proceedings.</p>
+      <p><strong>Notice to European and Other International Users:</strong> If you are a consumer residing in the European Union or another jurisdiction that does not allow pre-dispute mandatory arbitration agreements or class action waivers for consumer disputes, the above arbitration and class waiver provisions may not apply to you. In such cases, you retain the right to resolve disputes in the courts of your country of residence under applicable law. Nothing in this Section 13 is intended to limit any rights you may have that cannot be lawfully limited or waived, nor to prevent you from bringing issues to the attention of applicable consumer protection authorities.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>14. Governing Law</h2>
+      <p>Except to the extent that applicable law in your jurisdiction requires the use of local law (for example, if you are an EU consumer), these Terms and any Dispute between you and the Company will be governed by and construed in accordance with the <strong>laws of the State of Wyoming, USA</strong>, and applicable United States federal law, without regard to its conflict of law principles. This governing law applies regardless of your location or where you access the Services.</p>
+      <p>If for any reason a Dispute is not subject to arbitration or small claims court (as provided in Section 13), then you and the Company agree to the <strong>exclusive jurisdiction of the state and federal courts located in the State of Wyoming</strong> to resolve such dispute. You and we consent to venue in such courts and waive any objections based on inconvenient forum. Notwithstanding this, if you are a consumer residing outside the U.S., you may also be entitled to bring actions in your local courts under applicable consumer protection laws.</p>
+      <p><strong>International Use:</strong> Omni Home Apps is controlled and operated from the United States. We make no representation that the Services are appropriate or available for use in other locations. If you access the Services from other jurisdictions, you are responsible for compliance with local laws. You may not use or export anything from the Services in violation of U.S. export laws or regulations, or these Terms.</p>
+      <p><strong>Government Users:</strong> If you are a U.S. Government end user, our software and documentation are "Commercial Items," as defined at 48 C.F.R. &sect;2.101, and are provided under the same license terms set forth in these Terms.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>15. Changes to These Terms</h2>
+      <p>We may update or revise these Terms from time to time. When we make changes, we will update the "Effective Date" at the top of the Terms document. In some cases, we may provide additional notice of significant changes, such as by posting a notice on our Website or within the App or by sending you an email notification. <strong>It is your responsibility to review these Terms periodically.</strong></p>
+      <p>Any amendments will become effective on the date they are posted (or a later date as specified in the updated Terms). If you continue to use the Services after the new Terms take effect, you will be deemed to have accepted the changes. If you do not agree to any amended Terms, you should stop using the Services and uninstall the App.</p>
+      <p>For any material changes to the arbitration agreement or other provisions that affect your rights, we will notify you and allow you an opportunity to opt out of such changes, as required by law.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>16. Miscellaneous</h2>
+      <p><strong>Entire Agreement:</strong> These Terms (together with our Privacy Policy and any additional guidelines or policies we provide within the Services) constitute the entire agreement between you and us regarding your use of Omni Home Apps. They supersede any prior agreements or communications between you and us relating to the subject matter of these Terms. Any additional or different terms proposed by you (for example, in a purchase order or email) are hereby objected to and will not bind us unless we have expressly agreed in writing.</p>
+      <p><strong>Severability:</strong> If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court or arbitrator of competent jurisdiction, that provision shall be enforced to the maximum extent permissible and the remaining provisions of these Terms will remain in full force and effect. Our failure to enforce any right or provision of these Terms shall not constitute a waiver of future enforcement of that right or provision.</p>
+      <p><strong>No Waiver:</strong> No waiver by the Company of any term or condition set forth in these Terms shall be deemed a further or continuing waiver of such term or any other term. Similarly, our failure to assert any right under these Terms shall not constitute a waiver of such right.</p>
+      <p><strong>Assignment:</strong> You may <strong>not assign or transfer</strong> these Terms (or any of your rights or obligations hereunder) without our prior written consent. Any attempted assignment by you without consent will be null and void. We may assign or transfer our rights and obligations under these Terms to an affiliate or in connection with a merger, acquisition, corporate reorganization, or sale of all or substantially all of our assets, or by operation of law or otherwise. These Terms shall inure to the benefit of and be binding upon the parties and their permitted successors and assigns.</p>
+      <p><strong>No Third-Party Beneficiaries:</strong> These Terms are for the benefit of you and the Company (including our successors and assigns). Except as expressly provided in these Terms, no third party shall have any rights to enforce any term of this agreement. (For example, even though our distribution partners like Google or device manufacturers are not parties to these Terms and have no obligations under them, to the extent these Terms disclaim any warranties or liabilities on their behalf, those provisions are intended to benefit those third parties as an incidental beneficiary.)</p>
+      <p><strong>Force Majeure:</strong> We will not be liable for any delay or failure to perform any obligation under these Terms if the delay or failure is due to unforeseen events beyond our reasonable control, such as acts of God, natural disasters, war, terrorism, riots, labor disputes, government actions, failure of telecommunications or internet service providers, or other events of force majeure.</p>
+      <p><strong>Relationship of Parties:</strong> Nothing in these Terms shall be deemed to create any agency, partnership, joint venture, or employer-employee relationship between you and the Company. You and the Company are independent contracting parties. You do not have any authority to assume or create any obligation for or on behalf of us, nor to bind us to any contract, agreement, or undertaking with any third party.</p>
+      <p><strong>Headings and Interpretation:</strong> Section headings in these Terms are for convenience only and have no legal effect. Words like "including" or "for example" are not intended to be limiting and mean "including without limitation." Any version of these Terms in a language other than English is provided for convenience only. In case of any conflict or inconsistency between the English version and any non-English translation, the English version shall govern to the extent not prohibited by local law in your jurisdiction.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>17. Contact Information</h2>
+      <p>If you have any questions, concerns, or feedback about these Terms or the Services, or if you need to contact us for any reason, please reach out to us:</p>
+      <ul>
+        <li><strong>Company Name:</strong> Airfind Corp. (d/b/a Omni Home Apps)</li>
+        <li><strong>Business Address:</strong> 3401 N Miami Ave Suite 230 33127 USA</li>
+        <li><strong>Support Email:</strong> Support@OmniHome.app</li>
+      </ul>
+      <p>We will do our best to respond to inquiries in a timely manner. Official correspondence or legal notices may also be sent to us at the mailing address above (please include "Attn: Legal Department &ndash; Terms of Service" in the address).</p>
+      <p>Thank you for using Omni Home Apps. We appreciate your trust in our product and services. By following these Terms, we hope you enjoy a safe and enhanced experience customizing your Android home screen with Omni Home Apps!</p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Omni Home" style="height: 34px; width: auto; margin-bottom: 20px;">
+      <p>Comprehensive Android solutions for carriers, OEMs, and the people who use their devices every day.</p>
+    </div>
+    <div>
+      <h5>Product</h5>
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#carriers">Carriers &amp; OEMs</a></li>
+        <li><a href="index.html#content">Content Home Apps</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>&copy; 2026 Omni Home. All rights reserved.</span>
+    <span>Built for the home screen.</span>
+  </div>
+</footer>
+
+<script>
+  // ─── Nav scrolled state ───
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+
+  // ─── Reveal on scroll ───
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

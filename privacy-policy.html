@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Omni Home</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B1420;
+    --bg-alt: #0F1A2A;
+    --surface: #131F31;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+    --ink: #F4F1EB;
+    --ink-dim: #A9B2C0;
+    --ink-mute: #6B7788;
+    --accent: #3C8BFF;
+    --accent-glow: rgba(60, 139, 255, 0.35);
+    --display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+    --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --gutter: clamp(24px, 4vw, 64px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: var(--sans); font-weight: 300; font-size: 16px;
+    line-height: 1.55; letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  img, video { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+  /* ─── Nav ─── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px var(--gutter);
+    display: flex; align-items: center; justify-content: space-between;
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    background: color-mix(in oklab, var(--bg) 72%, transparent);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s ease;
+  }
+  .nav.scrolled { border-bottom-color: var(--border); }
+  .nav-logo { display: flex; align-items: center; height: 26px; }
+  .nav-logo img { height: 100%; width: auto; display: block; }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a {
+    font-size: 13px; color: var(--ink-dim); letter-spacing: 0.01em;
+    transition: color .15s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* ─── Page header ─── */
+  .page-header {
+    padding: clamp(140px, 18vh, 220px) var(--gutter) clamp(60px, 8vh, 100px);
+    position: relative;
+  }
+  .page-header-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .page-header .eyebrow {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-dim);
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px;
+  }
+  .page-header .eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+  .page-header h1 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.98; letter-spacing: -0.03em;
+    text-wrap: balance;
+    font-variation-settings: "opsz" 72;
+    margin-bottom: 24px;
+  }
+  .page-header .lead {
+    font-size: clamp(16px, 1.15vw, 18px);
+    line-height: 1.55; color: var(--ink-dim);
+    max-width: 60ch;
+  }
+
+  /* ─── Legal content ─── */
+  .legal-content {
+    padding: 0 var(--gutter) clamp(80px, 12vh, 160px);
+  }
+  .legal-content-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .legal-content h2 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 28px; line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-top: 48px; margin-bottom: 16px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+  .legal-content h2:first-child {
+    margin-top: 0; padding-top: 0; border-top: none;
+  }
+  .legal-content h3 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 22px; line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-top: 36px; margin-bottom: 12px;
+  }
+  .legal-content h4 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 18px; line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-top: 28px; margin-bottom: 10px;
+  }
+  .legal-content p {
+    font-size: 15px; line-height: 1.65;
+    color: var(--ink-dim);
+    margin-bottom: 16px;
+  }
+  .legal-content p strong {
+    color: var(--ink); font-weight: 500;
+  }
+  .legal-content ul {
+    list-style: none;
+    padding: 0; margin: 0 0 16px 0;
+  }
+  .legal-content li {
+    font-size: 15px; line-height: 1.65;
+    color: var(--ink-dim);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+  .legal-content li::before {
+    content: "";
+    position: absolute; left: 0; top: 10px;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0;
+  }
+  .legal-content li strong {
+    color: var(--ink); font-weight: 500;
+  }
+  .legal-content a {
+    color: var(--accent);
+    transition: color .15s;
+  }
+  .legal-content a:hover {
+    color: var(--ink);
+  }
+
+  /* ─── Footer ─── */
+  footer {
+    padding: 80px var(--gutter) 48px;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 48px; padding-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+  }
+  .footer-top h5 {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-mute);
+    margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-top ul { list-style: none; }
+  .footer-top li { margin-bottom: 12px; }
+  .footer-top a { font-size: 14px; color: var(--ink-dim); transition: color .15s; }
+  .footer-top a:hover { color: var(--ink); }
+  .footer-brand p { font-size: 14px; color: var(--ink-dim); max-width: 32ch; }
+  .footer-bot {
+    padding-top: 32px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    color: var(--ink-mute);
+  }
+  .footer-bot a { color: var(--ink-mute); }
+  .footer-bot a:hover { color: var(--ink); }
+  @media (max-width: 820px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+
+  /* ─── Reveal ─── */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo" aria-label="Omni Home"><img src="assets/logo.png" alt="Omni Home"></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#content">Content Home Apps</a>
+    <a href="index.html#carriers">Carriers &amp; OEMs</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a href="contact.html" class="nav-cta">Get in touch &rarr;</a>
+</nav>
+
+<!-- ─── PAGE HEADER ─── -->
+<header class="page-header">
+  <div class="page-header-inner reveal">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="lead">Last updated: May 27, 2025</p>
+  </div>
+</header>
+
+<!-- ─── LEGAL CONTENT ─── -->
+<main class="legal-content">
+  <div class="legal-content-inner">
+
+    <div class="reveal">
+      <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+      <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>Interpretation and Definitions</h2>
+
+      <h3>Interpretation</h3>
+      <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+
+      <h3>Definitions</h3>
+      <p>For the purposes of this Privacy Policy:</p>
+
+      <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p>
+      <p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
+      <p><strong>Application</strong> refers to Onmi Home Apps, the software program provided by the Company.</p>
+      <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AirFind Corp, 3401 N. Miami Ave Suite 230</p>
+      <p><strong>Country</strong> refers to: United States</p>
+      <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p>
+      <p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p>
+      <p><strong>Service</strong> refers to the Application.</p>
+      <p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p>
+      <p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p>
+      <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>Collecting and Using Your Personal Data</h2>
+
+      <h3>Types of Data Collected</h3>
+
+      <h4>Personal Data</h4>
+      <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+      <ul>
+        <li>Usage Data</li>
+      </ul>
+
+      <h4>Usage Data</h4>
+      <p>Usage Data is collected automatically when using the Service.</p>
+      <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+      <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
+      <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
+
+      <h4>Information Collected while Using the Application</h4>
+      <p>While using Our Application, in order to provide features of Our Application, We may collect, with Your prior permission:</p>
+      <p>Information regarding your location</p>
+      <p>Pictures and other information from your Device's camera and photo library</p>
+      <p>We use this information to provide features of Our Service, to improve and customize Our Service. The information may be uploaded to the Company's servers and/or a Service Provider's server or it may be simply stored on Your device.</p>
+      <p>You can enable or disable access to this information at any time, through Your Device settings.</p>
+    </div>
+
+    <div class="reveal">
+      <h3>Use of Your Personal Data</h3>
+      <p>The Company may use Personal Data for the following purposes:</p>
+      <p><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</p>
+      <p><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</p>
+      <p><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</p>
+      <p><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</p>
+      <p><strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</p>
+      <p><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p>
+      <p><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</p>
+      <p><strong>For other purposes:</strong> We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</p>
+
+      <p>We may share Your personal information in the following situations:</p>
+      <ul>
+        <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li>
+        <li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
+        <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
+        <li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
+        <li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
+        <li><strong>With Your consent:</strong> We may disclose Your personal information for any other purpose with Your consent.</li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <h3>Retention of Your Personal Data</h3>
+      <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
+      <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>
+    </div>
+
+    <div class="reveal">
+      <h3>Transfer of Your Personal Data</h3>
+      <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
+      <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
+      <p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
+    </div>
+
+    <div class="reveal">
+      <h3>Delete Your Personal Data</h3>
+      <p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
+      <p>Our Service may give You the ability to delete certain information about You from within the Service.</p>
+      <p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.</p>
+      <p>Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
+    </div>
+
+    <div class="reveal">
+      <h3>Disclosure of Your Personal Data</h3>
+
+      <h4>Business Transactions</h4>
+      <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
+
+      <h4>Law enforcement</h4>
+      <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
+
+      <h4>Other legal requirements</h4>
+      <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
+      <ul>
+        <li>Comply with a legal obligation</li>
+        <li>Protect and defend the rights or property of the Company</li>
+        <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+        <li>Protect the personal safety of Users of the Service or the public</li>
+        <li>Protect against legal liability</li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <h3>Security of Your Personal Data</h3>
+      <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>Children's Privacy</h2>
+      <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
+      <p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>Links to Other Websites</h2>
+      <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
+      <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+    </div>
+
+    <div class="reveal">
+      <h3>GDPR AND DATA PROTECTION RIGHTS (EEA &amp; UK)</h3>
+      <p>If you are located in the European Economic Area or the United Kingdom, you have specific rights regarding your personal data under the EU General Data Protection Regulation (GDPR). "Personal data" includes any information that can identify you or be linked to you, such as your IP address, mobile advertising identifier, or other information described in this Privacy Policy. We act as the <strong>data controller</strong> of your personal data for purposes of GDPR compliance. In accordance with the GDPR, you have the following rights over your data:</p>
+      <ul>
+        <li><strong>Right of Access:</strong> You can request a copy of the personal data we hold about you, as well as information on how we use it.</li>
+        <li><strong>Right to Rectification:</strong> You have the right to ask us to correct any inaccurate or incomplete personal data we have on file.</li>
+        <li><strong>Right to Erasure (Right to be Forgotten):</strong> You can request that we delete your personal data when, for example, it is no longer needed for the purposes it was collected, or if you withdraw consent (where applicable). Please note this right is subject to certain exceptions (e.g., we may retain data if required by law).</li>
+        <li><strong>Right to Restrict Processing:</strong> You can ask us to limit the processing of your personal data in certain circumstances – for instance, if you contest the accuracy of the data or object to our processing.</li>
+        <li><strong>Right to Data Portability:</strong> You have the right to request that we provide your personal data in a structured, commonly used, and machine-readable format, and you may ask us to transmit it to another data controller where technically feasible.</li>
+        <li><strong>Right to Object:</strong> You may object to our processing of your personal data when we are relying on a legitimate interest (including profiling), or at any time if your data is being processed for direct marketing purposes. In such cases, we will cease processing your information unless we have compelling legitimate grounds to continue or as otherwise permitted by law.</li>
+        <li><strong>Right to Withdraw Consent:</strong> If we are processing your personal data based on your consent, you have the right to withdraw that consent at any time. Withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal.</li>
+      </ul>
+      <p>To exercise any of these GDPR rights, please contact us at <strong>Support@Omnihome.app</strong> with your request. We will respond within the time frame required by law (generally within one month) and will honor your rights to the extent required by applicable law. For your security, we will take steps to verify your identity before fulfilling any requests. Also, please note that these rights may be subject to legal limitations; for example, we might retain certain information if we have a legal obligation to do so. In addition, you have the right to lodge a complaint with a supervisory authority in an EU member state or the UK if you believe that our processing of your personal data violates the GDPR.</p>
+    </div>
+
+    <div class="reveal">
+      <h3>CALIFORNIA PRIVACY RIGHTS (CCPA)</h3>
+      <p>If you are a California resident, California law (including the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act) provides you with specific rights regarding your personal information. In the past 12 months, we may have collected certain categories of personal information from or about you in connection with our Services, including <strong>identifiers</strong> (such as IP addresses and device advertising identifiers), <strong>Internet or other electronic network activity</strong> (such as your interactions with our app and ads), <strong>geolocation data</strong> (e.g. general location information or precise location if you allow it), and <strong>inferences</strong> drawn from the above to personalize your experience. We collect and use this personal information for the business purposes described in this Privacy Policy (for example, to provide and improve our services, to show relevant content or advertising, for security, and to communicate with you). We may share these categories of information with third-party service providers or partners for business purposes (such as analytics, ad delivery, or cloud services), as outlined in this Privacy Policy. <strong>We do not sell your personal information for monetary compensation.</strong> If we ever engage in data sharing that is considered a "sale" or "sharing" under California law (for instance, sharing certain identifiers with advertising partners), we will provide a means for you to opt out.</p>
+
+      <p><strong>Your California Privacy Rights:</strong> California consumers have the following rights under the CCPA (and its amendments):</p>
+      <ul>
+        <li><strong>Right to Know:</strong> You have the right to request that we disclose the personal information we have collected about you and how we have used and shared it. This includes the categories of personal information collected, the categories of sources, the business or commercial purposes for collection, the categories of third parties with whom we share personal information, and the specific pieces of personal information we hold about you.</li>
+        <li><strong>Right to Delete:</strong> You have the right to request that we delete personal information we have collected from you, subject to certain exceptions (for example, we may retain information needed to complete a transaction you requested, to detect security incidents, for legal compliance, or other purposes permitted by law).</li>
+        <li><strong>Right to Correct:</strong> You have the right to request that we correct inaccurate personal information that we maintain about you (taking into account the nature of the information and the purposes of processing).</li>
+        <li><strong>Right to Opt-Out of Sale or Sharing:</strong> You have the right to opt out of the "sale" of your personal information or the sharing of your personal information for cross-context behavioral advertising, as defined by California law. As noted above, we do not currently sell personal information. If this changes, we will update our Privacy Policy and honor any "Do Not Sell or Share My Info" requests, including signals transmitted through a browser's Global Privacy Control (GPC) as applicable.</li>
+        <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> If we collect sensitive personal information (as defined by law, e.g. precise geolocation or certain identifiers), you have the right to direct us to limit the use or disclosure of that information to those purposes allowed by the CCPA (as amended). We will only use sensitive information (if any) as necessary to provide the Services or as otherwise permitted by law.</li>
+        <li><strong>Right to Non-Discrimination:</strong> You have the right not to receive discriminatory treatment for exercising any of your CCPA rights. This means we will not deny you our services, charge you a different price, or provide a different level of quality of service just because you exercised your rights under California law.</li>
+      </ul>
+
+      <p><strong>Exercising Your Rights:</strong> You (or your authorized agent) can exercise your California privacy rights by contacting us at <strong>Support@Omnihome.app</strong>. Please include "CCPA Request" in the subject line and let us know which right you wish to exercise (e.g., access, deletion, correction, opt-out). Once we receive your request, we will confirm receipt and may request additional information as needed to verify your identity and authority (for security, we need to ensure the request is coming from you or a person authorized to act on your behalf). We will respond to verified requests within the timeframe required by law (generally within 45 days, with an extension of an additional 45 days if reasonably necessary). If we cannot fulfill a request, in whole or in part, we will provide an explanation. Rest assured, per the Right to Non-Discrimination, we will not penalize you for exercising your rights. If you have any questions about your California privacy rights or how to exercise them, you can always contact us at <strong>Support@Omnihome.app</strong>.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>Changes to this Privacy Policy</h2>
+      <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
+      <p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.</p>
+      <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+    </div>
+
+    <div class="reveal">
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+      <ul>
+        <li>By email: Support@Omnihome.app</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Omni Home" style="height: 34px; width: auto; margin-bottom: 20px;">
+      <p>Comprehensive Android solutions for carriers, OEMs, and the people who use their devices every day.</p>
+    </div>
+    <div>
+      <h5>Product</h5>
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#carriers">Carriers &amp; OEMs</a></li>
+        <li><a href="index.html#content">Content Home Apps</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>&copy; 2026 Omni Home. All rights reserved.</span>
+    <span>Built for the home screen.</span>
+  </div>
+</footer>
+
+<script>
+  // ─── Nav scrolled state ───
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+
+  // ─── Reveal on scroll ───
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
