@@ -552,3 +552,4 @@ pubmatic.com, 163758, RESELLER, 5d62403b186f2ace
 yieldmo.com, 3591550211052216798, RESELLER, 6a92c77cfc3d2258
 #Rubicon
 rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
+vungle.com, 6616d9ebfad634001137f646, DIRECT, c107d686becd2d77
