@@ -202,9 +202,6 @@
   .footer-bot a:hover { color: var(--ink); }
   @media (max-width: 820px) { .footer-top { grid-template-columns: 1fr 1fr; } }
 
-  /* ─── Reveal ─── */
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
-  .reveal.in { opacity: 1; transform: none; }
 </style>
 </head>
 <body>
@@ -250,7 +247,7 @@
 
       <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p>
       <p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
-      <p><strong>Application</strong> refers to Onmi Home Apps, the software program provided by the Company.</p>
+      <p><strong>Application</strong> refers to Omni Home Apps, the software program provided by the Company.</p>
       <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AirFind Corp, 3401 N. Miami Ave Suite 230</p>
       <p><strong>Country</strong> refers to: United States</p>
       <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p>
@@ -471,14 +468,6 @@
   // ─── Nav scrolled state ───
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
-
-  // ─── Reveal on scroll ───
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
