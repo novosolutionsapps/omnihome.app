@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Política de Privacidad — Omni Home</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon-192.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="https://omnihome.app/privacy-policy/es/">
+<link rel="alternate" hreflang="en" href="https://omnihome.app/privacy-policy/">
+<link rel="alternate" hreflang="es" href="https://omnihome.app/privacy-policy/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://omnihome.app/privacy-policy/pt/">
+<link rel="alternate" hreflang="x-default" href="https://omnihome.app/privacy-policy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B1420;
+    --bg-alt: #0F1A2A;
+    --surface: #131F31;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+    --ink: #F4F1EB;
+    --ink-dim: #A9B2C0;
+    --ink-mute: #6B7788;
+    --accent: #3C8BFF;
+    --accent-glow: rgba(60, 139, 255, 0.35);
+    --display: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+    --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --gutter: clamp(24px, 4vw, 64px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: var(--sans); font-weight: 300; font-size: 16px;
+    line-height: 1.55; letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  img, video { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+  /* ─── Nav ─── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px var(--gutter);
+    display: flex; align-items: center; justify-content: space-between;
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    background: color-mix(in oklab, var(--bg) 72%, transparent);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s ease;
+  }
+  .nav.scrolled { border-bottom-color: var(--border); }
+  .nav-logo { display: flex; align-items: center; height: 26px; }
+  .nav-logo img { height: 100%; width: auto; display: block; }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a {
+    font-size: 13px; color: var(--ink-dim); letter-spacing: 0.01em;
+    transition: color .15s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* ─── Page header ─── */
+  .page-header {
+    padding: clamp(140px, 18vh, 220px) var(--gutter) clamp(60px, 8vh, 100px);
+    position: relative;
+  }
+  .page-header-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .page-header .eyebrow {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-dim);
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px;
+  }
+  .page-header .eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+  .page-header h1 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.98; letter-spacing: -0.03em;
+    text-wrap: balance;    margin-bottom: 24px;
+  }
+  .page-header .lead {
+    font-size: clamp(16px, 1.15vw, 18px);
+    line-height: 1.55; color: var(--ink-dim);
+    max-width: 60ch;
+  }
+
+  /* ─── Legal content ─── */
+  .legal-content {
+    padding: 0 var(--gutter) clamp(80px, 12vh, 160px);
+  }
+  .legal-content-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .legal-content h2 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 28px; line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-top: 48px; margin-bottom: 16px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+  .legal-content h2:first-child {
+    margin-top: 0; padding-top: 0; border-top: none;
+  }
+  .legal-content h3 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 22px; line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-top: 36px; margin-bottom: 12px;
+  }
+  .legal-content h4 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 18px; line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-top: 28px; margin-bottom: 10px;
+  }
+  .legal-content p {
+    font-size: 15px; line-height: 1.65;
+    color: var(--ink-dim);
+    margin-bottom: 16px;
+  }
+  .legal-content p strong {
+    color: var(--ink); font-weight: 500;
+  }
+  .legal-content ul {
+    list-style: none;
+    padding: 0; margin: 0 0 16px 0;
+  }
+  .legal-content li {
+    font-size: 15px; line-height: 1.65;
+    color: var(--ink-dim);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+  .legal-content li::before {
+    content: "";
+    position: absolute; left: 0; top: 10px;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0;
+  }
+  .legal-content li strong {
+    color: var(--ink); font-weight: 500;
+  }
+  .legal-content a {
+    color: var(--accent);
+    transition: color .15s;
+  }
+  .legal-content a:hover {
+    color: var(--ink);
+  }
+
+  /* ─── Tables ─── */
+  .table-wrap { overflow-x: auto; margin: 0 0 16px; }
+  .legal-content table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  .legal-content th, .legal-content td {
+    border: 1px solid var(--border-strong); padding: 10px 12px;
+    text-align: left; vertical-align: top; color: var(--ink-dim); line-height: 1.5;
+  }
+  .legal-content th { color: var(--ink); font-weight: 500; background: var(--surface); }
+
+  /* ─── Footer ─── */
+  footer {
+    padding: 80px var(--gutter) 48px;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 48px; padding-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+  }
+  .footer-top h5 {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-mute);
+    margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-top ul { list-style: none; }
+  .footer-top li { margin-bottom: 12px; }
+  .footer-top a { font-size: 14px; color: var(--ink-dim); transition: color .15s; }
+  .footer-top a:hover { color: var(--ink); }
+  .footer-brand p { font-size: 14px; color: var(--ink-dim); max-width: 32ch; }
+  .footer-bot {
+    padding-top: 32px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    color: var(--ink-mute);
+  }
+  .footer-bot a { color: var(--ink-mute); }
+  .footer-bot a:hover { color: var(--ink); }
+  @media (max-width: 820px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+
+  /* ─── Language switcher ─── */
+  .lang-switch {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .lang-switch a {
+    padding: 8px 14px; border: 1px solid var(--border-strong); border-radius: 999px;
+    color: var(--ink-dim); transition: color .15s, border-color .15s;
+  }
+  .lang-switch a:hover { color: var(--ink); border-color: var(--ink-dim); }
+  .lang-switch a[aria-current="true"] { color: var(--ink); border-color: var(--accent); }
+  .translation-notice {
+    font-size: 14px; line-height: 1.6; color: var(--ink-dim);
+    border: 1px solid var(--border-strong); border-left: 2px solid var(--accent);
+    background: var(--surface); border-radius: 6px; padding: 14px 18px; margin-bottom: 40px;
+  }
+
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo" aria-label="Omni Home"><img src="../../assets/logo.png" alt="Omni Home"></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/#services">Services</a>
+    <a href="/#content">Content Home Apps</a>
+    <a href="/#carriers">Carriers &amp; OEMs</a>
+    <a href="/contact/">Contact</a>
+  </div>
+  <a href="/contact/" class="nav-cta">Get in touch &rarr;</a>
+</nav>
+
+<!-- ─── PAGE HEADER ─── -->
+<header class="page-header">
+  <div class="page-header-inner reveal">
+    <div class="eyebrow">Legal</div>
+    <h1>Política de Privacidad</h1>
+    <p class="lead">Última actualización: 20 de octubre de 2026</p>
+    <nav class="lang-switch" aria-label="Idioma">
+      <a href="/privacy-policy/" lang="en" hreflang="en">English</a>
+      <a href="/privacy-policy/es/" lang="es" hreflang="es" aria-current="true">Español</a>
+      <a href="/privacy-policy/pt/" lang="pt-BR" hreflang="pt-BR">Português</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ─── LEGAL CONTENT ─── -->
+<main class="legal-content">
+  <div class="legal-content-inner">
+
+<p class="translation-notice">Esta traducción al español se ofrece únicamente para su comodidad. En caso de discrepancia entre esta traducción y la <a href="/privacy-policy/" lang="en" hreflang="en">versión en inglés</a>, prevalecerá la versión en inglés, en la medida en que lo permita la ley aplicable.</p>
+
+<div class="reveal">
+<h2 id="introduction">Introducción</h2>
+
+<p>Esta aplicación móvil (la “Aplicación” o “App”) es ofrecida a usted por Airfind Corp., que opera comercialmente bajo el nombre Omni Home Apps (“Airfind”, la “Compañía”, “nosotros” o “nos”). Hemos preparado esta Política de Privacidad para describir nuestras prácticas con respecto a la información que recopilamos, usamos y compartimos a través de la Aplicación y de los demás sitios web, aplicaciones móviles, correos electrónicos, perfiles de redes sociales y otras ofertas en línea que ofrecemos y que enlazan a esta Política de Privacidad (en conjunto, los “Servicios”). Lea atentamente esta Política de Privacidad para comprender nuestras políticas y prácticas con respecto a los tipos de información que podemos recopilar de usted o que usted puede proporcionar cuando visita cualquiera de nuestros Servicios, así como nuestras prácticas para recopilar, usar, mantener, proteger, vender y divulgar dicha información. Si usted no está de acuerdo con esta Política de Privacidad, no debe usar ninguno de nuestros Servicios ni registrarse en ellos, incluida la Aplicación, la cual, en su lugar, usted debe ELIMINAR y DESINSTALAR.</p>
+
+<p>Airfind Corp. respeta su privacidad. Esta Política de Privacidad rige los Servicios que operamos.</p>
+
+<p>Esta Política de Privacidad se aplica a la información que recopilamos (i) en nuestros Servicios, (ii) en correos electrónicos, mensajes de texto y otras comunicaciones electrónicas; y (iii) cuando usted interactúa con nuestra publicidad y nuestras aplicaciones en sitios web y servicios de terceros, si dichas aplicaciones o dicha publicidad incluyen enlaces a esta Política de Privacidad.</p>
+
+<p>Esta Política de Privacidad no se aplica a la información recopilada por ningún tercero, incluso a través de cualquier aplicación o contenido (incluida la publicidad) que pueda enlazar a los Servicios o ser accesible desde o a través de ellos. Recomendamos revisar las prácticas de privacidad de esos terceros antes de acceder a sitios web de terceros y de compartir cualquier dato personal.</p>
+
+<p>Lea atentamente esta Política de Privacidad para comprender nuestras políticas y prácticas con respecto a su información y cómo la trataremos. Si usted no está de acuerdo con nuestras políticas y prácticas, su opción es no usar nuestros Servicios. También recomendamos revisar nuestros Términos de Servicio, que rigen su uso de los Servicios. Los términos con mayúscula inicial que no estén definidos en esta Política de Privacidad tendrán los significados que se les atribuyen en los Términos de Servicio. Esta Política de Privacidad puede cambiar ocasionalmente (consulte Cambios a Nuestra Política de Privacidad), por lo que le pedimos que la revise periódicamente para conocer las actualizaciones.</p>
+
+<p>Esta Política de Privacidad tiene dos partes: una sección global que se aplica a todas las personas que usan nuestros Servicios, y los Suplementos Regionales de Privacidad, que proporcionan divulgaciones y derechos adicionales para los usuarios de determinados países y regiones. Si un Suplemento Regional de Privacidad entra en conflicto con la sección global, el Suplemento Regional de Privacidad prevalece para los usuarios de esa región.</p>
+
+<p>Cuando la ley de su país, provincia o estado exija una base legal específica para el tratamiento de su información, tratamos su información conforme a las bases legales descritas en Bases Legales para el Tratamiento y en los Suplementos Regionales de Privacidad, y cuando se requiera su consentimiento lo solicitaremos. En los demás casos, al usar nuestros Servicios, usted autoriza a Airfind a recopilar, usar, compartir y tratar de cualquier otra forma su información según se describe en esta Política de Privacidad, incluida la información proporcionada por usted o recopilada por nosotros o por un tercero en nuestro nombre cuando usted interactúa con nuestros Servicios.</p>
+</div>
+
+<div class="reveal">
+<h2 id="table-of-contents">Índice</h2>
+
+<p>Es importante que usted lea y comprenda la totalidad de la Política de Privacidad antes de usar nuestros Servicios. Esta Política de Privacidad se presenta en un formato por capas. Usted puede ir a una sección específica haciendo clic en la sección correspondiente a continuación.</p>
+
+<ul>
+  <li><a href="#children-and-minors">Niños y Menores de Edad</a> — Nuestros Servicios no están dirigidos a niños menores de 13 años, y los menores de edad pueden usar los Servicios únicamente con el consentimiento de sus padres.</li>
+  <li><a href="#information-we-collect-and-how-we-collect-it">Información que Recopilamos y Cómo la Recopilamos</a> — Recopilamos información que puede usarse para identificarlo de manera única, de diversas formas y de diversas fuentes, de conformidad con la ley aplicable.</li>
+  <li><a href="#aggregated-de-identified-and-anonymous-information-ai-training">Información Agregada, Desidentificada y Anónima; Entrenamiento de IA</a> — Podemos crear información anonimizada y agregada, usarla para fines comerciales, incluido el entrenamiento de IA, y venderla o licenciarla directamente a empresas de IA seleccionadas, con sujeción a las restricciones de esa sección.</li>
+  <li><a href="#how-we-use-your-information">Cómo Usamos Su Información</a> — Podemos recopilar información personal para diversos fines, de conformidad con la ley aplicable.</li>
+  <li><a href="#legal-bases-for-processing">Bases Legales para el Tratamiento</a> — Describimos las bases legales conforme a las cuales tratamos la información personal cuando la ley aplicable exige una.</li>
+  <li><a href="#disclosure-of-your-information">Divulgación de Su Información</a> — Podemos divulgar su información personal a ciertos terceros, tales como nuestros proveedores de servicios y socios publicitarios.</li>
+  <li><a href="#summary-of-our-data-practices">Resumen de Nuestras Prácticas de Datos</a> — Resumimos nuestras prácticas de datos en una tabla de fácil comprensión.</li>
+  <li><a href="#cookies-and-other-tracking-technologies">Cookies y Otras Tecnologías de Seguimiento</a> — Recopilamos información sobre su uso de los Servicios mediante cookies y otras tecnologías de seguimiento.</li>
+  <li><a href="#do-not-track-signals">Señales de Do Not Track</a> — Actualmente no tenemos la capacidad de responder a las señales de “Do Not Track”.</li>
+  <li><a href="#security-and-retention-of-personal-information">Seguridad y Conservación de la Información Personal</a> — Conservaremos sus datos personales únicamente durante el tiempo que sea necesario para los fines establecidos en esta Política de Privacidad, y usamos medidas técnicas y organizativas razonables y apropiadas para proteger sus datos personales.</li>
+  <li><a href="#what-choices-do-you-have">¿Qué Opciones Tiene Usted?</a> — Explicamos qué opciones tiene usted con respecto a las comunicaciones de marketing.</li>
+  <li><a href="#your-privacy-rights">Sus Derechos de Privacidad</a> — Explicamos los derechos de privacidad que usted puede tener y cómo ejercerlos.</li>
+  <li><a href="#where-we-store-and-process-your-information">Dónde Almacenamos y Tratamos Su Información</a> — Describimos dónde se almacena su información y los países donde se trata.</li>
+  <li><a href="#international-data-transfers">Transferencias Internacionales de Datos</a> — Describimos las salvaguardas que usamos cuando su información cruza fronteras.</li>
+  <li><a href="#regional-privacy-supplements">Suplementos Regionales de Privacidad</a> — Proporcionamos divulgaciones y derechos adicionales para los residentes de los Estados Unidos (incluidos los avisos de privacidad de California, de Nevada y de otros estados), Canadá, el Espacio Económico Europeo y el Reino Unido, Brasil, México, Argentina, Chile, Colombia y Perú, e India.</li>
+  <li><a href="#other-websites-and-technologies">Otros Sitios Web y Tecnologías</a> — Esta Política de Privacidad no se aplica a sitios web o servicios de terceros. Proporcionamos enlaces a las políticas de privacidad de ciertos proveedores de servicios y socios tecnológicos.</li>
+  <li><a href="#changes-to-our-privacy-policy">Cambios a Nuestra Política de Privacidad</a> — Los cambios a esta Política de Privacidad entrarán en vigor en la fecha en que se publiquen.</li>
+  <li><a href="#contact-us">Contáctenos</a> — Usted puede contactarnos para enviar comentarios o preguntas de diversas maneras.</li>
+</ul>
+</div>
+
+<div class="reveal">
+<h2 id="children-and-minors">Niños y Menores de Edad</h2>
+
+<p>Nuestros Servicios no están dirigidos a niños menores de 13 años de edad, y no recopilamos a sabiendas información personal de niños menores de 13 años. Si usted es menor de 13 años, no use los Servicios ni nos proporcione ninguna información. Los usuarios menores de 18 años, o menores de la mayoría de edad legal en el lugar donde viven, pueden usar los Servicios únicamente con la supervisión y el consentimiento de uno de sus padres o de su tutor legal, quien acepte los Términos de Servicio en su nombre. Cuando la ley de su región establezca una edad mínima más alta o exija el consentimiento de los padres para el tratamiento de la información personal de un menor de edad (por ejemplo, para ciertos usuarios del Espacio Económico Europeo o del Reino Unido), aplicamos ese requisito. Si tomamos conocimiento de que hemos recopilado o recibido información personal de un niño menor de 13 años, o de un menor de edad sin el consentimiento legalmente exigido, eliminaremos esa información. Si un menor de edad, o uno de los padres o el tutor de un menor de edad, nos contacta en Support@OmniHome.app, eliminaremos la cuenta y la información personal asociadas según lo exija la ley. No vendemos ni compartimos a sabiendas la información personal de menores de edad para publicidad conductual entre contextos, y excluimos de los conjuntos de datos anonimizados descritos en esta Política de Privacidad la información que sabemos que se relaciona con usuarios menores de 18 años.</p>
+</div>
+
+<div class="reveal">
+<h2 id="information-we-collect-and-how-we-collect-it">Información que Recopilamos y Cómo la Recopilamos</h2>
+
+<p>La información personal es cualquier información que identifica, se relaciona con, describe o es susceptible de ser asociada con una persona identificable, o que razonablemente podría vincularse, directa o indirectamente, con ella. Las categorías de información personal que podemos recopilar variarán según la forma en que usted interactúe con nuestros Servicios. Parte de la información usted puede proporcionarla voluntariamente y parte de la información podemos recopilarla automáticamente cuando usted visita nuestros Servicios e interactúa con ellos. La información personal no incluye la información disponible públicamente; la información veraz, obtenida lícitamente, que sea un asunto de interés público; la información que ha sido desidentificada; ni la información agregada de consumidores. La “información disponible públicamente” incluye la información que se pone a disposición a partir de registros gubernamentales; la información que una empresa tiene una base razonable para creer que está lícitamente a disposición del público en general, ya sea a través de medios de amplia difusión o por la propia persona; y la información que es puesta a disposición por una persona a quien el individuo ha divulgado la información, si el individuo no ha restringido la información a una audiencia específica.</p>
+
+<h3>Información que Recopilamos de Usted</h3>
+
+<p>La información personal que recopilamos en nuestros Servicios o a través de ellos puede incluir:</p>
+
+<ul>
+  <li>Información que usted proporciona en nuestros Servicios. Esto incluye la información proporcionada al momento de registrarse para usar nuestros Servicios, publicar material, completar formularios en nuestros Servicios o solicitarnos bienes o servicios. También podemos pedirle información cuando usted reporta un problema con nuestros Servicios.</li>
+  <li>Registros y copias de su correspondencia (incluidas las direcciones de correo electrónico), si usted nos contacta.</li>
+  <li>Sus respuestas a encuestas que podríamos pedirle que complete con fines de investigación.</li>
+  <li>Detalles de las transacciones que usted realiza a través de nuestros Servicios y de la atención de sus consultas.</li>
+  <li>Sus consultas de búsqueda en los Servicios.</li>
+</ul>
+
+<p>Recopilamos información personal directamente de usted cuando nos la proporciona al visitar nuestros Servicios, registrarse en ellos, usarlos o completar formularios en ellos o en nuestros anuncios en distintos medios digitales, automáticamente a medida que usted navega por los Servicios, y de nuestros socios comerciales externos. También recopilamos registros y copias de su correspondencia.</p>
+
+<p>Para obtener más detalles sobre las categorías de información recopilada a través de la Aplicación, consulte el Apéndice B.</p>
+
+<h3>Información que Recopilamos Automáticamente</h3>
+
+<p>También podemos registrar automáticamente cierta información de su sistema, incluida su dirección IP, un identificador único de dispositivo o ID de Usuario, la versión del software instalado, el tipo de sistema, el contenido y las páginas a los que usted accede en el sitio y las fechas y horas en que usted visita el sitio. Usamos esta información con fines analíticos y para ayudarnos a mejorar nuestro sitio y nuestro negocio en general. Podemos proporcionar esta información a afiliadas y/o terceros para que nos asistan en la mejora de estas funciones. Podemos usar otros medios de seguimiento digital en los Servicios para asegurarnos de brindarle un mejor recorrido y una mejor experiencia como consumidor digital, así como para asegurarnos de contar con prueba digital de nuestro cumplimiento de ciertas leyes. Para obtener más información, consulte Cookies y Otras Tecnologías de Seguimiento.</p>
+
+<h3>Información que Recopilamos de Terceros</h3>
+
+<p>También podemos recopilar información de terceros tales como:</p>
+
+<ul>
+  <li>Socios de marketing externos, incluidos socios de marketing conjunto/marca compartida y empresas de marketing, publicidad y analítica.</li>
+  <li>Nuestros socios y proveedores de analítica y publicidad, incluidas las redes de publicidad en línea y los proveedores de analítica.</li>
+  <li>Otras empresas que proporcionan información personal para complementar lo que ya sabemos sobre usted, incluidos los agregadores de datos.</li>
+</ul>
+
+<h3>Funciones del Lanzador y Permisos del Dispositivo</h3>
+
+<p>La Aplicación es un lanzador de pantalla de inicio para Android. Además de las categorías anteriores, las funciones del lanzador implican el siguiente acceso al dispositivo:</p>
+
+<p>Aplicaciones instaladas y búsqueda en el dispositivo. Las funciones del lanzador acceden a información de las aplicaciones instaladas, tal como nombres de aplicaciones, identificadores de paquete, íconos y actividades que pueden iniciarse, según sea necesario para mostrar, organizar, encontrar y abrir sus aplicaciones. Limitamos este acceso a la funcionalidad del lanzador. No vendemos inventarios de aplicaciones instaladas ni los compartimos para la monetización de publicidad o de analítica, y estos y sus derivados están excluidos de los conjuntos de datos anonimizados descritos en esta Política de Privacidad.</p>
+
+<p>Ubicación y contenido local. La ubicación aproximada puede inferirse a partir de su dirección IP. Funciones tales como el clima pueden solicitar el permiso de ubicación del dispositivo, el cual puede incluir la ubicación precisa (fina); si usted lo concede, usamos su ubicación para proporcionar la función, y una ubicación o un lugar que usted seleccione o la ubicación de su dispositivo pueden enviarse al proveedor de clima o de contenido correspondiente para devolver resultados locales. Android le permite elegir la ubicación aproximada en lugar de la precisa al conceder el permiso, y usted puede cambiar los permisos del dispositivo en cualquier momento. No vendemos su ubicación precisa y no elaboramos historiales de ubicación ni perfiles de desplazamiento. Los rastros de ubicación precisa y los historiales de ubicación nunca se incluyen en los conjuntos de datos anonimizados descritos en esta Política de Privacidad; las áreas geográficas amplias (tales como un país, un estado o una región, o un área metropolitana), incluidas las áreas inferidas a partir de su dirección IP, pueden usarse para agrupar estadísticas agregadas.</p>
+
+<p>Fotos y cámara. Si una App ofrece una función que usa una foto o una entrada de la cámara, accedemos únicamente a la información necesaria para esa función a través del selector o del permiso aplicable. Las fotos, el contenido de la cámara y sus derivados están excluidos de las ventas de datos publicitarios y de los conjuntos de datos anonimizados descritos en esta Política de Privacidad.</p>
+
+<p>Notificaciones y otras integraciones opcionales del dispositivo. Si una App ofrece insignias de notificación, visualización de notificaciones u otra integración que necesite acceso especial, ese acceso se usa únicamente para la función divulgada después de que usted la habilite. El contenido de las notificaciones, los mensajes privados, los contactos y otro contenido privado del dispositivo, y sus derivados, están excluidos de los conjuntos de datos anonimizados descritos en esta Política de Privacidad.</p>
+
+<p>Usted puede habilitar o deshabilitar los permisos y el acceso especial a través de la configuración de Android. Algunas funciones no funcionarán sin el acceso que necesitan.</p>
+
+<h3>Datos de Salud y Actividad Física</h3>
+
+<p>Con su permiso explícito, la Aplicación puede mostrar información de salud y actividad física — tal como su conteo diario de pasos, datos de sueño y métricas similares de actividad y bienestar — dentro del feed de la pantalla de inicio de la Aplicación. Se accede a estos datos desde la plataforma Health Connect de Android y/o desde los sensores de su dispositivo únicamente después de que usted concede los permisos correspondientes.</p>
+
+<p>Todos los datos de salud y actividad física se tratan íntegramente en su dispositivo y nunca salen de él. Específicamente:</p>
+
+<ul>
+  <li>Tratamiento únicamente en el dispositivo y efímero: los datos de salud y actividad física se leen y se mantienen en memoria únicamente durante el tiempo necesario para mostrárselos a usted. La Aplicación no escribe estos datos en almacenamiento persistente, y se descartan tan pronto como dejan de ser necesarios para su visualización.</li>
+  <li>Sin recopilación ni transmisión: los datos de salud y actividad física nunca se transmiten fuera de su dispositivo y nunca se cargan a nuestros servidores ni a ningún proveedor de servicios u otro tercero.</li>
+  <li>Sin compartición ni venta: no compartimos, vendemos ni divulgamos de ninguna otra forma sus datos de salud y actividad física a nadie.</li>
+  <li>Sin uso publicitario ni analítico: los datos de salud y actividad física nunca se usan para publicidad, marketing, analítica, elaboración de perfiles ni para ningún fin distinto de mostrárselos a usted dentro de la Aplicación.</li>
+</ul>
+
+<p>El acceso a los datos de salud y actividad física es opcional y no es necesario para usar la Aplicación. Usted puede revocar el acceso de la Aplicación en cualquier momento a través de Health Connect o de la configuración de su dispositivo. Debido a que la Aplicación no almacena datos de salud y actividad física, la revocación del acceso pone fin de inmediato a todo tratamiento, y no hay datos de salud conservados que eliminar.</p>
+
+<p>Nuestro acceso a los datos recibidos de Health Connect y nuestro uso de ellos se ajustan a la política de Permisos de Health Connect (<a href="https://support.google.com/googleplay/android-developer/answer/16558241" target="_blank" rel="noopener">https://support.google.com/googleplay/android-developer/answer/16558241</a>), incluidos sus requisitos de Uso Limitado.</p>
+
+<p>Estas restricciones sobre salud y actividad física prevalecen sobre toda disposición general de uso de datos, compartición, agregación, anonimización, licenciamiento comercial o IA de esta Política de Privacidad y de los Términos de Servicio. No usamos datos de salud o de actividad física ni derivados de esos datos para el entrenamiento de IA ni para conjuntos de datos comerciales, ni siquiera en forma agregada o desidentificada.</p>
+</div>
+
+<div class="reveal">
+<h2 id="aggregated-de-identified-and-anonymous-information-ai-training">Información Agregada, Desidentificada y Anónima; Entrenamiento de IA</h2>
+
+<p>Tenga en cuenta que podemos crear información agregada, desidentificada o anónima a partir de datos mediante la eliminación de ciertos componentes de los datos (tales como su nombre, su dirección de correo electrónico o un identificador de seguimiento vinculable) que hacen que los datos sean identificables, o mediante agregación, ofuscación u otros medios. Con sujeción a la ley aplicable, la información agregada, desidentificada o anonimizada no constituye datos personales, y nuestro uso y nuestra divulgación de dicha información no están sujetos a esta Política de Privacidad. Cuando desidentificamos información personal, tomamos medidas razonables para asegurar que la información no pueda asociarse con usted ni con su hogar, nos comprometemos a mantener y usar la información únicamente en forma desidentificada y a no intentar reidentificarla (salvo en la medida permitida por la ley para probar nuestras medidas de desidentificación), y obligamos contractualmente a todo destinatario de la información a cumplir las mismas restricciones.</p>
+
+<p>Podemos usar información agregada, desidentificada o anonimizada (en conjunto, “información anonimizada y agregada”) para cualquier fin comercial lícito, incluso para analizar, mejorar y desarrollar los Servicios y para crear conjuntos de datos comerciales. Los ejemplos incluyen mediciones agregadas del uso de funciones, estadísticas de rendimiento técnico, términos de búsqueda anonimizados y tendencias de búsqueda o de uso agrupadas por área geográfica amplia (tal como un país, un estado o una región, o un área metropolitana).</p>
+
+<p>También podemos vender o licenciar estos conjuntos de datos directamente a empresas seleccionadas, incluidas empresas que desarrollan inteligencia artificial, para que puedan desarrollar, entrenar, ajustar, probar, evaluar y mejorar modelos de inteligencia artificial y de aprendizaje automático, incluidos modelos que sean propiedad de esas empresas y se usen en sus propios productos, y realizar investigación y desarrollo directamente relacionados con esos modelos. Estos acuerdos pueden generarnos ingresos.</p>
+
+<p>Sin corredores de datos. No vendemos ni licenciamos estos conjuntos de datos a corredores de datos, mercados de conjuntos de datos, agregadores que actúen como intermediarios ni revendedores, y prohibimos contractualmente a los destinatarios revender o redistribuir los conjuntos de datos.</p>
+
+<p>Cómo anonimizamos. Antes de que la información se incluya en un conjunto de datos conforme a esta sección, aplicamos medidas técnicas y organizativas diseñadas para impedir la identificación. Según los datos de que se trate, estas medidas incluyen eliminar nombres, datos de contacto, identificadores de cuenta, identificadores de dispositivo y direcciones IP; romper todo vínculo entre los datos y un usuario, dispositivo, cuenta o historial de búsqueda individual; filtrar o suprimir entradas (tales como términos de búsqueda) que contengan información personal o que razonablemente pudieran identificar a una persona; agregar, generalizar o suprimir valores poco frecuentes; y limitar la precisión geográfica a áreas amplias. Evaluamos los medios razonablemente disponibles mediante los cuales un conjunto de datos podría ser reidentificado, incluso en combinación con otra información a disposición de los destinatarios previstos, antes de que el conjunto de datos se use o se comparta. Eliminar un nombre, aplicar una función hash a un identificador o etiquetar la información como “desidentificada” no hace por sí solo que la información sea anónima, y no tratamos como anonimizados los registros vinculables a nivel de dispositivo ni los perfiles de usuario seudónimos.</p>
+
+<p>Obligaciones de los destinatarios. Los destinatarios reciben los conjuntos de datos en virtud de acuerdos escritos que limitan el uso a los fines descritos anteriormente y prohíben intentar identificar a cualquier persona, hogar o dispositivo; contactar a individuos o dirigirse a ellos; combinar un conjunto de datos con otra información a fin de identificar a alguien; y vender, sublicenciar o redistribuir el conjunto de datos. Un destinatario puede recurrir a sus afiliadas y proveedores de servicios para tratar un conjunto de datos únicamente bajo restricciones equivalentes. Nuestros acuerdos también abordan la seguridad, la conservación y la eliminación, y la notificación del acceso o uso no autorizados, y podemos suspender o dar por terminado un acuerdo por incumplimiento.</p>
+
+<p>Información que nunca se incluye. Los conjuntos de datos conforme a esta sección nunca incluyen datos de salud o de actividad física (incluidos los datos de Health Connect o de sensores corporales), inventarios de aplicaciones instaladas, contenido de las notificaciones, mensajes privados, contactos, registros de llamadas, fotos, grabaciones de audio o video, ubicación precisa (a nivel de GPS) o historiales de ubicación, contraseñas u otras credenciales de autenticación, datos de pago ni el contenido de sus comunicaciones de soporte, ya sea en forma bruta o derivada, ni información que sabemos que se relaciona con usuarios menores de 18 años.</p>
+
+<p>Términos de búsqueda y geografía. Los términos de búsqueda pueden incluirse únicamente después de que se hayan aplicado las medidas anteriores, de modo que ya no estén asociados con usted, su dispositivo, su cuenta o su historial de búsqueda. La agrupación geográfica se limita a áreas amplias según se describe anteriormente; no incluimos rastros de ubicación individuales ni patrones de desplazamiento.</p>
+
+<p>Una vez que la información ha sido anonimizada, deja de ser información personal conforme a la ley aplicable, y es posible que las contribuciones individuales no puedan recuperarse de un conjunto de datos ni de los modelos entrenados con él. Esto no afecta sus derechos sobre la información personal que aún conservamos, y no usamos la anonimización para evitar atender una solicitud de eliminación, de oposición o de exclusión voluntaria mientras la información siga siendo identificable.</p>
+</div>
+
+<div class="reveal">
+<h2 id="how-we-use-your-information">Cómo Usamos Su Información</h2>
+
+<p>Usamos la información que recopilamos sobre usted o que usted nos proporciona, incluida cualquier información personal:</p>
+
+<ul>
+  <li>Para cumplir el motivo por el cual usted proporcionó la información. Por ejemplo, si usted comparte su nombre y su información de contacto para solicitar información adicional o para hacer una pregunta sobre nuestros productos o servicios, usaremos esa información personal para responder a su consulta.</li>
+  <li>Para identificarlo y contactarlo como cliente potencial de nuestros productos y servicios.</li>
+  <li>Para proporcionar, respaldar, personalizar y desarrollar nuestros Servicios, incluido el suministro de contenido y anuncios a usted como parte de nuestros Servicios.</li>
+  <li>Para realizar la verificación de identidad y de edad según lo exija la ley aplicable.</li>
+  <li>Para brindarle soporte y responder a sus consultas, incluso para investigar y atender sus inquietudes y para supervisar y mejorar nuestras respuestas.</li>
+  <li>Para personalizar su experiencia con nuestros Servicios y para ofrecerle nuestro contenido y las ofertas de productos y servicios pertinentes a sus intereses, incluidas ofertas y anuncios dirigidos a través de nuestros Servicios, de sitios de terceros y por teléfono, correo electrónico o mensaje de texto (con su consentimiento, cuando lo exija la ley).</li>
+  <li>Para ayudar a mantener la protección, la seguridad y la integridad de nuestros Servicios y de nuestros productos y servicios, bases de datos y otros activos tecnológicos, y de nuestro negocio.</li>
+  <li>Para pruebas, investigación, análisis y desarrollo de productos, incluso para desarrollar y mejorar nuestros Servicios y nuestros productos y servicios.</li>
+  <li>Para responder a solicitudes de las autoridades encargadas de hacer cumplir la ley y según lo exijan la ley aplicable, una orden judicial o las regulaciones gubernamentales.</li>
+  <li>Para evaluar o llevar a cabo una fusión, desinversión, reestructuración, reorganización, disolución u otra venta o transferencia de la totalidad o parte de nuestros activos, ya sea como empresa en marcha o como parte de un procedimiento de quiebra, liquidación o similar, en el cual la información personal que mantenemos sobre los usuarios de nuestros Servicios se encuentre entre los activos transferidos.</li>
+  <li>Para cumplir nuestras obligaciones y hacer valer nuestros derechos derivados de cualquier contrato celebrado entre usted y nosotros, incluso para facturación y cobranza.</li>
+  <li>Para notificarle sobre cambios en nuestros Servicios o en cualquier producto o servicio que ofrecemos o proporcionamos a través de ellos.</li>
+  <li>De cualquier otra forma que podamos describir cuando usted proporcione la información.</li>
+  <li>Para cualquier otro fin con su consentimiento.</li>
+</ul>
+
+<p>También podemos usar su información para contactarlo acerca de nuestros Servicios que puedan ser de su interés. Si usted no desea que usemos su información de esta manera, le pedimos que no envíe su información en los formularios de nuestros Servicios.</p>
+
+<p>Podemos usar la información que hemos recopilado de usted para permitirnos mostrar anuncios a nuestras audiencias objetivo. Si usted hace clic en un anuncio o interactúa de otro modo con él, el anunciante puede suponer que usted cumple sus criterios de segmentación.</p>
+</div>
+
+<div class="reveal">
+<h2 id="legal-bases-for-processing">Bases Legales para el Tratamiento</h2>
+
+<p>Cuando la ley de su país o región (por ejemplo, las leyes del Espacio Económico Europeo y del Reino Unido, de Brasil o de otros países con requisitos similares) exija una base legal para el tratamiento de la información personal, nos apoyamos en las siguientes bases:</p>
+
+<p>Ejecución de un contrato. Tratamos la información necesaria para proporcionar los Servicios que usted solicita, incluida la creación y el mantenimiento de su Cuenta (cuando se ofrezca), el suministro de funciones y contenido del lanzador, y la prestación de soporte.</p>
+
+<p>Consentimiento. Nos apoyamos en su consentimiento para la publicidad personalizada basada en su actividad; para el uso del identificador de publicidad de su dispositivo y de cookies, SDK y tecnologías similares no esenciales cuando se requiera consentimiento; para la recopilación y la compartición de información de ubicación aproximada con fines publicitarios; para la recopilación de la ubicación precisa del dispositivo cuando una función que usted usa (tal como el clima) la solicite y usted conceda el permiso; para las comunicaciones de marketing cuando se requiera consentimiento de aceptación voluntaria; y para cualquier información demográfica opcional que usted elija proporcionar y que sea tratada como sensible conforme a su ley local. Usted puede retirar su consentimiento en cualquier momento a través de la configuración de la App o contactándonos, sin que ello afecte la licitud del tratamiento realizado antes de su retiro.</p>
+
+<p>Intereses legítimos. Cuando esté permitido, y después de ponderar nuestros intereses frente a sus derechos, nos apoyamos en nuestros intereses legítimos para proteger los Servicios, prevenir e investigar el fraude, hacer cumplir nuestros términos y realizar la analítica necesaria para operar y mejorar los Servicios.</p>
+
+<p>Obligaciones legales. Tratamos información cuando es necesario para cumplir obligaciones fiscales, contables y otras obligaciones legales, y para responder a solicitudes lícitas.</p>
+
+<p>Cuando el consentimiento sea la base legal exigida para la publicidad personalizada, solicitamos ese consentimiento por separado, no lo agrupamos con su uso de los Servicios y no condicionamos su uso de los Servicios a dicho consentimiento. Si usted rechaza o retira ese consentimiento, recibirá publicidad contextual que no se basa en la elaboración de perfiles, según se describe en la App. Los Suplementos Regionales de Privacidad proporcionan más detalles para su región.</p>
+</div>
+
+<div class="reveal">
+<h2 id="disclosure-of-your-information">Divulgación de Su Información</h2>
+
+<p>Podemos divulgar la información personal que recopilamos o que usted proporciona según se describe en esta Política de Privacidad:</p>
+
+<ul>
+  <li>A nuestras subsidiarias y afiliadas.</li>
+  <li>A nuestros socios publicitarios externos.</li>
+  <li>A contratistas, proveedores de servicios y otros terceros a los que recurrimos para respaldar nuestro negocio y proporcionar nuestros Servicios.</li>
+  <li>A empresas seleccionadas de IA y de tecnología que reciben conjuntos de datos anonimizados o agregados únicamente según se describe en Información Agregada, Desidentificada y Anónima; Entrenamiento de IA.</li>
+  <li>A un comprador u otro sucesor en caso de una fusión, desinversión, reestructuración, reorganización, disolución u otra venta o transferencia de la totalidad o parte de los activos de la compañía, ya sea como empresa en marcha o como parte de un procedimiento de quiebra, liquidación o similar, en el cual la información personal que la compañía mantiene sobre los usuarios de nuestros Servicios se encuentre entre los activos transferidos.</li>
+  <li>Para cumplir el fin para el cual usted la proporciona.</li>
+  <li>Para cualquier otro fin que divulguemos cuando usted proporcione la información.</li>
+  <li>Con su consentimiento.</li>
+</ul>
+
+<p>También podemos divulgar su información personal:</p>
+
+<ul>
+  <li>Para cumplir cualquier orden judicial, ley o proceso legal, incluso para responder a cualquier solicitud gubernamental o regulatoria.</li>
+  <li>Para hacer cumplir o aplicar nuestros Términos de Servicio y otros acuerdos, incluso para fines de facturación y cobranza.</li>
+  <li>Si consideramos que la divulgación es necesaria o apropiada para proteger los derechos, la propiedad o la seguridad de la compañía, de nuestros clientes o de otros. Esto incluye el intercambio de información con otras empresas y organizaciones para fines de protección contra el fraude.</li>
+</ul>
+
+<p>Podemos divulgar información agregada sobre nuestros usuarios, e información que no identifica a un individuo, sin restricción. La divulgación de dicha información agregada no está sujeta a esta Política de Privacidad.</p>
+
+<p>No vendemos ni licenciamos información personal ni conjuntos de datos anonimizados de usuarios a corredores de datos, mercados de conjuntos de datos ni intermediarios para su reventa.</p>
+</div>
+
+<div class="reveal">
+<h2 id="summary-of-our-data-practices">Resumen de Nuestras Prácticas de Datos</h2>
+
+<p>El cuadro a continuación está diseñado para resumir con mayor detalle cómo y por qué podemos usar distintos tipos de información personal.</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Categoría de Información Personal</th><th>Fin(es) del Tratamiento</th><th>Categorías de Terceros Destinatarios (excluidos nuestras afiliadas, proveedores de servicios y encargados del tratamiento)</th></tr></thead>
+<tbody>
+<tr><td>Identificadores. Por ejemplo, un nombre real, alias, dirección postal, número de teléfono, identificador personal único, identificador en línea, dirección de Protocolo de Internet, dirección de correo electrónico u otros identificadores similares.</td><td>Identificarlo y contactarlo como cliente potencial de nuestros productos y servicios; Brindar servicio al cliente; Realizar la verificación de identidad y de edad según lo exija la ley aplicable; Proporcionar y mantener los Servicios, incluido el suministro de contenido y anuncios a usted como parte de nuestros Servicios; Facilitar funciones interactivas; Analítica interna; Comercializar nuestros productos y servicios; Fines comerciales internos, incluidas la administración general del negocio y el mantenimiento de su cuenta con nosotros; Obligaciones de auditoría, cumplimiento, legales, de políticas, de procedimientos y regulatorias; Seguridad de los sistemas y de los datos; Proteger la seguridad de nuestros empleados y de otros; Identificarlo y contactarlo como cliente potencial de los productos y servicios de terceros; Publicidad dirigida; Verificar su identidad y autenticar su inicio de sesión, incluso mediante el envío de códigos de verificación de un solo uso; Enviarle nuestro boletín por correo electrónico y otras comunicaciones a las que usted se haya suscrito; Cualquier otro fin compatible con su consentimiento y sus preferencias expresadas</td><td>Proveedores de servicios; Autoridades gubernamentales locales, estatales o federales u otras entidades con autoridad legal; Plataformas de publicidad y proveedores de analítica externos; Plataformas de boletines por correo electrónico y de marketing y sus patrocinadores y anunciantes</td></tr>
+<tr><td>Actividad en Internet u otra actividad de red similar. Por ejemplo, su actividad de navegación y de búsqueda dentro de nuestros Servicios e información sobre la interacción de un consumidor con un sitio web, una aplicación o un anuncio. No rastreamos directamente su historial de navegación en otros sitios web o aplicaciones; nuestros socios de publicidad y analítica pueden recopilar información sobre su actividad a lo largo del tiempo y en otros servicios mediante sus propias tecnologías, según se describe en Cookies y Otras Tecnologías de Seguimiento.</td><td>Los mismos fines indicados para “Identificadores”</td><td>Proveedores de servicios; Autoridades gubernamentales locales, estatales o federales u otras entidades con autoridad legal; Plataformas de publicidad y proveedores de analítica externos</td></tr>
+<tr><td>Datos de geolocalización. Por ejemplo, ubicación física o desplazamientos. Recopilamos la ubicación aproximada (por ejemplo, derivada de su dirección IP) y, para ciertas funciones (tales como el clima) y únicamente con su permiso, la ubicación precisa.</td><td>Fines comerciales internos, incluida la administración general del negocio; Seguridad de los sistemas y de los datos; Proteger la seguridad de nuestros empleados y de otros; Analítica interna; Publicidad dirigida</td><td>Proveedores de servicios; Autoridades gubernamentales locales, estatales o federales u otras entidades con autoridad legal; Plataformas de publicidad y proveedores de analítica externos</td></tr>
+<tr><td>Información electrónica. Por ejemplo, información que usted ingresa directamente en nuestros Servicios.</td><td>Los mismos fines indicados para “Identificadores”</td><td>Proveedores de servicios; Autoridades gubernamentales locales, estatales o federales u otras entidades con autoridad legal; Plataformas de publicidad y proveedores de analítica externos</td></tr>
+<tr><td>Información comercial. Por ejemplo, productos o servicios comprados, historiales de compras e información sobre sus intereses y preferencias.</td><td>Los mismos fines indicados para “Identificadores”</td><td>Proveedores de servicios; Autoridades gubernamentales locales, estatales o federales u otras entidades con autoridad legal; Plataformas de publicidad y proveedores de analítica externos</td></tr>
+<tr><td>Inferencias extraídas de otra información personal. Por ejemplo, un perfil que refleje las preferencias, características, tendencias psicológicas, predisposiciones, comportamiento, actitudes, inteligencia, habilidades y aptitudes de una persona.</td><td>Los mismos fines indicados para “Identificadores”</td><td>Proveedores de servicios; Autoridades gubernamentales locales, estatales o federales u otras entidades con autoridad legal; Plataformas de publicidad y proveedores de analítica externos</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="reveal">
+<h2 id="cookies-and-other-tracking-technologies">Cookies y Otras Tecnologías de Seguimiento</h2>
+
+<p>Nosotros y nuestros proveedores externos podemos usar cookies (cuando usted interactúa con nuestros Servicios o con nuestros anuncios) y otras tecnologías tales como archivos de registro, píxeles de seguimiento, balizas web, kits de desarrollo de software, y herramientas y servicios de analítica para recopilar información (incluida información personal) automáticamente de usted. Dicha información incluye (entre otros) su dirección de protocolo de internet, información de ubicación, el tipo de navegador web y de sistema operativo que usted usa, las actividades de navegación, la información de uso y cualquier otra información que su software de navegación web o su proveedor de servicios de internet nos proporcione automáticamente. Consulte la totalidad de esta Política de Privacidad para conocer toda la información que se recopila.</p>
+
+<p>Una cookie es un pequeño fragmento de datos almacenado por su navegador web en su computadora o dispositivo móvil. Usamos cookies para recopilar información de usted con respecto a su uso de nuestros Servicios a fin de recordar las preferencias y configuraciones del usuario, personalizar su experiencia con los Servicios y para fines de seguridad. Para brindarle la mejor experiencia posible en el sitio web, usamos distintos tipos de cookies. Clasificamos estas cookies de la siguiente manera:</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Tipo de Cookie</th><th>Descripción</th><th>¿Se pueden deshabilitar estas cookies?</th></tr></thead>
+<tbody>
+<tr><td>Estrictamente Necesarias</td><td>Podemos usar cookies que consideramos estrictamente necesarias para permitirle usar nuestros Servicios y acceder a ellos, incluidas las cookies requeridas para prevenir actividades fraudulentas o mejorar la seguridad.</td><td>No</td></tr>
+<tr><td>Relacionadas con el Rendimiento</td><td>Podemos usar cookies que son útiles para evaluar el rendimiento de nuestros Servicios, incluso como parte de nuestras prácticas de analítica o de otro modo para mejorar el contenido, los productos o los servicios ofrecidos a través de nuestros Servicios.</td><td>Sí</td></tr>
+<tr><td>Relacionadas con la Funcionalidad</td><td>Podemos usar cookies que son necesarias para ofrecerle una funcionalidad mejorada al acceder a nuestros Servicios, incluso para identificarlo cuando usted inicia sesión en nuestros Servicios o para llevar un registro de las preferencias que usted haya especificado, incluso en cuanto a la presentación del contenido en nuestros Servicios.</td><td>Sí</td></tr>
+<tr><td>Relacionadas con la Segmentación</td><td>Podemos usar cookies para ofrecer contenido, incluidos anuncios, pertinente a sus intereses en nuestros Servicios y en sitios de terceros en función de cómo usted interactúa con los anuncios o el contenido.</td><td>Sí</td></tr>
+</tbody>
+</table></div>
+
+<p>Usted puede administrar las cookies a través de la configuración de su navegador según se describe más adelante. Cuando proporcionemos un banner de cookies o una herramienta de preferencias de cookies en nuestro sitio web, usted también podrá administrar allí sus preferencias de cookies.</p>
+
+<p>Consentimiento para el seguimiento cuando se requiera. Cuando la ley aplicable exija su consentimiento de aceptación voluntaria antes de que nosotros o nuestros socios coloquemos o leamos cookies o tecnologías similares, accedamos al identificador de publicidad de su dispositivo o activemos SDK de publicidad o de analítica, solicitaremos su consentimiento mediante un banner de consentimiento o un flujo de consentimiento dentro de la App (incluida, para la publicidad en el Espacio Económico Europeo y el Reino Unido, una plataforma de gestión del consentimiento certificada conforme al marco aplicable de la industria) antes de que esas tecnologías se activen, y permanecerán desactivadas hasta que usted acepte. Usted puede cambiar o retirar sus elecciones en cualquier momento a través de la configuración de cookies o de privacidad de los Servicios. En Quebec, las funciones que permiten identificarlo, localizarlo o elaborar un perfil de usted están desactivadas de manera predeterminada y se activan únicamente si usted las activa.</p>
+
+<p>Usted también puede optar por excluirse de la recopilación automática de cierta información consultando el menú de opciones o de configuración de su navegador web o de su dispositivo móvil. Sin embargo, hacerlo puede deshabilitar muchas de las partes, funciones o funcionalidades de los Servicios. Cada navegador es diferente, por lo que debe consultar el menú de “Ayuda” de su navegador para saber cómo cambiar sus preferencias de cookies, o visitar <a href="https://allaboutcookies.org" target="_blank" rel="noopener">https://allaboutcookies.org</a> para obtener más información.</p>
+
+<p>Podemos usar herramientas de analítica de terceros, tales como Google Analytics y otros servicios, ocasionalmente, a fin de comprender mejor su uso de nuestros Servicios y cómo podemos mejorarlos. Estas herramientas recopilan información enviada por su navegador o dispositivo móvil, incluidas las páginas que usted visita y otra información de uso. Para obtener más información sobre cómo Google recopila, usa y comparte su información, visite <a href="https://www.google.com/policies/privacy/partners/" target="_blank" rel="noopener">https://www.google.com/policies/privacy/partners/</a>. Para impedir que Google Analytics use los datos, usted puede descargar el complemento de inhabilitación para navegadores en: <a href="https://tools.google.com/dlpage/gaoptout?hl=en" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout?hl=en</a>.</p>
+
+<p>Tenga en cuenta que parte del contenido o de las aplicaciones de los Servicios, incluidos los anuncios, puede ser suministrada por terceros, incluidos anunciantes, redes y servidores de anuncios, proveedores de contenido y proveedores de aplicaciones. Estos terceros pueden usar cookies solas o en conjunto con balizas web u otras tecnologías de seguimiento para recopilar información sobre usted cuando usted usa nuestros Servicios. La información que recopilan puede asociarse con su información personal, o pueden recopilar información, incluida información personal, sobre sus actividades en línea a lo largo del tiempo y en distintos sitios web y otros servicios en línea. Pueden usar esta información para proporcionarle publicidad basada en intereses (conductual) u otro contenido dirigido. No controlamos las tecnologías de seguimiento de estos terceros ni la forma en que pueden usarse. Si usted tiene alguna pregunta sobre un anuncio u otro contenido dirigido, debe contactar directamente al proveedor responsable. Para obtener información sobre cómo usted puede optar por excluirse de recibir publicidad dirigida de muchos proveedores, consulte ¿Qué Opciones Tiene Usted?.</p>
+</div>
+
+<div class="reveal">
+<h2 id="do-not-track-signals">Señales de Do Not Track</h2>
+
+<p>No admitimos las configuraciones de navegador “Do Not Track” y, por lo tanto, los Servicios no cambian sus prácticas en respuesta a una señal de “Do Not Track” en el encabezado HTTP de un navegador o de una aplicación móvil. Sin embargo, cuando lo exija la ley aplicable, trataremos una señal de preferencia de exclusión voluntaria (tal como el Global Privacy Control) como una solicitud válida de exclusión voluntaria de la venta o la compartición de información personal para el navegador en el que la señal esté presente.</p>
+</div>
+
+<div class="reveal">
+<h2 id="security-and-retention-of-personal-information">Seguridad y Conservación de la Información Personal</h2>
+
+<p>Mantenemos nuestros sistemas de conformidad con estándares de la industria comercialmente razonables para preservar la integridad y la seguridad de su información de identificación personal bajo nuestro control. Sin embargo, ningún sistema de seguridad es impenetrable, y no podemos garantizar ni asegurar la seguridad de ninguna información que usted nos transmita, y usted lo hace bajo su propio riesgo. Además, no somos responsables de la seguridad de la información que usted nos transmita a través de redes que no controlamos, incluidas Internet y las redes inalámbricas. Tenga en cuenta que esto no constituye una garantía de que dicha información no pueda ser objeto de acceso, divulgación, alteración o destrucción por la vulneración de cualquiera de nuestras salvaguardas físicas, técnicas o administrativas.</p>
+
+<p>Conservaremos su información personal durante el tiempo que sea necesario para los fines descritos en esta Política de Privacidad. Esta información se usará y se conservará en la medida necesaria para cumplir cualquier obligación legal o política, para resolver disputas y/o para hacer cumplir acuerdos legales. La información personal también puede conservarse para fines de analítica interna. Esta información se conserva por un período más corto, salvo que se use para mejorar las funciones de seguridad o la funcionalidad de nuestros Servicios. Nuestra determinación de los períodos de conservación precisos se basará en (i) el tiempo durante el cual mantengamos una relación continua con usted; (ii) si existe una obligación legal a la que estemos sujetos; y (iii) si la conservación es aconsejable a la luz de nuestra posición legal, incluso en consideración de los plazos de prescripción aplicables, de litigios o de investigaciones regulatorias.</p>
+
+<p>Cuando usted elimina su Cuenta, eliminamos o desidentificamos la información personal asociada con su Cuenta dentro de un período razonable, salvo cuando la ley nos exija o nos permita conservarla (por ejemplo, para fines fiscales, contables, de prevención del fraude, de seguridad o de resolución de disputas), en cuyo caso conservamos únicamente la información necesaria, y únicamente durante el tiempo necesario. Cuando la ley aplicable nos exija aplicar o divulgar períodos de conservación específicos para categorías específicas de información personal, lo hacemos, y usted puede contactarnos en Support@OmniHome.app para obtener más información sobre nuestras prácticas de conservación.</p>
+</div>
+
+<div class="reveal">
+<h2 id="what-choices-do-you-have">¿Qué Opciones Tiene Usted?</h2>
+
+<p>Si usted ya no desea recibir comunicaciones de marketing de nuestra parte, puede informárnoslo contactándonos en Support@OmniHome.app o por correo postal a la dirección que se indica más adelante en Contáctenos. Las comunicaciones electrónicas de marketing que enviamos también contendrán un mecanismo de exclusión voluntaria conforme a los requisitos legales. Tenga en cuenta que puede tomar hasta diez (10) días hábiles eliminar su información de contacto de nuestras listas de comunicaciones de marketing, por lo que usted podría recibir correspondencia nuestra durante un breve período después de realizar su solicitud. También le pedimos que nos contacte para actualizar o corregir su información si esta cambia o si usted considera que alguna información que hemos recopilado sobre usted es inexacta. A modo de recordatorio, solo podemos controlar nuestra propia lista de correo y nuestras propias políticas. Los anunciantes externos que mantienen sus propias listas de correo pueden enviar comunicaciones que publiciten nuestros Servicios o los servicios y productos de otros terceros, y es posible que usted deba contactar directamente a esas partes para dejar de recibir sus comunicaciones.</p>
+
+<p>Publicidad basada en intereses. Usted puede limitar la publicidad basada en intereses en su dispositivo móvil a través de la configuración de su dispositivo. En los dispositivos Android, abra Configuración y seleccione Privacidad → Anuncios, y luego elija “Eliminar ID de publicidad” (o, en versiones anteriores, “Inhabilitar Personalización de Anuncios”). Usted también puede informarse sobre la publicidad basada en intereses de muchas empresas participantes y optar por excluirse de ella a través de la Digital Advertising Alliance en <a href="https://optout.aboutads.info" target="_blank" rel="noopener">https://optout.aboutads.info</a> y de su aplicación móvil AppChoices, y a través de la Network Advertising Initiative en <a href="https://optout.networkadvertising.org" target="_blank" rel="noopener">https://optout.networkadvertising.org</a>.</p>
+
+<p>Comunicaciones de marketing y consentimiento. Cuando la ley aplicable exija su consentimiento previo de aceptación voluntaria antes de que le enviemos marketing por correo electrónico, mensaje de texto, notificación push o teléfono, solicitaremos ese consentimiento y enviaremos esas comunicaciones únicamente después de que usted lo otorgue. El consentimiento para recibir llamadas o mensajes de texto de marketing nunca es una condición para usar los Servicios. Usted puede retirar su consentimiento y detener los mensajes de marketing en cualquier momento respondiendo STOP a un mensaje de texto, usando el enlace para cancelar la suscripción incluido en un correo electrónico, ajustando la configuración de notificaciones de su dispositivo o de la App, o contactándonos según se describe en Contáctenos. Si usted nos llama o nosotros lo llamamos, la llamada puede ser grabada o monitoreada para fines de control de calidad, capacitación y prevención del fraude cuando la ley lo permita. Los términos adicionales para los residentes de los Estados Unidos, incluidos los consentimientos relacionados con el telemarketing y las firmas electrónicas, figuran en el Suplemento 1. Nada de lo dispuesto en este párrafo renuncia a ninguno de los derechos descritos en Sus Derechos de Privacidad ni los limita.</p>
+</div>
+
+<div class="reveal">
+<h2 id="your-privacy-rights">Sus Derechos de Privacidad</h2>
+
+<p>Según el lugar donde usted viva, usted puede tener algunos o todos los siguientes derechos con respecto a su información personal: el derecho a acceder a la información personal que conservamos sobre usted y a recibir una copia portable; el derecho a corregir información inexacta o incompleta; el derecho a eliminar su información; el derecho a restringir cierto tratamiento o a oponerse a él, incluido el derecho a oponerse al marketing directo en cualquier momento; el derecho a retirar el consentimiento en cualquier momento; el derecho a optar por excluirse de la venta o la compartición de información personal o de la publicidad dirigida; el derecho a la revisión humana de ciertas decisiones automatizadas; y el derecho a presentar una queja ante una autoridad de protección de datos, de privacidad o de protección al consumidor. Los Suplementos Regionales de Privacidad describen los derechos disponibles en su región y los plazos dentro de los cuales responderemos.</p>
+
+<p>Si alguno de los derechos o avisos de esta sección o de los Suplementos Regionales de Privacidad se aplica a usted, use la siguiente información para ejercer sus derechos. Tenga en cuenta que cualquier solicitud que usted nos envíe puede estar sujeta a un proceso de verificación de identidad y de residencia según lo permita la ley aplicable, así como a ciertos otros requisitos de procedimiento que puedan indicarse en los Suplementos Regionales de Privacidad. Además, todas las solicitudes están sujetas a ciertas excepciones conforme a la ley aplicable, las cuales pueden variar. Si usted es un cliente con discapacidad visual, un cliente que tiene otra discapacidad o un cliente que busca asistencia en otro idioma, puede acceder a sus derechos de privacidad enviándonos un correo electrónico a Support@OmniHome.app.</p>
+
+<p>Envíe su(s) solicitud(es) usando uno de los siguientes métodos:</p>
+
+<ul>
+  <li>Correo electrónico: Support@OmniHome.app</li>
+  <li>Correo postal: Airfind Corp., 3401 N. Miami Avenue, Suite 230, Miami, FL 33127, Attn: Privacy</li>
+  <li>Teléfono: (310) 499-4211</li>
+</ul>
+
+<p>Para solicitar una copia de los datos personales específicos suyos que hemos recopilado, en un formato fácilmente utilizable, para solicitar una lista de los terceros a los cuales sus datos personales fueron divulgados o vendidos en los 12 meses anteriores, o para solicitar la supresión de sus datos personales (con sujeción a ciertas exenciones), contáctenos usando cualquiera de los métodos anteriores. Cuando la Aplicación ofrezca una cuenta y controles de privacidad o de eliminación de cuenta dentro de la aplicación, usted también puede usar esos controles.</p>
+
+<p>Para optar por excluirse de la “venta” o la “compartición” de sus datos personales (incluso para publicidad dirigida), envíenos un correo electrónico a Support@OmniHome.app con el asunto “Do Not Sell or Share My Personal Information” o use cualquiera de los otros métodos enumerados en esta sección. La exclusión voluntaria no requiere que usted cierre su cuenta. Usted también puede detener toda recopilación de información por parte de la App desinstalándola y eliminando su cuenta según se describe anteriormente.</p>
+
+<p>No cobramos una tarifa por tramitar o responder su solicitud verificable de consumidor, salvo que sea excesiva, repetitiva o manifiestamente infundada, o según lo permita de otro modo la ley aplicable. Si determinamos que la solicitud justifica una tarifa, le informaremos por qué tomamos esa decisión y le proporcionaremos un estimado de costos antes de completar su solicitud.</p>
+
+<p>Según la ley aplicable, usted puede estar limitado en cuanto al número de solicitudes de consumidor verificables o autenticadas que realice dentro de un período de doce (12) meses. Si hemos recopilado información sobre su hijo menor de edad, usted puede ejercer los derechos anteriores en nombre de su hijo menor de edad. Además, en algunas jurisdicciones, usted puede designar a un agente autorizado para que presente una solicitud en su nombre y, en tal caso, podemos exigir prueba de la autorización que usted otorgó al agente y/o la verificación de la identidad del propio agente.</p>
+
+<p>Responderemos a su solicitud dentro del plazo exigido por la ley que se aplique a usted, según se describe en los Suplementos Regionales de Privacidad.</p>
+</div>
+
+<div class="reveal">
+<h2 id="where-we-store-and-process-your-information">Dónde Almacenamos y Tratamos Su Información</h2>
+
+<p>Nuestra infraestructura de backend está alojada en infraestructura de nube de Google en los Estados Unidos, y los datos de cuenta y de uso asociados con la Aplicación se almacenan en los Estados Unidos. Podemos cambiar o agregar ubicaciones de almacenamiento ocasionalmente, y actualizaremos esta Política de Privacidad si un cambio afecta de manera sustancial el lugar donde se almacena su información.</p>
+
+<p>Independientemente de dónde se almacenen los datos de su cuenta, parte de su información se transfiere a los Estados Unidos y a otros países y se trata en ellos. En particular: (i) los datos de analítica y de medición se tratan en plataformas con sede en los Estados Unidos, tales como Google Firebase y Google BigQuery; (ii) muchos de los socios de publicidad, atribución y analítica identificados en el Apéndice A tratan datos en los Estados Unidos o en otros países; y (iii) nuestro personal, que se encuentra ubicado principalmente en los Estados Unidos, accede a los datos desde los Estados Unidos a fin de operar, respaldar y proteger los Servicios. Las leyes de protección de datos de los Estados Unidos y de otros países donde se trata su información pueden diferir de las leyes de su país y, en algunos casos, pueden no brindar el mismo nivel de protección.</p>
+</div>
+
+<div class="reveal">
+<h2 id="international-data-transfers">Transferencias Internacionales de Datos</h2>
+
+<p>Cuando la información personal se transfiere fuera de un país cuya ley restringe las transferencias transfronterizas, usamos salvaguardas reconocidas por esa ley. Estas incluyen las cláusulas contractuales tipo de la Comisión Europea (junto con la adenda del Reino Unido o el acuerdo internacional de transferencia de datos cuando se aplique la ley del Reino Unido) para las transferencias desde el Espacio Económico Europeo y el Reino Unido; las cláusulas contractuales estándar aprobadas por la autoridad nacional de protección de datos de Brasil (ANPD) para las transferencias desde Brasil; cláusulas contractuales modelo, consentimiento u otros mecanismos reconocidos para las transferencias desde Argentina, Colombia, Chile, Perú y México; las evaluaciones exigidas por la ley de Quebec antes de que la información personal se comunique fuera de Quebec; y los mecanismos reconocidos conforme a la Digital Personal Data Protection Act de India. Usted puede contactarnos en Support@OmniHome.app para obtener más información sobre las salvaguardas que se aplican a su información.</p>
+</div>
+
+<div class="reveal">
+<h2 id="regional-privacy-supplements">Suplementos Regionales de Privacidad</h2>
+
+<p>Los siguientes suplementos proporcionan información y derechos adicionales según el lugar donde usted viva. Si un suplemento entra en conflicto con cualquier otra parte de esta Política de Privacidad, el suplemento prevalece para los usuarios de esa región.</p>
+
+<h3>Suplemento 1: Estados Unidos</h3>
+
+<p>Este suplemento se aplica a los residentes de los Estados Unidos.</p>
+
+<h4>Derechos de Privacidad Estatales</h4>
+
+<p>Ciertos estados de los EE. UU. otorgan actualmente, u otorgarán en el futuro, a sus residentes ciertos derechos de privacidad con respecto a su información personal o sus datos personales, según se definen en la ley aplicable. Estos derechos están sujetos a las leyes específicas de esa jurisdicción y podrían aplicarse ciertos otros derechos. Revise el Aviso de Privacidad de California, el Aviso de Privacidad de Nevada y el Aviso de Privacidad para Residentes de Otros Estados que figuran a continuación para obtener más información sobre los derechos y términos específicos de su estado de residencia.</p>
+
+<p>Salvo que se indique lo contrario, responderemos a su solicitud dentro de los cuarenta y cinco (45) días posteriores a su recepción y nos reservamos el derecho de extender el plazo de respuesta por cuarenta y cinco (45) días adicionales cuando sea razonablemente necesario y siempre que la notificación de la extensión al consumidor se realice dentro de los primeros cuarenta y cinco (45) días. Daremos curso a una solicitud de exclusión voluntaria de la venta o la compartición de información personal dentro de los quince (15) días hábiles posteriores a su recepción.</p>
+
+<h4>Aviso de Privacidad de California</h4>
+
+<p>Este Aviso de Privacidad de California complementa la información contenida en el resto de nuestra Política de Privacidad y tiene por objeto cumplir con la California Consumer Privacy Act of 2018, modificada por la California Privacy Rights Act of 2020 (en conjunto, la “CCPA”). Todo término con mayúscula inicial que se use y no esté definido de otro modo a continuación tiene el significado que se le asigna en nuestra Política de Privacidad. Para los fines de este Aviso de Privacidad de California, salvo cuando se indique una definición diferente, “información personal” significa la información que identifica, se relaciona con, describe o es razonablemente susceptible de ser asociada con un residente u hogar de California en particular, o que razonablemente podría vincularse, directa o indirectamente, con él. La información personal no incluye la información disponible públicamente, la información que ha sido desidentificada o agregada, ni otra información sujeta a cierta regulación federal y estatal.</p>
+
+<p>Si usted es un cliente con discapacidad visual, un cliente que tiene otra discapacidad o un cliente que busca asistencia en otro idioma, puede acceder a este Aviso de Privacidad de California enviándonos un correo electrónico a Support@OmniHome.app.</p>
+
+<p>Información personal que recopilamos. Recopilamos información que identifica, se relaciona con, describe, hace referencia a o es susceptible de ser asociada con un consumidor o dispositivo en particular, o que razonablemente podría vincularse, directa o indirectamente, con él (“información personal”). En particular, hemos recopilado las siguientes categorías de información personal de consumidores dentro de los últimos doce (12) meses:</p>
+
+<ul>
+  <li>Identificadores</li>
+  <li>Características de clasificaciones protegidas</li>
+  <li>Información sobre la actividad en Internet u otra red electrónica</li>
+  <li>Datos de geolocalización</li>
+  <li>Información de audio, electrónica, visual o similar</li>
+  <li>Información profesional o relacionada con el empleo</li>
+  <li>Información comercial</li>
+  <li>Inferencias</li>
+</ul>
+
+<p>No recopilamos información personal sensible sobre usted, salvo que se describa de otro modo en esta Política de Privacidad (por ejemplo, sus credenciales de inicio de sesión en la cuenta, la geolocalización precisa que usted permita para funciones tales como el clima, o la información demográfica que usted voluntariamente elija proporcionar). Usamos y divulgamos esa información personal sensible únicamente para los fines permitidos conforme a la ley aplicable de California sin derecho a limitación, y no usamos ni divulgamos información personal sensible para inferir características sobre usted.</p>
+
+<p>Uso de la información personal. Podemos usar o divulgar la información personal que recopilamos para uno o más de los siguientes fines:</p>
+
+<ul>
+  <li>Para cumplir o satisfacer el motivo por el cual usted proporcionó la información. Por ejemplo, si usted comparte su nombre y su información de contacto para hacer una pregunta sobre nuestros productos o servicios, usaremos esa información personal para responder a su consulta.</li>
+  <li>Para proporcionar, personalizar y desarrollar nuestros Servicios.</li>
+  <li>Para brindarle soporte y responder a sus consultas, incluso para investigar y atender sus inquietudes y para supervisar y mejorar nuestras respuestas.</li>
+  <li>Para personalizar su experiencia con nuestros Servicios y para ofrecerle nuestro contenido y las ofertas de productos y servicios pertinentes a sus intereses, incluidas ofertas y anuncios dirigidos a través de nuestros Servicios, de sitios de terceros y por teléfono, correo electrónico o mensaje de texto (con su consentimiento, cuando lo exija la ley).</li>
+  <li>Para ayudar a mantener la protección, la seguridad y la integridad de nuestros Servicios y de nuestros productos y servicios, bases de datos y otros activos tecnológicos, y de nuestro negocio.</li>
+  <li>Para pruebas, investigación, análisis y desarrollo de productos, incluso para desarrollar y mejorar nuestros Servicios y nuestros productos y servicios.</li>
+  <li>Para responder a solicitudes de las autoridades encargadas de hacer cumplir la ley y según lo exijan la ley aplicable, una orden judicial o las regulaciones gubernamentales.</li>
+  <li>Para evaluar o llevar a cabo una fusión, desinversión, reestructuración, reorganización, disolución u otra venta o transferencia de la totalidad o parte de nuestros activos, ya sea como empresa en marcha o como parte de un procedimiento de quiebra, liquidación o similar, en el cual la información personal que mantenemos sobre los usuarios de nuestros Servicios se encuentre entre los activos transferidos.</li>
+  <li>Para cumplir nuestras obligaciones y hacer valer nuestros derechos derivados de cualquier contrato celebrado entre usted y nosotros, incluso para facturación y cobranza.</li>
+  <li>Para notificarle sobre cambios en nuestros Servicios o en cualquier producto o servicio que ofrecemos o proporcionamos a través de ellos.</li>
+  <li>Para comercializar nuestros productos y servicios.</li>
+  <li>Para identificarlo y contactarlo como cliente potencial de los productos y servicios de terceros.</li>
+  <li>Para proporcionar publicidad dirigida.</li>
+  <li>De cualquier otra forma que podamos describir cuando usted proporcione la información.</li>
+  <li>Para cualquier otro fin con su consentimiento.</li>
+</ul>
+
+<p>Divulgación de la información personal. Salvo lo descrito a continuación con respecto a las “ventas” y la “compartición”, limitamos nuestra divulgación de las categorías de información personal anteriores a nuestros proveedores de servicios para uno o más fines comerciales. “Fines comerciales” significa el uso razonablemente necesario y proporcionado de la información personal para nuestros fines operativos, para otros fines descritos en esta Política de Privacidad, para los fines operativos de nuestros proveedores de servicios y contratistas, así como para otros fines compatibles con el contexto en el cual se recopiló la información personal.</p>
+
+<p>Podemos “vender” y/o “compartir” información personal (a) con redes y plataformas de publicidad de terceros con el fin de proporcionar publicidad conductual dirigida en esas plataformas, y (b) con el operador, los patrocinadores y los anunciantes de nuestro boletín por correo electrónico, a quienes podemos divulgar su dirección de correo electrónico y la información sobre su interacción con el boletín.</p>
+
+<p>En los últimos 12 meses (contados desde la fecha “A partir de” indicada en la parte superior de esta Política de Privacidad), hemos “vendido” o “compartido” las siguientes categorías de información personal:</p>
+
+<ul>
+  <li>Identificadores</li>
+  <li>Información sobre la actividad en Internet u otra red electrónica</li>
+  <li>Información electrónica</li>
+  <li>Información comercial</li>
+  <li>Datos de geolocalización (únicamente aproximada)</li>
+  <li>Inferencias extraídas de otra información personal</li>
+</ul>
+
+<p>Conservación de la información personal. Conservaremos su información personal durante el tiempo que sea necesario para los fines descritos en esta Política de Privacidad. Esta información se usará y se conservará en la medida necesaria para cumplir cualquier obligación legal o política, para resolver disputas y/o para hacer cumplir acuerdos legales. La información personal también puede conservarse para fines de analítica interna. Esta información se conserva por un período más corto, salvo que se use para mejorar las funciones de seguridad o la funcionalidad de nuestros Servicios. Nuestra determinación de los períodos de conservación precisos se basará en (i) el tiempo durante el cual mantengamos una relación continua con usted; (ii) si existe una obligación legal a la que estemos sujetos; y (iii) si la conservación es aconsejable a la luz de nuestra posición legal, incluso en consideración de los plazos de prescripción aplicables, de litigios o de investigaciones regulatorias.</p>
+
+<p>Sus derechos de privacidad. La CCPA otorga a los residentes de California derechos específicos con respecto a su información personal. Si usted es residente de California, puede tener los siguientes derechos conforme a la ley aplicable de California:</p>
+
+<ul>
+  <li>Derecho a saber y a acceder. Usted tiene derecho a saber qué información personal recopilamos, usamos, divulgamos y vendemos y/o compartimos, según se definen esos términos en la ley aplicable. Usted puede pedirnos que le proporcionemos una copia portable de esta información hasta dos veces en un período móvil de doce meses.</li>
+  <li>Derecho a eliminar y suprimir. Usted tiene derecho a solicitar, en ciertas circunstancias, que nosotros, así como nuestros proveedores de servicios y contratistas, eliminemos la información personal que recopilamos sobre usted.</li>
+  <li>Derecho a corregir información personal inexacta. Usted tiene derecho a solicitar la corrección de información personal inexacta.</li>
+  <li>Derecho a la no discriminación. Usted tiene derecho a no recibir un trato discriminatorio por el ejercicio de los derechos de privacidad descritos anteriormente.</li>
+  <li>Derecho a optar por excluirse de la venta y/o la compartición. Usted tiene derecho a optar por excluirse de la venta y/o la compartición de su información personal por parte de una empresa.</li>
+  <li>Derecho a limitar el uso y la divulgación. Usted tiene derecho a limitar el uso o la divulgación de su información personal sensible únicamente a los usos necesarios para que le proporcionemos bienes o servicios. No usaremos ni divulgaremos su información personal sensible después de que usted haya ejercido su derecho, salvo que usted posteriormente otorgue su consentimiento para el uso de su información personal sensible para fines adicionales.</li>
+</ul>
+
+<p>Compartición con terceros para sus propios fines de marketing directo. La ley “Shine the Light” de California (Cal. Civ. Code § 1798.83) permite a los residentes de California solicitar cierta información sobre nuestra divulgación de información personal a terceros para los propios fines de marketing directo de estos. Según se describe en esta Política de Privacidad, podemos divulgar información personal, tal como su dirección de correo electrónico, a terceros, incluidas redes de publicidad y los patrocinadores y anunciantes de nuestro boletín por correo electrónico, para sus propios fines de marketing directo. Para solicitar información sobre estas prácticas, por favor Contáctenos una vez por año calendario. Usted debe incluir su nombre completo, su dirección de correo electrónico y su dirección postal en su solicitud por correo electrónico o por correo postal para que podamos verificar su residencia en California y responder.</p>
+
+<p>Cómo ejercer sus derechos. Usted puede ejercer cualquiera de los derechos descritos en esta sección siguiendo las instrucciones de Sus Derechos de Privacidad.</p>
+
+<p>Aviso del derecho a optar por excluirse de la venta/compartición. Los residentes de California pueden optar por excluirse de la “venta” o la “compartición” de su información personal. Como se indicó anteriormente, podemos “vender” y/o “compartir” información personal con redes y plataformas de publicidad de terceros con el fin de proporcionar publicidad conductual dirigida en esas plataformas. Usted puede optar por excluirse siguiendo las instrucciones de Sus Derechos de Privacidad. No vendemos ni compartimos a sabiendas la información personal de menores de 18 años de edad. Si usted es padre, madre o tutor y considera que su hijo nos ha proporcionado información sin su consentimiento, revise Niños Menores de 18 Años y contáctenos por correo electrónico en Support@OmniHome.app.</p>
+
+<h4>Aviso de Privacidad de Nevada</h4>
+
+<p>Podemos “vender” datos personales según se define ese término en la ley de Nevada. Los residentes de Nevada tienen derecho a solicitar la exclusión voluntaria de cualquier venta futura de sus datos personales conforme a la Nevada SB 220. Si usted es residente de Nevada y desea realizar dicha solicitud, siga las instrucciones de Sus Derechos de Privacidad. Usted debe incluir su nombre completo, su dirección de correo electrónico y su dirección postal en su solicitud por correo electrónico o por correo postal para que podamos verificar su residencia en Nevada y responder. Una vez recibida y verificada su solicitud, no venderemos su información cubierta.</p>
+
+<h4>Aviso de Privacidad para Residentes de Otros Estados</h4>
+
+<p>Esta sección se aplica a los residentes de Colorado, Connecticut, Montana, Oregón, Texas, Utah y Virginia, y a los residentes de cualquier otro estado de los EE. UU. que haya promulgado una ley integral de privacidad del consumidor que se encuentre en vigor (incluidos, entre otros, Delaware, Indiana, Iowa, Kentucky, Maryland, Minnesota, Nebraska, Nuevo Hampshire, Nueva Jersey, Rhode Island y Tennessee), sobre quienes recopilamos datos personales (según se definen más adelante) de cualquier fuente, incluso mediante el uso de los Servicios o al comunicarse con nosotros por medios electrónicos, por correspondencia en papel o en persona. Las disposiciones contenidas en esta sección, además de las divulgaciones incluidas en el resto de esta Política de Privacidad, tienen por objeto proporcionar avisos en cumplimiento de la Colorado Privacy Act (“CPA”), la Connecticut Data Privacy Act (“CTDPA”), la Montana Consumer Data Privacy Act (“MCDPA”), la Oregon Consumer Data Privacy Act (“OCDPA”), la Texas Data Privacy and Security Act (“TDPSA”), la Utah Consumer Privacy Act (“UCPA”), la Virginia Consumer Data Protection Act (“VCDPA”) y otras leyes estatales de privacidad similares. Esta sección no se aplica a ciertos datos personales que se recopilan de un individuo en un contexto de empresa a empresa o de empleo.</p>
+
+<p>Para los fines de esta sección, “datos personales” significa cualquier información que esté vinculada o sea razonablemente vinculable a una persona física identificada o identificable. Los datos personales no incluyen los datos desidentificados ni la información disponible públicamente.</p>
+
+<p>Nuestras prácticas de datos personales. Estas leyes estatales de privacidad otorgan a sus respectivos residentes derechos a recibir ciertas divulgaciones y acceso con respecto a la recopilación, el uso, la venta y la compartición de datos personales. En Información que Recopilamos y Cómo la Recopilamos, Cómo Usamos Su Información y Divulgación de Su Información se encuentran más detalles sobre qué tipos de datos personales podemos recopilar o hemos recopilado, cómo los recopilamos, por qué los recopilamos y a quién podemos divulgarlos.</p>
+
+<p>Podemos “vender” y/o “compartir” datos personales (a) con nuestras redes y plataformas de publicidad de terceros con el fin de proporcionar publicidad conductual dirigida en esas plataformas, y (b) con el operador, los patrocinadores y los anunciantes de nuestro boletín por correo electrónico, a quienes podemos divulgar su dirección de correo electrónico y la información sobre su interacción con el boletín.</p>
+
+<p>Sus derechos de privacidad. Si usted es residente de uno de los estados descritos anteriormente, tiene los siguientes derechos conforme a la ley aplicable en relación con sus datos personales, con sujeción a ciertas excepciones (no todos los derechos están disponibles en todos los estados):</p>
+
+<ul>
+  <li>Derecho a saber y a acceder. Usted tiene derecho a saber qué datos personales recopilamos, usamos, divulgamos y/o vendemos o compartimos, según se definen esos términos en la ley aplicable. Usted puede pedirnos que le proporcionemos una copia portable de esta información hasta dos veces en un período móvil de doce meses. Los residentes de Oregón también tienen derecho a conocer los terceros específicos a los cuales hemos divulgado datos personales.</li>
+  <li>Derecho a eliminar y suprimir. Usted tiene derecho a solicitar, en ciertas circunstancias, que nosotros, así como nuestros proveedores de servicios y contratistas, eliminemos los datos personales que recopilamos sobre usted.</li>
+  <li>Derecho a corregir datos personales inexactos. Usted tiene derecho a solicitar la corrección de datos personales inexactos.</li>
+  <li>Derecho a la no discriminación. Usted tiene derecho a no recibir un trato discriminatorio por el ejercicio de los derechos de privacidad descritos anteriormente.</li>
+  <li>Derecho a optar por excluirse. Usted tiene derecho a optar por excluirse de la publicidad dirigida, de nuestra venta de sus datos personales y de las decisiones de elaboración de perfiles que pudieran producir efectos legales o de importancia similar con respecto al consumidor.</li>
+  <li>Derechos relativos a los datos personales sensibles. Si usted es residente de Connecticut, Colorado, Montana, Oregón, Texas o Virginia, no podemos tratar sus datos sensibles ni las inferencias de sus datos sensibles, ni usar sus datos personales para ciertos fines, sin su consentimiento afirmativo. Si usted es residente de Utah, tiene derecho a optar por excluirse del tratamiento de sus datos personales sensibles.</li>
+</ul>
+
+<p>Cómo ejercer sus derechos. Usted puede ejercer cualquiera de los derechos descritos en esta sección siguiendo las instrucciones de Sus Derechos de Privacidad.</p>
+
+<p>Cómo apelar las decisiones sobre sus derechos. Los residentes de Colorado, Connecticut, Oregón, Montana, Texas y Virginia pueden apelar nuestras decisiones relativas a las solicitudes de derechos de privacidad, de la siguiente manera:</p>
+
+<p>Residentes de Colorado. Si usted es residente de Colorado y desea apelar nuestra decisión con respecto a una solicitud que usted haya realizado, por favor Contáctenos. Dentro de los cuarenta y cinco (45) días posteriores a la recepción de una apelación, le informaremos por escrito de toda medida adoptada o no adoptada, incluida una explicación de nuestras razones para llegar a la decisión. Si la apelación es denegada, usted puede contactar a la Oficina del Fiscal General de Colorado por teléfono al (720) 508-6000 o a través de su sitio web en <a href="https://coag.gov" target="_blank" rel="noopener">https://coag.gov</a>.</p>
+
+<p>Residentes de Connecticut. Si usted es residente de Connecticut y desea apelar nuestra decisión con respecto a una solicitud que usted haya realizado, por favor Contáctenos. Dentro de los sesenta (60) días posteriores a la recepción de una apelación, le informaremos por escrito de toda medida adoptada o no adoptada, incluida una explicación de nuestras razones para llegar a la decisión. Si la apelación es denegada, usted puede contactar a la Oficina del Fiscal General de Connecticut por teléfono al (860) 808-5420 o a través de su sitio web en <a href="https://portal.ct.gov/ag" target="_blank" rel="noopener">https://portal.ct.gov/ag</a>.</p>
+
+<p>Residentes de Montana. Si usted es residente de Montana y desea apelar nuestra decisión con respecto a una solicitud que usted haya realizado, por favor Contáctenos. Dentro de los sesenta (60) días posteriores a la recepción de una apelación, le informaremos por escrito de toda medida adoptada o no adoptada, incluida una explicación de nuestras razones para llegar a la decisión. Si la apelación es denegada, usted puede contactar a la Oficina del Fiscal General de Montana por teléfono al (406) 444-4500 o a través de su sitio web en <a href="https://dojmt.gov" target="_blank" rel="noopener">https://dojmt.gov</a>.</p>
+
+<p>Residentes de Oregón. Si usted es residente de Oregón y desea apelar nuestra decisión con respecto a una solicitud que usted haya realizado, por favor Contáctenos. Dentro de los cuarenta y cinco (45) días posteriores a la recepción de una apelación, le informaremos por escrito de toda medida adoptada o no adoptada, incluida una explicación de nuestras razones para llegar a la decisión. Si la apelación es denegada, usted puede contactar a la Oficina del Fiscal General de Oregón por teléfono al (877) 877-9392 o a través de su sitio web en <a href="https://www.doj.state.or.us" target="_blank" rel="noopener">https://www.doj.state.or.us</a>.</p>
+
+<p>Residentes de Texas. Si usted es residente de Texas y desea apelar nuestra decisión con respecto a una solicitud que usted haya realizado, por favor Contáctenos. Dentro de los sesenta (60) días posteriores a la recepción de una apelación, le informaremos por escrito de toda medida adoptada o no adoptada, incluida una explicación de nuestras razones para llegar a la decisión. Si la apelación es denegada, usted puede contactar a la Oficina del Fiscal General de Texas por teléfono al (800) 621-0508 o a través de su sitio web en <a href="https://www.texasattorneygeneral.gov" target="_blank" rel="noopener">https://www.texasattorneygeneral.gov</a>.</p>
+
+<p>Residentes de Virginia. Si usted es residente de Virginia y desea apelar nuestra decisión con respecto a una solicitud que usted haya realizado previamente, por favor Contáctenos o notifique a la Oficina del Fiscal General de Virginia a través de su sitio web en <a href="https://www.oag.state.va.us" target="_blank" rel="noopener">https://www.oag.state.va.us</a>. Dentro de los sesenta (60) días posteriores a la recepción de una apelación, le informaremos por escrito de toda medida adoptada o no adoptada, incluida una explicación de nuestras razones para llegar a la decisión. Si la apelación es denegada, usted puede contactar a la Oficina del Fiscal General de Virginia por teléfono al (804) 786-2071 o por correspondencia escrita dirigida a 202 North 9th Street, Richmond, Virginia 23219.</p>
+
+<p>Residentes de otros estados. Si la ley integral de privacidad de su estado otorga un derecho a apelar nuestra decisión con respecto a una solicitud de privacidad y usted desea ejercerlo, por favor Contáctenos y tramitaremos su apelación dentro del plazo exigido por la ley de su estado.</p>
+
+<h4>Firmas Electrónicas y Telemarketing (Estados Unidos)</h4>
+
+<p>Cuando usted hace clic en un botón de envío u otro botón similar que transmite la información que usted ingresa en uno de nuestros formularios web en los Servicios, usted acepta expresamente que está firmando electrónicamente un acuerdo con nosotros conforme a la ley de Florida con los términos de los consentimientos, las aceptaciones voluntarias y los descargos de responsabilidad que figuran en la página web correspondiente de nuestros Servicios. Preste especial atención a estos términos al enviar su información. Al enviar su información, usted consiente el tratamiento, la recopilación y la transferencia de la información que usted proporciona según se describe en esta Política de Privacidad. Usted también acepta esta Política de Privacidad y los Términos de Servicio. Según el alcance del consentimiento que usted otorgue, usted puede ser contactado por nosotros, nuestras afiliadas, subsidiarias o socios. Usted puede ser contactado por correo electrónico, computadora, correo postal, llamada a teléfono residencial o inalámbrico, fax, mensaje de texto u otros medios de comunicación electrónica escrita con anuncios, mensajes o telemarketing, incluso mediante el uso de sistemas de marcación telefónica automática o de una voz artificial o pregrabada, usando la información que usted proporcionó a través de nuestros Servicios, incluso si usted ha registrado previamente o registra en el futuro cualquiera de la información anterior en el National Do Not Call Registry o en una lista similar. El consentimiento para recibir llamadas o mensajes de texto de marketing no es una condición para usar los Servicios. Usted puede detener los mensajes de texto de marketing en cualquier momento respondiendo STOP. Si usted nos llama o nosotros lo llamamos, la llamada puede ser grabada o monitoreada para fines de control de calidad, capacitación y prevención del fraude. Usted puede revocar su consentimiento en cualquier momento siguiendo las instrucciones establecidas en ¿Qué Opciones Tiene Usted?. Nada de lo dispuesto en este párrafo renuncia a ninguno de los derechos descritos en Sus Derechos de Privacidad o en este Suplemento 1 ni los limita.</p>
+
+<h3>Suplemento 2: Canadá</h3>
+
+<p>Este suplemento se aplica a los residentes de Canadá. Tratamos su información personal de conformidad con la Personal Information Protection and Electronic Documents Act (PIPEDA) y las leyes provinciales de privacidad aplicables, incluida la Act respecting the protection of personal information in the private sector de Quebec.</p>
+
+<p>Consentimiento. Nos apoyamos en su consentimiento, expreso o implícito según lo permita la ley canadiense, para recopilar, usar y divulgar su información personal para los fines descritos en esta Política de Privacidad, y obtenemos su consentimiento expreso para la información sensible y para fines tales como la publicidad dirigida cuando se requiera consentimiento expreso. Usted puede retirar su consentimiento en cualquier momento, con sujeción a restricciones legales o contractuales y a un aviso razonable.</p>
+
+<p>Tratamiento transfronterizo. Los datos de su cuenta se almacenan en los Estados Unidos, y su información personal puede tratarse en otros países según se describe en Dónde Almacenamos y Tratamos Su Información. Mientras su información se encuentre fuera de Canadá, está sujeta a las leyes de esos países y puede ser accesible para los tribunales, las autoridades encargadas de hacer cumplir la ley y las autoridades de seguridad nacional de esos países.</p>
+
+<p>Quebec. Si usted reside en Quebec: puede comunicarse con la persona encargada de la protección de la información personal en Support@OmniHome.app; las funciones que permiten identificarlo, localizarlo o elaborar un perfil de usted están desactivadas de manera predeterminada y se activan únicamente con su consentimiento; realizamos las evaluaciones exigidas por la ley de Quebec antes de comunicar información personal fuera de Quebec; y usted tiene derechos de acceso, rectificación y, cuando corresponda, portabilidad, y el derecho a presentar una queja ante la Commission d’accès à l’information.</p>
+
+<p>Sus derechos. Usted puede solicitar el acceso a su información personal y su corrección, y retirar su consentimiento, usando los métodos indicados en Sus Derechos de Privacidad. Responderemos dentro de los treinta (30) días o de cualquier otro plazo exigido por la ley. Usted también puede presentar una queja ante la Office of the Privacy Commissioner of Canada o ante su regulador provincial de privacidad.</p>
+
+<p>Marketing. Enviamos mensajes electrónicos comerciales únicamente de conformidad con la Canada’s Anti-Spam Legislation, y cada mensaje incluye un mecanismo para cancelar la suscripción.</p>
+
+<h3>Suplemento 3: Espacio Económico Europeo y Reino Unido</h3>
+
+<p>Este suplemento se aplica a los usuarios del Espacio Económico Europeo (EEE) y del Reino Unido (RU).</p>
+
+<p>Responsable del tratamiento. Airfind Corp., 3401 N. Miami Avenue, Suite 230, Miami, FL 33127, United States, es el responsable del tratamiento de sus datos personales. Usted puede contactarnos sobre asuntos de protección de datos en Support@OmniHome.app.</p>
+
+<p>Bases legales. Tratamos sus datos personales conforme a las bases legales descritas en Bases Legales para el Tratamiento. En particular, nos apoyamos en la ejecución de un contrato para operar la App; en su consentimiento, obtenido a través de nuestro flujo de consentimiento dentro de la App y, para la publicidad, a través de una plataforma de gestión del consentimiento certificada, antes de que nosotros o nuestros socios usemos el identificador de publicidad de su dispositivo, cookies o SDK no esenciales, o publicidad personalizada; en nuestros intereses legítimos para la seguridad, la prevención del fraude y la analítica de mejora del servicio que no requieren consentimiento; y en nuestras obligaciones legales.</p>
+
+<p>Consentimiento otorgado libremente. Usted puede usar la App sin consentir la publicidad personalizada. Si usted rechaza o retira el consentimiento, la App mostrará publicidad contextual que no se basa en la elaboración de perfiles, y su uso de la App no estará condicionado al consentimiento para la publicidad personalizada.</p>
+
+<p>Categorías especiales. No solicitamos categorías especiales de datos personales (tales como origen étnico, salud o creencias) a través de la App.</p>
+
+<p>Sus derechos. Usted tiene derecho a acceder a sus datos personales, rectificarlos y suprimirlos; a restringir su tratamiento u oponerse a él, incluido el derecho a oponerse al marketing directo en cualquier momento; a recibir sus datos en un formato portable; a retirar el consentimiento en cualquier momento sin afectar el tratamiento anterior; y a no ser objeto de una decisión basada únicamente en el tratamiento automatizado que produzca efectos legales o de importancia similar. Si tomamos una decisión basada únicamente en el tratamiento automatizado que produzca efectos legales o de importancia similar, usted puede impugnar esa decisión y obtener una revisión humana contactando a Support@OmniHome.app. Responderemos a sus solicitudes dentro de un (1) mes, plazo que puede extenderse hasta por dos (2) meses adicionales en el caso de solicitudes complejas o numerosas, en cuyo caso le informaremos. Usted puede presentar una reclamación ante su autoridad de control local o, en el RU, ante la Information Commissioner’s Office.</p>
+
+<p>Transferencias. Su información se almacena en los Estados Unidos, y algunos de sus datos también se tratan en otros países según se describe en Dónde Almacenamos y Tratamos Su Información. Para esas transferencias nos apoyamos en las cláusulas contractuales tipo de la Comisión Europea, con la adenda del RU o el acuerdo internacional de transferencia de datos cuando se aplique la ley del RU, junto con medidas complementarias cuando corresponda. Usted puede solicitar una copia de las salvaguardas pertinentes en Support@OmniHome.app.</p>
+
+<h3>Suplemento 4: Brasil</h3>
+
+<p>Este suplemento se aplica a los usuarios de Brasil. Tratamos los datos personales de conformidad con la Lei Geral de Proteção de Dados (LGPD).</p>
+
+<p>Bases legales. Nos apoyamos en las bases legales del Artículo 7 de la LGPD, incluidas la ejecución de un contrato (operar la App), el consentimiento (publicidad personalizada, seguimiento no esencial, marketing y cualquier dato sensible que usted elija proporcionar), los intereses legítimos (seguridad y prevención del fraude) y el cumplimiento de obligaciones legales.</p>
+
+<p>Sus derechos. Conforme al Artículo 18 de la LGPD, usted puede obtener la confirmación de que tratamos sus datos; el acceso a sus datos; la corrección de datos incompletos, inexactos o desactualizados; la anonimización, el bloqueo o la eliminación de datos innecesarios o excesivos; la portabilidad; información sobre las entidades públicas y privadas con las cuales hemos compartido sus datos; información sobre la posibilidad de negar el consentimiento y las consecuencias de la negativa; y la revocación del consentimiento. Usted también puede solicitar la revisión de las decisiones tomadas únicamente mediante tratamiento automatizado conforme al Artículo 20. Responderemos dentro de los plazos establecidos por la LGPD y las regulaciones de la ANPD.</p>
+
+<p>Contacto. Las solicitudes y preguntas pueden dirigirse a nuestro contacto de protección de datos (encarregado) en Support@OmniHome.app. Usted también puede presentar una reclamación ante la Autoridade Nacional de Proteção de Dados (ANPD) o ante los organismos de protección al consumidor.</p>
+
+<p>Transferencias. Cuando sus datos personales se transfieran fuera de Brasil, incluidos el almacenamiento y el tratamiento en los Estados Unidos según se describe en Dónde Almacenamos y Tratamos Su Información, nos apoyamos en los mecanismos de transferencia reconocidos por la LGPD y las regulaciones de la ANPD, incluidas las cláusulas contractuales estándar de la ANPD.</p>
+
+<p>Idioma. Se pondrá a disposición una versión en portugués de esta Política de Privacidad; cuando lo exija la ley brasileña, la versión en portugués rige para los usuarios de Brasil.</p>
+
+<h3>Suplemento 5: México</h3>
+
+<p>Este suplemento se aplica a los usuarios de México y, junto con el resto de esta Política de Privacidad, constituye nuestro aviso de privacidad (aviso de privacidad) conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) de México.</p>
+
+<p>Responsable. Airfind Corp., 3401 N. Miami Avenue, Suite 230, Miami, FL 33127, United States, correo electrónico Support@OmniHome.app.</p>
+
+<p>Finalidades. Las finalidades primarias de nuestro tratamiento son operar la App y sus funciones, brindar soporte y prevenir el fraude. Las finalidades secundarias incluyen la analítica, la publicidad personalizada y el marketing; usted puede negarse a las finalidades secundarias sin afectar los servicios primarios.</p>
+
+<p>Derechos ARCO. Usted puede ejercer sus derechos de acceso, rectificación, cancelación y oposición (ARCO), limitar el uso o la divulgación de sus datos y revocar su consentimiento contactando a Support@OmniHome.app mediante los métodos indicados en Sus Derechos de Privacidad. Responderemos dentro de los plazos establecidos por la ley aplicable. Usted también puede presentar quejas ante la autoridad mexicana competente en materia de protección de datos.</p>
+
+<p>Transferencias. Transferimos datos personales a proveedores de servicios y socios según se describe en esta Política de Privacidad, incluidos el almacenamiento y el tratamiento en los Estados Unidos. Cuando se requiera su consentimiento para una transferencia, lo obtendremos.</p>
+
+<p>Marketing. Respetamos el Registro Público para Evitar Publicidad (REPEP) de México, y usted puede optar por excluirse del marketing en cualquier momento.</p>
+
+<p>Idioma. Se pondrá a disposición una versión en español de esta Política de Privacidad; cuando lo exija la ley mexicana, la versión en español rige para los usuarios de México.</p>
+
+<h3>Suplemento 6: Argentina, Chile, Colombia y Perú</h3>
+
+<p>Este suplemento se aplica a los usuarios de Argentina, Chile, Colombia y Perú.</p>
+
+<p>Bases legales y consentimiento. Tratamos sus datos personales con su consentimiento y conforme a las demás bases reconocidas por la ley de protección de datos de su país, incluidas la Ley 25.326 de Argentina, la Ley 1581 de 2012 de Colombia, la Ley N.° 29733 de Perú y la ley de protección de datos de Chile. Cuando su ley exija autorización expresa para el tratamiento de sus datos, para el tratamiento de datos sensibles o para las transferencias internacionales, la obtendremos a través de la App.</p>
+
+<p>Sus derechos. Usted puede solicitar el acceso a sus datos personales (en Argentina, en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo), así como su rectificación, actualización o supresión, y puede revocar su consentimiento, usando los métodos indicados en Sus Derechos de Privacidad. Responderemos dentro de los plazos establecidos por la ley de su país. Usted también puede presentar una queja ante su autoridad nacional, incluidas la Agencia de Acceso a la Información Pública de Argentina, la Superintendencia de Industria y Comercio de Colombia, la autoridad competente de Chile y la Autoridad Nacional de Protección de Datos Personales de Perú.</p>
+
+<p>Transferencias. Su información se almacena y se trata en los Estados Unidos, y algunos de sus datos pueden tratarse en otros países, según se describe en Dónde Almacenamos y Tratamos Su Información. Cuando la ley de su país exija salvaguardas o autorizaciones específicas para esas transferencias, tales como las cláusulas contractuales modelo de Argentina para las transferencias a países sin protección adecuada, las implementamos.</p>
+
+<p>Aviso de la autoridad de aplicación de Argentina. En cumplimiento de la Ley 25.326, la Agencia de Acceso a la Información Pública, en su carácter de Órgano de Control, tiene la atribución de atender las denuncias y reclamos que interpongan los titulares de los datos cuyos derechos resulten afectados por el incumplimiento de las normas aplicables en materia de protección de datos personales.</p>
+
+<h3>Suplemento 7: India</h3>
+
+<p>Este suplemento se aplica a los usuarios de India. Tratamos sus datos personales de conformidad con la Digital Personal Data Protection Act, 2023 y sus reglas a medida que entren en vigor.</p>
+
+<p>Aviso y consentimiento. Cuando se requiera, proporcionaremos un aviso y solicitaremos su consentimiento a través de la App antes de tratar sus datos personales, y usted puede retirar su consentimiento en cualquier momento a través de la App o contactándonos. El retiro del consentimiento detendrá el tratamiento relacionado, pero puede limitar las funciones que dependen de ese tratamiento.</p>
+
+<p>Sus derechos. Usted tiene derecho a acceder a un resumen de los datos personales que tratamos sobre usted y de las actividades de tratamiento realizadas; a la corrección, la compleción, la actualización y la supresión de sus datos personales; a designar a otra persona para que ejerza sus derechos en caso de su fallecimiento o incapacidad; y a un mecanismo de atención de reclamos fácilmente disponible.</p>
+
+<p>Reclamos. Puede comunicarse con nuestro contacto para reclamos en Support@OmniHome.app o en la dirección indicada en Contáctenos, y acusaremos recibo de los reclamos y los resolveremos dentro de los plazos exigidos por la ley aplicable. Si usted no está satisfecho con nuestra respuesta, puede presentar una queja ante la Data Protection Board of India.</p>
+
+<p>Almacenamiento. Su información se almacena en los Estados Unidos y puede tratarse en otros países según se describe en Dónde Almacenamos y Tratamos Su Información, de conformidad con las restricciones aplicables.</p>
+
+<p>Aadhaar. No solicitamos números de Aadhaar, y usted no debe proporcionárnoslos.</p>
+</div>
+
+<div class="reveal">
+<h2 id="other-websites-and-technologies">Otros Sitios Web y Tecnologías</h2>
+
+<p>Nuestros Servicios pueden incluir enlaces o referencias a otros sitios web o servicios. Estos sitios enlazados se proporcionan para su conveniencia y únicamente con fines informativos. Esta Política de Privacidad no se aplica a sitios web o servicios de terceros, ni a las funciones de redes sociales a las que pueda accederse mediante enlaces que proporcionamos para su conveniencia e información. Acceder a esos enlaces hará que usted salga de nuestro sitio y puede dar lugar a la recopilación de su información personal por parte de terceros. No controlamos ni respaldamos esos sitios web de terceros ni sus prácticas de privacidad, que pueden diferir de las nuestras, ni hacemos ninguna declaración sobre ellos. Lo alentamos a revisar la política de privacidad de cualquier sitio con el que usted interactúe antes de permitir la recopilación y el uso de su información. No somos responsables de las prácticas de privacidad de dichos sitios. Esta Política de Privacidad se aplica únicamente a la información recopilada a través de nuestros Servicios.</p>
+
+<p>Trabajamos con socios externos en relación con el suministro de la App, incluidas redes y plataformas de publicidad, proveedores de búsqueda, de clima y de contenido, y proveedores de analítica y de atribución. Una lista representativa de algunos de estos socios, con enlaces a sus políticas de privacidad, figura en el Apéndice A. Esa lista no es exhaustiva y puede cambiar ocasionalmente a medida que agreguemos o eliminemos socios. Puede obtenerse una lista actualizada de los socios publicitarios activos en la App contactándonos en Support@OmniHome.app. Para obtener más información sobre cómo estos terceros tratan los datos, lo alentamos a leer sus políticas de privacidad.</p>
+</div>
+
+<div class="reveal">
+<h2 id="changes-to-our-privacy-policy">Cambios a Nuestra Política de Privacidad</h2>
+
+<p>Esta Política de Privacidad puede actualizarse periódicamente, y alentamos a los visitantes a consultar con frecuencia esta página para conocer cualquier cambio. Usted puede saber cuándo se actualizó esta política por última vez consultando la fecha “A partir de” ubicada en la parte superior de esta política. En caso de cambios sustantivos en la forma en que recopilamos, tratamos, usamos o compartimos información personal, podemos proporcionar un aviso adicional agregando una declaración a nuestra página de inicio y/o enviándole una notificación por correo electrónico con un enlace a nuestra política revisada.</p>
+
+<p>Su uso posterior de nuestros Servicios después de la fecha en que nuestra Política de Privacidad se actualizó por última vez estará sujeto a la política revisada. Cuando la ley aplicable exija un aviso anticipado de los cambios sustanciales, o nos exija obtener su consentimiento antes de que una nueva finalidad de tratamiento se aplique a usted, proporcionaremos ese aviso o solicitaremos ese consentimiento antes de que el cambio entre en vigor.</p>
+</div>
+
+<div class="reveal">
+<h2 id="contact-us">Contáctenos</h2>
+
+<p>Si usted tiene alguna pregunta o comentario sobre esta Política de Privacidad, sobre las formas en que recopilamos y usamos su información descritas en la Política de Privacidad, o sobre sus opciones y derechos con respecto a dicho uso, o si desea ejercer sus derechos conforme a la ley aplicable, no dude en contactarnos en:</p>
+
+<p>Airfind Corp. (d/b/a Omni Home Apps)<br>3401 N. Miami Avenue, Suite 230<br>Miami, FL 33127<br>Teléfono: (310) 499-4211<br>Support@OmniHome.app</p>
+
+<p>Si usted es un cliente con discapacidad visual, un cliente que tiene otra discapacidad o un cliente que busca asistencia en otro idioma, puede acceder a esta Política de Privacidad contactándonos en Support@OmniHome.app o al (310) 499-4211.</p>
+
+<p>Si la ley de su país o estado le otorga el derecho a presentar una queja ante una autoridad de control, de protección de datos o de protección al consumidor, usted puede hacerlo en cualquier momento; los Suplementos Regionales de Privacidad identifican las autoridades pertinentes para su región.</p>
+</div>
+
+<div class="reveal">
+<h2 id="appendix-a-privacy-policies-of-third-party-service-providers-and-technology-partners">Apéndice A. Políticas de Privacidad de Proveedores de Servicios y Socios Tecnológicos Externos</h2>
+
+<p>Muchos de los socios que se enumeran a continuación tratan datos en los Estados Unidos o en otros países, según se describe en Dónde Almacenamos y Tratamos Su Información. Esta lista es representativa, no exhaustiva, y puede cambiar ocasionalmente; puede obtenerse una lista actualizada contactándonos en Support@OmniHome.app.</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Proveedor de Servicios / Socio Tecnológico</th><th>Política de Privacidad</th></tr></thead>
+<tbody>
+<tr><td>Google AdMob / Google Ads</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></td></tr>
+<tr><td>Google Firebase</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></td></tr>
+<tr><td>Meta Audience Network</td><td><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">https://www.facebook.com/privacy/policy/</a></td></tr>
+<tr><td>AppLovin</td><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">https://www.applovin.com/privacy/</a></td></tr>
+<tr><td>Liftoff (Vungle)</td><td><a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">https://liftoff.io/privacy-policy/</a></td></tr>
+<tr><td>InMobi</td><td><a href="https://www.inmobi.com/privacy-policy/" target="_blank" rel="noopener">https://www.inmobi.com/privacy-policy/</a></td></tr>
+<tr><td>Mintegral</td><td><a href="https://www.mintegral.com/en/privacy/" target="_blank" rel="noopener">https://www.mintegral.com/en/privacy/</a></td></tr>
+<tr><td>Taboola</td><td><a href="https://policies.taboola.com/privacy-policy/" target="_blank" rel="noopener">https://policies.taboola.com/privacy-policy/</a></td></tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="reveal">
+<h2 id="appendix-b-additional-detail-about-the-information-we-collect-through-the-application">Apéndice B. Detalles Adicionales Sobre la Información que Recopilamos a Través de la Aplicación</h2>
+
+<p>Este Apéndice describe con mayor detalle las categorías de información personal que recopilamos a través de la Aplicación, las fuentes de esa información, los fines de negocio y comerciales para los cuales la usamos, y las categorías de terceros a los cuales la divulgamos. Complementa el cuerpo de esta Política de Privacidad y está sujeto a él.</p>
+
+<h3>Parte 1. Información Personal que Usted Proporciona</h3>
+
+<h4>Información de la Cuenta</h4>
+
+<p>Descripción: Podemos recopilar información de usted, tal como su nombre, género, edad, mes y año de nacimiento, estado civil, situación laboral, nivel educativo, ingresos, intereses de contenido, dirección de correo electrónico, estado o región de residencia, código postal de residencia, número de teléfono y contraseñas de la Aplicación cuando usted crea una cuenta dentro de la Aplicación (“Cuenta”). No solicitamos el origen étnico ni otras categorías especiales de información personal a través de la Aplicación. La información demográfica que exceda lo necesario para operar su Cuenta es opcional, y cuando la ley aplicable trate como sensible cualquier información que usted elija proporcionar, la tratamos únicamente con su consentimiento. No divulgamos su contraseña a ningún tercero.</p>
+
+<p>Fuente: Usted nos proporciona esta información.</p>
+
+<p>Fin(es) de Negocio o Comercial(es): Proporcionarle los Servicios; Dirigirle Anuncios y Contenido; Mantener la Calidad y la Integridad de la Aplicación y de los Servicios; Investigación Interna para el Desarrollo Tecnológico y de Productos; Identificar y Reparar Errores; Detectar y Prevenir Incidentes de Seguridad y Fraude; Auditar Interacciones Digitales.</p>
+
+<p>Categoría de Terceros con los que se Comparte: Proveedores de Servicios; Autoridades Gubernamentales Locales, Estatales o Federales u Otras Entidades con Autoridad Legal; anunciantes externos.</p>
+
+<h4>Información de Comentarios</h4>
+
+<p>Descripción: Si usted nos proporciona comentarios o nos contacta por correo electrónico a través de los Servicios, recopilaremos su nombre y su dirección de correo electrónico, así como cualquier otro contenido incluido en el correo electrónico, a fin de enviarle una respuesta.</p>
+
+<p>Fuente: Usted nos proporciona esta información.</p>
+
+<p>Fin(es) de Negocio o Comercial(es): Proporcionarle la Aplicación y los Servicios; Dirigirle Anuncios y Contenido; Mantener la Calidad y la Integridad de la Aplicación y de los Servicios; Investigación Interna para el Desarrollo Tecnológico y de Productos; Identificar y Reparar Errores; Auditar Interacciones Digitales.</p>
+
+<p>Categoría de Terceros con los que se Comparte: Proveedores de Servicios; Autoridades Gubernamentales Locales, Estatales o Federales u Otras Entidades con Autoridad Legal; anunciantes externos.</p>
+
+<h4>Otra Información</h4>
+
+<p>Descripción: También podemos recopilar otra Información Personal en otros puntos de los Servicios en los que se indique que se está recopilando Información Personal, tales como las solicitudes de su correo electrónico realizadas a través de los Servicios.</p>
+
+<p>Fuente: Usted nos proporciona esta información.</p>
+
+<p>Fin(es) de Negocio o Comercial(es): Proporcionarle la Aplicación y los Servicios; Investigación Interna para el Desarrollo Tecnológico y de Productos; Identificar y Reparar Errores; Detectar y Prevenir Incidentes de Seguridad y Fraude; Auditar Interacciones Digitales.</p>
+
+<p>Categoría de Terceros con los que se Comparte: Proveedores de Servicios; Autoridades Gubernamentales Locales, Estatales o Federales u Otras Entidades con Autoridad Legal; anunciantes externos.</p>
+
+<h4>Aplicaciones Instaladas (Funcionalidad del Lanzador)</h4>
+
+<p>Descripción: La Aplicación accede a información sobre las aplicaciones instaladas en su dispositivo (tal como nombres de aplicaciones, identificadores de paquete e íconos) localmente en su dispositivo a fin de mostrar, organizar, buscar y abrir sus aplicaciones — la función principal de un lanzador. No vendemos inventarios de aplicaciones instaladas ni los compartimos para la monetización de publicidad o de analítica, y estos y sus derivados están excluidos de los conjuntos de datos anonimizados descritos en esta Política de Privacidad.</p>
+
+<p>Fuente: Se accede localmente en su dispositivo para proporcionar la funcionalidad del lanzador.</p>
+
+<p>Fin(es) de Negocio o Comercial(es): Proporcionarle los Servicios.</p>
+
+<p>Categoría de Terceros con los que se Comparte: No se vende; no se comparte para la monetización de publicidad o de analítica.</p>
+
+<h4>Información de Salud y Actividad Física</h4>
+
+<p>Descripción: Consulte Datos de Salud y Actividad Física más arriba. Esta información se trata únicamente en su dispositivo, nunca se transmite a nosotros ni a nadie más, y nunca se vende, se comparte ni se usa para publicidad, analítica o entrenamiento de IA.</p>
+
+<p>Fuente: Health Connect de Android y/o sensores del dispositivo, con su permiso.</p>
+
+<p>Fin(es) de Negocio o Comercial(es): Únicamente visualización dentro de la Aplicación.</p>
+
+<p>Categoría de Terceros con los que se Comparte: Ninguna.</p>
+
+<h3>Parte 2. Información Recopilada Mediante Tecnología</h3>
+
+<p>Para hacer que los Servicios le sean más útiles, los Servicios usan tecnología para recopilar automáticamente cierta información, incluida, entre otras:</p>
+
+<h4>Información de Ubicación</h4>
+
+<p>Descripción: La Aplicación puede recopilar, transferir y usar información sobre la ubicación aproximada de su dispositivo para brindar una experiencia más personalizada y pertinente, incluida publicidad pertinente a la ubicación suministrada por socios externos. Esta información de ubicación aproximada puede derivarse de su dirección IP o de datos de ubicación poco precisa del dispositivo. Ciertas funciones (tales como el clima) también pueden solicitar el permiso de ubicación precisa (fina) de su dispositivo; si usted lo concede, la ubicación precisa se usa para proporcionar la función (por ejemplo, para devolver el clima local), no se vende y nunca se incluye en los conjuntos de datos anonimizados descritos en esta Política de Privacidad. La publicidad usa, como máximo, la ubicación aproximada, según se describe en esta Política de Privacidad y con sujeción a sus elecciones de consentimiento. Se le dará la opción de compartir información de ubicación cuando la Aplicación la solicite por primera vez. Si usted opta por aceptar compartir su información de ubicación, la Aplicación permitirá que Airfind y terceros recopilen, transfieran y usen la información de ubicación aproximada de su dispositivo. Airfind no garantiza la exactitud ni la integridad de la información de ubicación suministrada a través de la Aplicación, y cualquier servicio basado en la ubicación puede verse interrumpido o fallar debido a factores ambientales o técnicos. Usted puede optar por excluirse de la futura recopilación, transferencia y uso de información de ubicación a través de la configuración de su dispositivo.</p>
+
+<p>Fuente: Nuestros Servicios usan tecnología para recopilar automáticamente esta información.</p>
+
+<p>Fin(es) de Negocio o Comercial(es): Proporcionarle los Servicios; Dirigirle Anuncios y Contenido; Mantener la Calidad y la Integridad de la Aplicación y de los Servicios; Investigación Interna para el Desarrollo Tecnológico y de Productos; Identificar y Reparar Errores; Detectar y Prevenir Incidentes de Seguridad y Fraude; Auditar Interacciones Digitales.</p>
+
+<p>Categoría de Terceros con los que se Comparte: Proveedores de Servicios; Autoridades Gubernamentales Locales, Estatales o Federales u Otras Entidades con Autoridad Legal; anunciantes externos.</p>
+
+<h4>Detalles de Uso</h4>
+
+<p>Descripción: Los Servicios pueden recopilar automáticamente ciertos detalles de su acceso a los Servicios y de su uso de ellos, incluidos datos de tráfico, interacción con anuncios, información de flujo de clics (que es el registro de las partes de la pantalla o de la Aplicación en las que usted hace clic), términos de búsqueda, visualizaciones de contenido y fecha y hora de uso/visita.</p>
+
+<p>Fuente: Nuestros Servicios usan tecnología para recopilar automáticamente esta información.</p>
+
+<p>Fin(es) de Negocio o Comercial(es): Proporcionarle los Servicios; Dirigirle Anuncios y Contenido; Mantener la Calidad y la Integridad de la Aplicación y de los Servicios; Investigación Interna para el Desarrollo Tecnológico y de Productos; Identificar y Reparar Errores; Detectar y Prevenir Incidentes de Seguridad y Fraude; Auditar Interacciones Digitales.</p>
+
+<p>Categoría de Terceros con los que se Comparte: Proveedores de Servicios; Autoridades Gubernamentales Locales, Estatales o Federales u Otras Entidades con Autoridad Legal; anunciantes externos.</p>
+
+<h4>Información de la Computadora o del Dispositivo</h4>
+
+<p>Descripción: Los Servicios pueden recopilar información sobre su computadora o dispositivo móvil y su conexión a internet, incluidos el identificador único de publicidad (Ad ID) de un dispositivo, la dirección IP, el sistema operativo, la información de la red móvil, el tipo de conexión de red (p. ej., WiFi, celular), el número de teléfono de un dispositivo, otros identificadores de dispositivo, y el modelo, el fabricante y el tipo de dispositivo.</p>
+
+<p>Fuente: Nuestros Servicios usan tecnología para recopilar automáticamente esta información.</p>
+
+<p>Fin(es) de Negocio o Comercial(es): Proporcionarle la Aplicación y los Servicios; Dirigirle Anuncios y Contenido; Mantener la Calidad y la Integridad de la Aplicación y de los Servicios; Investigación Interna para el Desarrollo Tecnológico y de Productos; Identificar y Reparar Errores; Detectar y Prevenir Incidentes de Seguridad y Fraude; Auditar Interacciones Digitales.</p>
+
+<p>Categoría de Terceros con los que se Comparte: Proveedores de Servicios; Autoridades Gubernamentales Locales, Estatales o Federales u Otras Entidades con Autoridad Legal; anunciantes externos.</p>
+</div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="../../assets/logo.png" alt="Omni Home" style="height: 34px; width: auto; margin-bottom: 20px;">
+      <p>Comprehensive Android solutions for carriers, OEMs, and the people who use their devices every day.</p>
+    </div>
+    <div>
+      <h5>Product</h5>
+      <ul>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#carriers">Carriers &amp; OEMs</a></li>
+        <li><a href="/#content">Content Home Apps</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="/privacy-policy/es/">Política de Privacidad</a></li>
+        <li><a href="/terms-conditions/es/">Términos y Condiciones</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>&copy; 2026 Omni Home. All rights reserved.</span>
+    <span>Built for the home screen.</span>
+  </div>
+</footer>
+
+<script>
+  // ─── Nav scrolled state ───
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+</script>
+</body>
+</html>

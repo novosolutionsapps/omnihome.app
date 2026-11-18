@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Termos e Condições — Omni Home</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon-192.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="https://omnihome.app/terms-conditions/pt/">
+<link rel="alternate" hreflang="en" href="https://omnihome.app/terms-conditions/">
+<link rel="alternate" hreflang="es" href="https://omnihome.app/terms-conditions/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://omnihome.app/terms-conditions/pt/">
+<link rel="alternate" hreflang="x-default" href="https://omnihome.app/terms-conditions/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B1420;
+    --bg-alt: #0F1A2A;
+    --surface: #131F31;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+    --ink: #F4F1EB;
+    --ink-dim: #A9B2C0;
+    --ink-mute: #6B7788;
+    --accent: #3C8BFF;
+    --accent-glow: rgba(60, 139, 255, 0.35);
+    --display: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+    --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --gutter: clamp(24px, 4vw, 64px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: var(--sans); font-weight: 300; font-size: 16px;
+    line-height: 1.55; letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  img, video { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+  /* ─── Nav ─── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px var(--gutter);
+    display: flex; align-items: center; justify-content: space-between;
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    background: color-mix(in oklab, var(--bg) 72%, transparent);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s ease;
+  }
+  .nav.scrolled { border-bottom-color: var(--border); }
+  .nav-logo { display: flex; align-items: center; height: 26px; }
+  .nav-logo img { height: 100%; width: auto; display: block; }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a {
+    font-size: 13px; color: var(--ink-dim); letter-spacing: 0.01em;
+    transition: color .15s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* ─── Page header ─── */
+  .page-header {
+    padding: clamp(140px, 18vh, 220px) var(--gutter) clamp(60px, 8vh, 100px);
+    position: relative;
+  }
+  .page-header-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .page-header .eyebrow {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-dim);
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px;
+  }
+  .page-header .eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--accent);
+  }
+  .page-header h1 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.98; letter-spacing: -0.03em;
+    text-wrap: balance;    margin-bottom: 24px;
+  }
+  .page-header .lead {
+    font-size: clamp(16px, 1.15vw, 18px);
+    line-height: 1.55; color: var(--ink-dim);
+    max-width: 60ch;
+  }
+
+  /* ─── Legal content ─── */
+  .legal-content {
+    padding: 0 var(--gutter) clamp(80px, 12vh, 160px);
+  }
+  .legal-content-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .legal-content h2 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 28px; line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-top: 48px; margin-bottom: 16px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+  .legal-content h2:first-child {
+    margin-top: 0; padding-top: 0; border-top: none;
+  }
+  .legal-content h3 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 22px; line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-top: 36px; margin-bottom: 12px;
+  }
+  .legal-content h4 {
+    font-family: var(--display); font-weight: 500;
+    font-size: 18px; line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-top: 28px; margin-bottom: 10px;
+  }
+  .legal-content p {
+    font-size: 15px; line-height: 1.65;
+    color: var(--ink-dim);
+    margin-bottom: 16px;
+  }
+  .legal-content p strong {
+    color: var(--ink); font-weight: 500;
+  }
+  .legal-content ul {
+    list-style: none;
+    padding: 0; margin: 0 0 16px 0;
+  }
+  .legal-content li {
+    font-size: 15px; line-height: 1.65;
+    color: var(--ink-dim);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+  .legal-content li::before {
+    content: "";
+    position: absolute; left: 0; top: 10px;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0;
+  }
+  .legal-content li strong {
+    color: var(--ink); font-weight: 500;
+  }
+  .legal-content a {
+    color: var(--accent);
+    transition: color .15s;
+  }
+  .legal-content a:hover {
+    color: var(--ink);
+  }
+
+  /* ─── Tables ─── */
+  .table-wrap { overflow-x: auto; margin: 0 0 16px; }
+  .legal-content table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  .legal-content th, .legal-content td {
+    border: 1px solid var(--border-strong); padding: 10px 12px;
+    text-align: left; vertical-align: top; color: var(--ink-dim); line-height: 1.5;
+  }
+  .legal-content th { color: var(--ink); font-weight: 500; background: var(--surface); }
+
+  /* ─── Footer ─── */
+  footer {
+    padding: 80px var(--gutter) 48px;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 48px; padding-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+  }
+  .footer-top h5 {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-mute);
+    margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-top ul { list-style: none; }
+  .footer-top li { margin-bottom: 12px; }
+  .footer-top a { font-size: 14px; color: var(--ink-dim); transition: color .15s; }
+  .footer-top a:hover { color: var(--ink); }
+  .footer-brand p { font-size: 14px; color: var(--ink-dim); max-width: 32ch; }
+  .footer-bot {
+    padding-top: 32px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    color: var(--ink-mute);
+  }
+  .footer-bot a { color: var(--ink-mute); }
+  .footer-bot a:hover { color: var(--ink); }
+  @media (max-width: 820px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+
+  /* ─── Language switcher ─── */
+  .lang-switch {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .lang-switch a {
+    padding: 8px 14px; border: 1px solid var(--border-strong); border-radius: 999px;
+    color: var(--ink-dim); transition: color .15s, border-color .15s;
+  }
+  .lang-switch a:hover { color: var(--ink); border-color: var(--ink-dim); }
+  .lang-switch a[aria-current="true"] { color: var(--ink); border-color: var(--accent); }
+  .translation-notice {
+    font-size: 14px; line-height: 1.6; color: var(--ink-dim);
+    border: 1px solid var(--border-strong); border-left: 2px solid var(--accent);
+    background: var(--surface); border-radius: 6px; padding: 14px 18px; margin-bottom: 40px;
+  }
+
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo" aria-label="Omni Home"><img src="../../assets/logo.png" alt="Omni Home"></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/#services">Services</a>
+    <a href="/#content">Content Home Apps</a>
+    <a href="/#carriers">Carriers &amp; OEMs</a>
+    <a href="/contact/">Contact</a>
+  </div>
+  <a href="/contact/" class="nav-cta">Get in touch &rarr;</a>
+</nav>
+
+<!-- ─── PAGE HEADER ─── -->
+<header class="page-header">
+  <div class="page-header-inner reveal">
+    <div class="eyebrow">Legal</div>
+    <h1>Termos e Condições</h1>
+    <p class="lead">Vigente a partir de 20 de outubro de 2026</p>
+    <nav class="lang-switch" aria-label="Idioma">
+      <a href="/terms-conditions/" lang="en" hreflang="en">English</a>
+      <a href="/terms-conditions/es/" lang="es" hreflang="es">Español</a>
+      <a href="/terms-conditions/pt/" lang="pt-BR" hreflang="pt-BR" aria-current="true">Português</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ─── LEGAL CONTENT ─── -->
+<main class="legal-content">
+  <div class="legal-content-inner">
+
+<p class="translation-notice">Esta tradução para o português é fornecida apenas para sua conveniência. Em caso de divergência entre esta tradução e a <a href="/terms-conditions/" lang="en" hreflang="en">versão em inglês</a>, prevalecerá a versão em inglês, na medida permitida pela lei aplicável.</p>
+
+<div class="reveal">
+<p>Estes Termos de Serviço (estes “Termos” ou este “Contrato”) regem o seu uso deste aplicativo móvel (o “Aplicativo” ou “App”) oferecido a você pela Airfind Corp., que opera sob o nome Omni Home Apps (“Airfind”, “Empresa”, “nós” ou “nos”), e dos demais sites, aplicativos móveis, e-mails, perfis em redes sociais e outras ofertas on-line disponibilizados por nós que contenham um link para estes Termos (coletivamente, “Serviços”). Estes Termos incorporam a nossa Política de Privacidade por referência. Estes Termos são um contrato juridicamente vinculante entre você e nós. Estes Termos consistem em uma seção global que se aplica a todos os usuários e nos Suplementos Regionais dos Termos constantes da Seção 18, que modificam estes Termos para usuários de determinados países e regiões. Se um Suplemento Regional dos Termos conflitar com qualquer outra disposição destes Termos, o suplemento prevalecerá para os usuários daquela região.</p>
+
+<p>OFERECEMOS NOSSOS SERVIÇOS A VOCÊ SOB A CONDIÇÃO DE QUE VOCÊ ACEITE ESTES TERMOS SEM MODIFICAÇÃO OU EXCEÇÃO. LEIA ESTES TERMOS COM ATENÇÃO. A SUA AÇÃO AFIRMATIVA OU O SEU CONSENTIMENTO PARA BAIXAR, INSTALAR E/OU USAR NOSSOS SERVIÇOS CONSTITUI A SUA ACEITAÇÃO DESTES TERMOS. ESTES TERMOS CONTÊM ISENÇÕES DE GARANTIAS E DE RESPONSABILIDADE. ESSAS DISPOSIÇÕES CONSTITUEM UMA BASE ESSENCIAL DO NOSSO ACORDO. SE VOCÊ NÃO CONCORDAR COM ESTES TERMOS, VOCÊ ESTÁ PROIBIDO DE USAR NOSSOS SERVIÇOS. SE O APLICATIVO VEIO PRÉ-INSTALADO NO SEU DISPOSITIVO, VOCÊ ACEITA ESTES TERMOS QUANDO CRIA UMA CONTA OU, DE OUTRA FORMA, USA PELA PRIMEIRA VEZ O APLICATIVO OU OS SERVIÇOS DEPOIS QUE ESTES TERMOS LHE SÃO APRESENTADOS, E NÃO MERAMENTE PORQUE O APLICATIVO ESTÁ PRESENTE NO SEU DISPOSITIVO. SE VOCÊ NÃO CONCORDAR, NÃO CRIE UMA CONTA E NÃO USE O APLICATIVO, E VOCÊ PODERÁ DESINSTALÁ-LO OU DESATIVÁ-LO A QUALQUER MOMENTO.</p>
+
+<p>OBSERVE QUE A SEÇÃO 9 DESTES TERMOS INCLUI TANTO UMA CLÁUSULA DE ARBITRAGEM QUANTO UMA RENÚNCIA A AÇÕES COLETIVAS. SE VOCÊ RESIDE NOS ESTADOS UNIDOS, AO ACEITAR ESTES TERMOS, VOCÊ CONCORDA (A) EM RESOLVER TODAS AS DISPUTAS CONOSCO POR MEIO DE ARBITRAGEM INDIVIDUAL VINCULANTE (RENUNCIANDO A QUALQUER DIREITO QUE VOCÊ POSSA TER DE QUE QUAISQUER DISPUTAS QUE VOCÊ TENHA CONOSCO OU REIVINDICAÇÕES CONTRA NÓS SEJAM DECIDIDAS POR UM JUIZ OU JÚRI), E (B) EM RENUNCIAR AO SEU DIREITO DE PARTICIPAR DE AÇÕES COLETIVAS, ARBITRAGENS COLETIVAS OU AÇÕES REPRESENTATIVAS. VOCÊ TEM O DIREITO DE OPTAR POR NÃO PARTICIPAR DA ARBITRAGEM, CONFORME EXPLICADO NA SEÇÃO 9. SE VOCÊ RESIDE FORA DOS ESTADOS UNIDOS, A SEÇÃO 9 SE APLICA A VOCÊ SOMENTE NA MEDIDA PERMITIDA PELAS LEIS IMPERATIVAS DO SEU PAÍS DE RESIDÊNCIA, E OS SUPLEMENTOS REGIONAIS DOS TERMOS CONSTANTES DA SEÇÃO 18 PRESERVAM O SEU DIREITO DE APRESENTAR REIVINDICAÇÕES PERANTE OS TRIBUNAIS LOCAIS E PERANTE AS AUTORIDADES LOCAIS DE DEFESA DO CONSUMIDOR, QUANDO ESSE DIREITO FOR GARANTIDO POR LEI.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-1-our-services-rights-restrictions-and-licenses">Seção 1. Nossos Serviços; Direitos; Restrições e Licenças.</h2>
+
+<p>(a) Salvo se apresentado de outra forma no momento em que um determinado Serviço for disponibilizado para o seu uso, todos os nossos Serviços são fornecidos a você gratuitamente, desde que você cumpra estes Termos. A natureza dos Serviços oferecidos é descrita a você no momento em que você acessa tais Serviços. Ao usar nossos Serviços, você reconhece e concorda que tais Serviços contêm nosso próprio conteúdo proprietário, bem como conteúdo fornecido por terceiros (coletivamente, “Conteúdo”). Embora nos esforcemos para fornecer Serviços úteis, precisos e atualizados, não garantimos a precisão, a integridade ou a qualidade dos Serviços ou de qualquer Conteúdo. Além disso, você reconhece e concorda que poderá ser exposto a Conteúdo que considere ofensivo, indecente ou censurável, ou que seja impreciso ou desatualizado. Você concorda em arcar com todos os riscos associados ao uso de nossos Serviços e de tal Conteúdo, incluindo a exposição a Conteúdo por meio de tais Serviços. Se você não gostar de nossos Serviços ou Conteúdo ou os considerar ofensivos, o seu único recurso é cessar imediatamente o uso dos Serviços e o acesso ao Conteúdo. Mantemos o direito, mas não a obrigação, de remover qualquer Conteúdo que, a nosso exclusivo critério, determinemos que viola estes Termos ou que seja de outra forma censurável, a qualquer momento e por qualquer motivo.</p>
+
+<p>(b) Você reconhece e concorda que todo o Conteúdo disponibilizado nos Serviços ou por meio deles é protegido pelos direitos de propriedade intelectual aplicáveis, incluindo, sem limitação, a legislação de direitos autorais e/ou de marcas. Para fins de clareza, tal Conteúdo pode incluir, sem limitação, fotografias, marcas, logotipos, conteúdo escrito, ilustrações, elementos gráficos, imagens, clipes de som ou de vídeo e animação em Flash, sejam de nossa propriedade ou de terceiros com os quais temos relacionamento. Em nenhuma circunstância você poderá modificar, vender, licenciar, transferir, publicar, transmitir, reproduzir, criar obras derivadas, distribuir, executar publicamente, exibir publicamente ou de qualquer forma explorar qualquer Conteúdo ou qualquer aspecto de nossos Serviços, no todo ou em parte. Você reconhece e concorda que os Serviços, quaisquer cópias deles (incluindo, sem limitação, qualquer cópia que você baixe, instale ou use no seu computador pessoal ou dispositivo(s) móvel(is)) e todos os direitos autorais, patentes, marcas, identidade de marca ou logotipos usados nos Serviços, segredos comerciais, código-fonte e código-objeto, formato, diretórios, consultas, algoritmos, estrutura e organização dos Serviços e outros direitos de propriedade intelectual e direitos sobre informações proprietárias e confidenciais a eles associados são, e continuarão sendo, de propriedade da Airfind ou de nossos licenciantes. A Airfind e nossos licenciantes reservam-se o direito de alterar, suspender, encerrar, remover, impor limites ao uso ou ao acesso, desativar o acesso ou exigir a devolução dos Serviços (ou de qualquer cópia deles) a qualquer momento, sem aviso prévio, e não terão qualquer responsabilidade por fazê-lo. Exceto conforme expressamente autorizado pela Airfind neste instrumento, não são concedidos a você quaisquer direitos de propriedade intelectual sobre os Serviços por implicação, estoppel ou outra teoria jurídica, e todos os direitos sobre os Serviços não expressamente concedidos neste Contrato ficam, por meio deste, reservados e retidos pela Airfind e por nossos licenciantes.</p>
+
+<p>(c) Sujeito ao seu cumprimento destes Termos, concedemos a você um direito e uma licença individuais e pessoais, revogáveis, intransferíveis, não cedíveis e não exclusivos (a “Licença”) para instalar e usar uma cópia do Aplicativo, em código-objeto executável, e para acessar e usar os Serviços e o Conteúdo para o seu próprio uso pessoal nos países em que o Aplicativo é oferecido para download ou vem pré-instalado em um dispositivo (coletivamente, o “Território”). Os países atualmente incluídos no Território são identificados no Aplicativo ou na página aplicável da loja de aplicativos. Qualquer uso dos Serviços e do Conteúdo que não seja para o seu próprio uso e fruição pessoais é estritamente proibido e constituirá uma violação destes Termos. Se você baixar e usar o Aplicativo fora do Território, talvez não consiga abrir uma conta para o Aplicativo ou usar algumas de suas funcionalidades.</p>
+
+<p>(d) Em alguns casos, podemos exigir cadastro antes do uso de nossos Serviços. Se solicitarmos informações de cadastro a você, você nos fornecerá informações verdadeiras, precisas, atuais e completas. Você atualizará prontamente o seu cadastro para mantê-lo preciso, atual e completo. Se emitirmos uma senha para você, você não poderá revelá-la a mais ninguém. Você não poderá usar a senha de outra pessoa. Você é responsável por manter a confidencialidade de suas contas e senhas. Você concorda em nos notificar imediatamente sobre qualquer uso não autorizado de suas senhas ou contas ou sobre qualquer outra violação de segurança. Você também concorda em sair de suas contas ao final de cada sessão. Não seremos responsáveis por qualquer perda ou dano que possa resultar caso você deixe de cumprir esses requisitos. Você está autorizado a ter apenas uma (1) conta. Se você abrir mais de uma conta, poderemos cancelar todas as suas contas, a nosso critério.</p>
+
+<p>(e) Alguns de nossos Serviços podem estar sujeitos a termos e/ou condições adicionais publicados por nós. O seu uso desses Serviços está sujeito a esses termos e/ou condições adicionais, que ficam, por meio deste, incorporados a estes Termos por referência. Em caso de qualquer conflito ou inconsistência entre estes Termos e quaisquer termos e/ou condições adicionais publicados por nós, as disposições de tais termos e/ou condições adicionais prevalecerão com relação ao Serviço específico ao qual se aplicam. Os termos ou condições de qualquer terceiro não modificarão nem substituirão estes Termos na relação entre você e a Airfind.</p>
+
+<p>(f) O seu uso do Aplicativo também pode ser regido por termos e condições exigidos (i) pelo fabricante e por outros fornecedores do(s) seu(s) dispositivo(s) móvel(is) e de seus componentes de hardware e software, incluindo o seu sistema operacional; e (ii) pela loja on-line ou outro distribuidor aplicável por meio do qual você obtém o Aplicativo ((i) e (ii) sendo coletivamente denominados os “Contratos Relacionados”). Nenhum Contrato Relacionado, contudo, terá o efeito de limitar, onerar ou de outra forma restringir os direitos e recursos da Airfind ou as suas obrigações nos termos destes Termos, incluindo a Licença aqui estabelecida, nem de renunciar a quaisquer restrições aos seus direitos de usar o Aplicativo nos termos da Licença. A Licença não terá o efeito de limitar, onerar ou de outra forma restringir os direitos e recursos da Airfind ou as suas obrigações nos termos de qualquer outro contrato entre você e a Airfind, nem de renunciar a quaisquer restrições aos seus direitos nos termos de qualquer contrato desse tipo.</p>
+
+<p>(g) Ao usar os Serviços, você declara, garante e concorda que está usando os Serviços exclusivamente para o seu próprio uso pessoal e não para redistribuição ou transferência de qualquer natureza. Você concorda em cumprir as regras e políticas estabelecidas periodicamente pela Airfind relativas ao seu uso dos Serviços. Tais regras e políticas podem incluir, por exemplo, atualizações, modificações e/ou reinstalações obrigatórias ou automatizadas do Aplicativo e a obtenção de correções disponíveis para tratar de questões de segurança, interoperabilidade ou desempenho. Se, a qualquer momento após avaliar o Aplicativo, você desejar encerrar a licença, você deverá desinstalar e remover o Aplicativo do(s) seu(s) dispositivo(s) móvel(is) e excluir qualquer cópia em seu poder.</p>
+
+<p>(h) Alguns dos Serviços que oferecemos podem exigir que você pague uma tarifa ou cobrança, conforme descrito nas condições específicas incluídas no local em que esses Serviços são oferecidos. Você concorda em pagar todas as tarifas e cobranças em que incorrer. Salvo indicação em contrário, todas as referências monetárias são em dólares dos Estados Unidos. Podemos, mediante aviso se exigido pelas leis aplicáveis, a qualquer momento alterar o valor ou a base de cálculo de qualquer tarifa ou cobrança, ou instituir novas tarifas ou cobranças. Todas as tarifas e cobranças são devidas de acordo com as condições de pagamento em vigor no momento em que a tarifa ou a cobrança se tornar devida. Ao usar nossos Serviços pagos e/ou clicar no botão “Eu Concordo” ou em consentimento afirmativo semelhante em qualquer pedido que você enviar para nossos Serviços, você concorda em ficar vinculado a estes Termos e autoriza a Empresa a debitar no seu cartão de crédito o valor do pagamento indicado com relação aos Serviços que você está adquirindo. Ao clicar em “Eu Concordo”, você nos autoriza a usar tal consentimento em substituição à sua assinatura física e concorda que, ao clicar em “Eu Concordo”, você é responsável por cumprir estes Termos. Uma cópia eletrônica da sua aceitação destes Termos será armazenada em nossos sistemas e será usada para confirmar à administradora do seu cartão de crédito e/ou ao seu banco a sua aceitação da cobrança do pagamento. Quando uma compra ou assinatura for feita por meio de uma loja de aplicativos (como o Google Play), a loja de aplicativos processa o pagamento de acordo com os seus próprios termos, nós não coletamos nem armazenamos as suas credenciais de pagamento, e qualquer assinatura será renovada automaticamente, a menos que você a cancele por meio da sua conta na loja de aplicativos antes da data de renovação; desinstalar o Aplicativo não cancela uma assinatura.</p>
+
+<p>(i) Os Serviços podem conter links para outros sites e serviços da Internet pertencentes a terceiros. O seu uso de cada um desses sites e serviços está sujeito às condições, se houver, que cada um desses sites tenha publicado. Você reconhece e concorda que não temos controle sobre sites que não são nossos e que não somos responsáveis por quaisquer alterações neles e/ou pelo conteúdo neles existente. A nossa inclusão de qualquer Conteúdo de terceiros ou de um link para um site ou serviço de terceiros não é um endosso de tal conteúdo de terceiros ou site de terceiros. A sua correspondência ou as suas atividades relacionadas com terceiros, incluindo transações de pagamento e transações de entrega de mercadorias, ocorrem exclusivamente entre você e esse terceiro. Você concorda que não seremos responsáveis por qualquer perda ou dano de qualquer natureza incorrido como resultado de qualquer de suas transações com terceiros. Quaisquer perguntas, reclamações ou reivindicações relacionadas a qualquer produto ou serviço devem ser dirigidas ao terceiro apropriado.</p>
+
+<p>(j) A Airfind pode lançar versões atualizadas do App periodicamente. Determinados recursos do App podem estar disponíveis somente com o uso da versão mais atualizada do App. Além disso, as informações contidas em versões do App que não sejam a versão mais atualizada podem não ser precisas. Recomendamos que você atualize prontamente o App quando novas versões forem lançadas.</p>
+
+<p>(k) Você é responsável por obter acesso aos Serviços e é responsável por pagar quaisquer tarifas de terceiros associadas a tal acesso. Você também é responsável por pagar a sua conta de serviços de telefonia móvel e por todas as tarifas padrão de dados e tarifas padrão de mensagens que possam ser aplicáveis. Além disso, se você estiver viajando fora da sua área de cobertura doméstica, a sua operadora de telefonia móvel poderá cobrar tarifas de roaming internacional ao baixar/transmitir conteúdo dos Serviços. Além disso, você deve providenciar todo o equipamento necessário para acessar os Serviços e é responsável por ele.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-2-your-content">Seção 2. Seu Conteúdo.</h2>
+
+<p>(a) Você é o único responsável por todos os materiais, sejam publicados publicamente ou transmitidos de forma privada, que você carregar, publicar, enviar por e-mail, transmitir ou de outra forma disponibilizar nos Serviços ou por meio deles (“Seu Conteúdo”). Você certifica que é titular de todos os direitos de propriedade intelectual sobre o Seu Conteúdo. Você, por meio deste, concede a nós, às nossas afiliadas e aos nossos parceiros uma licença mundial, irrevogável, isenta de royalties, não exclusiva e sublicenciável para usar, reproduzir, criar obras derivadas, distribuir, executar publicamente, exibir publicamente, transferir, transmitir, distribuir e publicar o Seu Conteúdo e versões subsequentes do Seu Conteúdo para os fins de (i) perseguir os nossos interesses comerciais, (ii) distribuir o Seu Conteúdo, seja eletronicamente ou por outros meios, a terceiros que procurem baixá-lo ou de outra forma adquiri-lo, (iii) cumprir as leis aplicáveis ou processo judicial e responder a reivindicações de terceiros nos termos da Seção 2(d) deste instrumento, (iv) fazer cumprir estes Termos, e/ou (v) armazenar o Seu Conteúdo em um banco de dados remoto acessível por terceiros. Esta licença se aplicará à distribuição e ao armazenamento do Seu Conteúdo em qualquer forma, meio ou tecnologia atualmente conhecidos ou desenvolvidos posteriormente.</p>
+
+<p>(b) Se você acreditar que o Seu Conteúdo foi copiado e tornado acessível por meio dos Serviços e/ou como parte do Conteúdo de uma maneira que viole os seus direitos de propriedade intelectual, você poderá enviar uma notificação de reivindicação ao nosso agente de direitos autorais designado: Airfind Corp., Attn: Copyright Agent, 3401 N. Miami Avenue, Suite 230, Miami, FL 33127; telefone (310) 499-4211; e-mail Support@OmniHome.app.</p>
+
+<p>(c) Esteja ciente de que, nos termos do 17 U.S.C. 512(f), ao fazer conscientemente uma declaração falsa relevante de que material ou atividade on-line é infrator ou de que material ou atividade foi removido ou desativado por engano ou identificação incorreta, você poderá estar sujeito a pesadas penalidades civis. Essas penalidades incluem indenização pecuniária, incluindo custas e honorários advocatícios, incorridos pelo suposto infrator, por qualquer titular de direitos autorais ou licenciado autorizado do titular de direitos autorais, ou por um provedor de serviços que seja prejudicado pela sua declaração falsa. Qualquer notificação de reivindicação de violação de direitos autorais DEVE incluir, no mínimo, (1) a identificação adequada do material supostamente infrator ou que seja objeto da atividade supostamente infratora, juntamente com uma exigência de que tal material supostamente infrator seja removido ou tenha o acesso desativado, juntamente com informações suficientes para que a Empresa localize adequadamente o material; (2) a identificação da obra protegida por direitos autorais que se alega ter sido violada ou, se várias obras protegidas por direitos autorais em um único Serviço forem abrangidas por uma única notificação, uma lista representativa de tais obras disponíveis nesse Serviço; (3) uma declaração de que você acredita de boa-fé que o uso do material da maneira reclamada não é autorizado pelo titular dos direitos autorais, por seu agente ou pela lei; (4) uma declaração de que as informações contidas na notificação são precisas e, sob pena de perjúrio, de que você está autorizado a agir em nome do titular de um direito exclusivo supostamente violado; (5) informações razoavelmente suficientes para permitir que a Empresa entre em contato com você, tais como endereço, número de telefone e, se disponível, um endereço de e-mail pelo qual você possa ser contatado; e (6) uma assinatura física ou eletrônica de uma pessoa autorizada a agir em nome do titular da obra supostamente violada (os “Requisitos da Notificação”). Se os Requisitos da Notificação não forem atendidos, a Empresa poderá desconsiderar a notificação nos termos do 17 U.S.C. 512(c)(3).</p>
+
+<p>(d) Na medida em que removermos os seus materiais em decorrência de reclamações de outra pessoa nos termos desta Seção 2, poderemos notificá-lo desse fato e forneceremos a você o endereço de e-mail da parte reclamante para que você possa tentar resolver a questão. Você poderá contestar tal determinação por escrito ao nosso agente designado, em comunicação que deve conter as seguintes informações, nos termos do 17 U.S.C. 512(g)(3): (1) a sua assinatura física ou eletrônica; (2) a identificação do material que foi removido ou cujo acesso foi desativado e o local em que o material aparecia antes de ser removido ou de ter o acesso desativado; (3) uma declaração, sob pena de perjúrio, de que você acredita de boa-fé que o material foi removido ou desativado em decorrência de engano ou identificação incorreta do material a ser removido ou desativado; e (4) o seu nome, endereço e número de telefone, e uma declaração de que você consente com a jurisdição do Tribunal Distrital Federal do distrito judicial em que o endereço está localizado ou, se o seu endereço for fora dos Estados Unidos, de qualquer distrito judicial em que o provedor de serviços possa ser encontrado, e de que você aceitará a citação feita pela pessoa que apresentou a notificação nos termos da subseção 17 U.S.C. 512(c)(1)(C) ou por um agente de tal pessoa.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-3-communications-to-you">Seção 3. Comunicações a Você.</h2>
+
+<p>Você entende e concorda que, ao utilizar nossos Serviços, você concorda em receber comunicações nossas, incluindo e-mails, notificações push, mensagens de texto (quando você tiver fornecido qualquer consentimento exigido pela lei aplicável) e outras formas de comunicação, a respeito de nossos Serviços e de outras ofertas comerciais de terceiros. Você entende e concorda, ainda, que nossos Serviços podem incluir comunicações nossas ou de nossos parceiros a você e que essas comunicações são consideradas parte dos Serviços. Para optar por não receber comunicações de marketing nossas por e-mail, envie-nos um e-mail para Support@OmniHome.app ou clique no link “cancelar inscrição” na parte inferior de qualquer comunicação que você receber de nós. Esteja ciente de que não controlamos e não podemos controlar as políticas de quaisquer terceiros que distribuam quaisquer comunicações a você.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-4-privacy-policy">Seção 4. Política de Privacidade.</h2>
+
+<p>Ao usar qualquer de nossos Serviços, você concorda com os termos da nossa Política de Privacidade, que contém informações sobre as políticas e práticas da Airfind a respeito dos tipos de informações que podemos coletar de você ou que você pode fornecer quando visita qualquer de nossos Serviços e sobre as nossas práticas de coleta, uso, manutenção, proteção, venda e divulgação dessas informações. Conforme descrito na Política de Privacidade, os Serviços coletam, usam, mantêm, compartilham, vendem e de outra forma tratam dados pessoais seus, incluindo os seguintes:</p>
+
+<ul>
+  <li>Identificadores. Por exemplo, nome real, pseudônimo, endereço postal, número de telefone, identificador pessoal único, identificador on-line, endereço de Protocolo de Internet, endereço de e-mail ou outros identificadores semelhantes.</li>
+  <li>Atividade na Internet ou em outra rede semelhante. Por exemplo, a sua atividade de navegação e de pesquisa em nossos Serviços e informações sobre a interação de um consumidor com um site, aplicativo ou anúncio; nossos parceiros de publicidade também podem coletar informações sobre a sua atividade em outros sites e aplicativos ao longo do tempo.</li>
+  <li>Dados de geolocalização. Por exemplo, localização física ou movimentos. Coletamos a localização aproximada e, para determinados recursos (como a previsão do tempo) e somente com a sua permissão, a localização precisa, conforme descrito na Política de Privacidade.</li>
+  <li>Informações eletrônicas. Por exemplo, informações que você insere diretamente em nossos Serviços.</li>
+  <li>Informações comerciais. Por exemplo, produtos ou serviços adquiridos, históricos de compras e informações sobre os seus interesses e preferências.</li>
+  <li>Inferências extraídas de outras informações pessoais. Por exemplo, perfil que reflita as preferências, características, tendências psicológicas, predisposições, comportamento, atitudes, inteligência, habilidades e aptidões de uma pessoa.</li>
+</ul>
+
+<p>Algumas de suas informações coletadas a partir dos Serviços serão compartilhadas com terceiros ou permitirão que determinados terceiros coletem, usem e transfiram diretamente tais informações diretamente do seu dispositivo, em cada caso conforme descrito mais especificamente na Política de Privacidade. Se você não concordar com essa coleta, transferência e uso, você não deve usar o Aplicativo e deve desinstalá-lo do seu dispositivo. A coleta, o uso, o compartilhamento, a venda e outros tratamentos das informações coletadas estão diretamente relacionados à funcionalidade dos Serviços e aos benefícios comerciais oferecidos a você por meio dos Serviços.</p>
+
+<p>Para exercer os seus direitos de privacidade, ou para fazer uma pergunta sobre as nossas práticas de privacidade, você pode entrar em contato conosco pelo e-mail Support@OmniHome.app, ligar para (310) 499-4211 ou escrever para Airfind Corp., 3401 N. Miami Avenue, Suite 230, Miami, FL 33127, Attn: Privacy, em cada caso conforme descrito em nossa Política de Privacidade.</p>
+
+<h3>Informações Anonimizadas e Agregadas; Treinamento de IA</h3>
+
+<p>Você reconhece e concorda que podemos criar informações anonimizadas e agregadas a partir de informações tratadas por meio dos Serviços, conforme descrito em nossa Política de Privacidade, e que podemos usar essas informações para qualquer finalidade comercial lícita. Isso inclui usá-las para desenvolver e treinar modelos de inteligência artificial e de aprendizado de máquina, e vender ou licenciar conjuntos de dados anonimizados ou agregados diretamente a empresas selecionadas, incluindo desenvolvedores de IA, para que elas possam desenvolver, treinar, ajustar, testar, avaliar e aprimorar os seus próprios modelos e conduzir pesquisa e desenvolvimento diretamente relacionados. Esses acordos podem gerar receita para nós.</p>
+
+<p>Não vendemos nem licenciamos esses conjuntos de dados a corretores de dados, mercados de conjuntos de dados ou revendedores. Os destinatários estão vinculados por contratos escritos que proíbem tentar reidentificar qualquer pessoa, domicílio ou dispositivo e proíbem vender, sublicenciar ou redistribuir os conjuntos de dados. A seção “Informações Agregadas, Desidentificadas e Anônimas; Treinamento de IA” da Política de Privacidade rege quais informações são elegíveis, as medidas de anonimização que aplicamos, as categorias que nunca são incluídas (como dados de saúde, inventários de aplicativos instalados, conteúdo privado do dispositivo e localização precisa) e as obrigações dos destinatários.</p>
+
+<p>Na medida permitida por lei e sujeito aos direitos de terceiros, retemos todos os direitos, a titularidade e os interesses sobre compilações, estatísticas, análises, conjuntos de dados e modelos anonimizados e agregados criados nos termos desta seção. Você não adquire qualquer participação de propriedade, royalty ou direito a remuneração sobre eles pelo simples fato de que informações relativas ao seu uso dos Serviços contribuíram para eles. Esta disposição não transfere a propriedade dos seus dados pessoais ou do Seu Conteúdo e não implica renúncia a qualquer direito de privacidade que você tenha nos termos da lei aplicável.</p>
+
+<p>Nada nesta seção prevalece sobre os requisitos aplicáveis das lojas de aplicativos ou sobre qualquer compromisso mais rigoroso constante da Política de Privacidade. Quando as informações anonimizadas não mais permitirem a identificação, as contribuições individuais poderão não ser recuperáveis; os seus direitos sobre informações pessoais identificáveis permanecem inalterados.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-5-your-conduct">Seção 5. Sua Conduta.</h2>
+
+<p>(a) A tecnologia e o software subjacentes aos nossos Serviços são de propriedade da Empresa, de nossas afiliadas, operadores, fornecedores, controladoras e/ou parceiros. Você concorda em não vender, licenciar, ceder, distribuir, hospedar, terceirizar, fazer engenharia reversa, copiar, modificar, alugar, arrendar, emprestar, constituir garantia real sobre, ou de outra forma explorar comercialmente e/ou transferir qualquer direito sobre a tecnologia ou o software subjacentes aos Serviços. Você concorda em não modificar o software subjacente aos Serviços de qualquer maneira ou forma, nem usar versões modificadas de tal software, inclusive (sem limitação) com a finalidade de obter acesso não autorizado aos Serviços. Você não acessará os Serviços com o objetivo de criar um produto ou serviço semelhante ou concorrente. Exceto conforme expressamente estabelecido neste instrumento, nenhuma parte dos Serviços pode ser copiada, reproduzida, distribuída, republicada, baixada, exibida, publicada ou transmitida de qualquer forma ou por qualquer meio, incluindo, entre outros, meios eletrônicos, mecânicos, de fotocópia, de gravação ou outros. Você não fará qualquer modificação, adaptação, melhoria, aprimoramento, tradução ou obra derivada dos Serviços. Você não removerá, alterará nem ocultará qualquer aviso de propriedade (incluindo qualquer aviso de direitos autorais ou de marca) ou avisos legais da Airfind ou de nossos licenciantes. Você não usará os Serviços para qualquer finalidade para a qual não tenham sido projetados ou destinados ou que não seja permitida por estes Termos. Você não disponibilizará os Serviços em uma rede ou outro ambiente que permita o acesso ou o uso por vários dispositivos ou usuários ao mesmo tempo. Você não usará quaisquer informações ou interfaces proprietárias da Airfind ou outra propriedade intelectual da Airfind no projeto, desenvolvimento, fabricação, licenciamento ou distribuição de quaisquer aplicativos, acessórios ou dispositivos para uso com os Serviços. Você não contornará, desativará nem adulterará quaisquer componentes relacionados à segurança ou outras medidas de proteção aplicáveis aos Serviços. Qualquer uso dos Serviços que não seja o especificamente autorizado neste instrumento, sem a permissão prévia por escrito da Airfind, é estritamente proibido e extinguirá a Licença.</p>
+
+<p>(b) Sem limitar as proibições estabelecidas na Seção 5(a) acima, você concorda que não usará os Serviços para (i) publicar, postar, carregar, enviar por e-mail, distribuir ou disseminar (coletivamente, “transmitir”) qualquer conteúdo ofensivo, inapropriado, profano, difamatório, infrator, vulgar, sexualmente explícito, obsceno, indecente ou ilícito ou qualquer discurso de ódio (por exemplo, discurso racista/discriminatório); (ii) transmitir arquivos que contenham vírus, arquivos corrompidos, spyware, cavalos de troia, worms, bombas-relógio, cancelbots ou qualquer outro software ou programa semelhante que possa danificar ou afetar adversamente o funcionamento do computador de outra pessoa, dos Serviços, de qualquer software ou hardware ou de equipamentos de telecomunicações; (iii) restringir ou inibir qualquer outro usuário de usar e desfrutar de qualquer aspecto dos Serviços; (iv) interferir nos Serviços, servidores ou redes ou interrompê-los, incluindo, sem limitação, forjar cabeçalhos ou de outra forma manipular identificadores a fim de disfarçar a origem do Seu Conteúdo; (v) fazer-se passar por qualquer pessoa ou entidade, incluindo, entre outros, um representante da Empresa, ou declarar falsamente ou de outra forma deturpar a sua afiliação com uma pessoa ou entidade; (vi) praticar qualquer ato que imponha uma carga excessiva ou desproporcionalmente grande à nossa infraestrutura; (vii) violar os direitos de propriedade intelectual da Empresa e/ou de qualquer terceiro; (viii) tentar reidentificar qualquer pessoa, domicílio ou dispositivo a partir de informações anonimizadas ou agregadas disponibilizadas por meio dos Serviços, ou manipular de forma fraudulenta a publicidade ou a mensuração; (ix) enviar consultas automatizadas a qualquer site ou enviar qualquer e-mail comercial não solicitado, incluindo, sem limitação, qualquer publicidade não solicitada ou não autorizada, materiais promocionais, “lixo eletrônico”, “spam”, “correntes”, “esquemas de pirâmide” ou qualquer outra forma de solicitação; e/ou (x) envolver-se em quaisquer atividades ilegais ou violar qualquer lei, regra ou regulamento aplicável.</p>
+
+<p>(c) O acesso não autorizado aos Serviços constitui uma violação destes Termos e uma violação da lei. Você concorda em não acessar os Serviços por qualquer meio que não seja a interface fornecida por nós para uso no acesso aos Serviços. Você concorda em não usar quaisquer meios automatizados, incluindo, sem limitação, agentes, robôs, scripts ou spiders, para acessar, monitorar ou copiar qualquer parte dos Serviços, exceto os meios automatizados que tenhamos aprovado previamente e por escrito.</p>
+
+<p>(d) Em todos os casos, o uso dos Serviços está sujeito às leis e aos processos legais existentes, e você deve cumprir tais leis e processos legais em todos os momentos. Nada contido nestes Termos limitará o nosso direito de cumprir solicitações ou exigências governamentais, judiciais e de autoridades policiais relativas ao seu uso dos Serviços.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-6-termination-suspension-and-other-company-rights">Seção 6. Rescisão, Suspensão e Outros Direitos da Empresa.</h2>
+
+<p>(a) Temos, em todos os momentos, o direito, sem obrigação, de tomar determinadas medidas com relação aos Serviços e ao seu uso dos Serviços e do Conteúdo, a nosso exclusivo e absoluto critério, a qualquer momento e por qualquer motivo, sem lhe dar qualquer aviso prévio, incluindo, sem limitação, o direito de (i) rescindir, suspender ou de outra forma restringir o seu acesso a todos ou a qualquer parte de nossos Serviços; (ii) remover, recusar ou mover qualquer material que você enviar aos Serviços, por qualquer motivo; (iii) remover, recusar ou mover qualquer Conteúdo que esteja disponível nos Serviços ou por meio deles; (iv) atualizar nossos Serviços, no todo ou em parte; e (v) estabelecer práticas e limites gerais relativos ao uso dos Serviços e do Conteúdo. Você pode suspender o seu uso dos Serviços a qualquer momento e por qualquer motivo e pode rescindir estes Termos excluindo o Aplicativo e cessando todo o uso dos Serviços. Com a rescisão destes Termos, a sua conta e o seu direito de acessar e usar os Serviços serão encerrados imediatamente, juntamente com todos os direitos e benefícios que possam ter sido adquiridos nos termos deles, sem qualquer obrigação adicional. Quando a lei do seu país de residência exigir que lhe demos aviso da suspensão ou do encerramento da sua conta, ou que tenhamos justa causa para tanto, cumpriremos essa lei.</p>
+
+<p>(b) Na máxima medida permitida pela lei aplicável, você concorda que, em nenhuma circunstância, nós ou nossos parceiros, afiliadas, operadores ou controladoras seremos responsáveis perante você ou qualquer terceiro por tomar qualquer das medidas estabelecidas na Seção 6(a) acima, e você concorda, ainda, em abster-se de propor qualquer ação contra nós ou nossas controladoras, afiliadas, operadores ou parceiros por tomarmos qualquer das medidas estabelecidas na Seção 6(a) acima. Esta Seção 6(b) não limita qualquer direito ou recurso que não possa ser objeto de renúncia ou exclusão nos termos das leis do seu país ou estado de residência.</p>
+
+<p>(c) Quaisquer disposições destes Termos que, por sua linguagem expressa ou por seu contexto, se destinem a sobreviver à rescisão destes Termos (incluindo, sem limitação, as disposições que regem indenização, limitações de responsabilidade, isenções de garantia e titularidade de propriedade intelectual) sobreviverão a tal rescisão.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-7-indemnification">Seção 7. Indenização.</h2>
+
+<p>Na máxima medida permitida pela lei aplicável, você, por meio deste, concorda em indenizar, defender e isentar de responsabilidade a Empresa e todos os seus operadores, diretores, conselheiros, proprietários, empregados, agentes, provedores de informações, afiliadas, controladoras, parceiros e licenciantes (coletivamente, as “Partes da Empresa”) com relação a toda e qualquer responsabilidade, perda, custo e despesa (incluindo honorários advocatícios) incorridos por qualquer Parte da Empresa em conexão com qualquer reivindicação, incluindo, entre outras, reivindicações por difamação, violação de direitos de imagem e/ou de privacidade, violação de direitos autorais ou violação de marca decorrentes (i) do seu uso dos Serviços e/ou do Conteúdo; (ii) do conteúdo, da qualidade ou do desempenho do Seu Conteúdo; (iii) da sua conexão com os Serviços e/ou o Conteúdo; (iv) da sua violação destes Termos; ou (v) da sua violação dos direitos de qualquer outra pessoa ou entidade. Reservamo-nos o direito de, às nossas próprias custas, assumir a defesa e o controle exclusivos de qualquer questão pela qual você seja obrigado a nos indenizar, e você concorda em cooperar com a nossa defesa dessas reivindicações. Nada nesta Seção 7 exige que você indenize qualquer Parte da Empresa por responsabilidade decorrente da negligência, do dolo ou da violação da lei por parte dessa própria Parte da Empresa, e esta Seção 7 se aplica a consumidores somente na medida permitida pela lei do país ou estado de residência do consumidor.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-8-disclaimer-no-warranties">Seção 8. Isenção de Responsabilidade; Ausência de Garantias.</h2>
+
+<p>Nós e nossas controladoras, proprietários, agentes, provedores de Conteúdo, empregados, licenciantes, afiliadas e nossos parceiros (i) nos isentamos de qualquer responsabilidade pela exclusão, pela falha no armazenamento, pela entrega incorreta ou pela entrega intempestiva de qualquer informação ou material; (ii) nos isentamos de qualquer responsabilidade por qualquer dano resultante do download ou do acesso aos Serviços e a qualquer Conteúdo acessível pelos Serviços e/ou pelo Conteúdo ou por meio deles; (iii) nos isentamos de qualquer responsabilidade por quaisquer interrupções de serviço causadas pela nossa manutenção nos servidores ou na tecnologia subjacente aos Serviços, por falhas de nossos prestadores de serviços (incluindo fornecedores de telecomunicações, hospedagem e energia), por vírus de computador, desastres naturais ou outra destruição ou dano às nossas instalações, por eventos da natureza, guerra, perturbação civil ou qualquer outra causa fora do nosso controle razoável.</p>
+
+<p>NÃO GARANTIMOS QUE OS SERVIÇOS SERÃO ININTERRUPTOS OU LIVRES DE ERROS. ALÉM DISSO, NÃO OFERECEMOS QUALQUER GARANTIA QUANTO AO CONTEÚDO EXISTENTE NOS SERVIÇOS OU DISPONÍVEL POR MEIO DELES. OS SERVIÇOS E TODO O CONTEÚDO SÃO DISTRIBUÍDOS “NO ESTADO EM QUE SE ENCONTRAM E CONFORME DISPONÍVEIS”. QUALQUER MATERIAL QUE VOCÊ BAIXAR OU DE OUTRA FORMA OBTIVER POR MEIO DOS SERVIÇOS É OBTIDO A SEU PRÓPRIO CRITÉRIO E RISCO, E VOCÊ SERÁ O ÚNICO RESPONSÁVEL POR QUAISQUER DANOS POTENCIAIS AO SEU SISTEMA DE COMPUTADOR OU PERDA DE DADOS QUE RESULTE DO SEU DOWNLOAD DE QUALQUER MATERIAL DESSE TIPO. NEM NÓS NEM QUALQUER DE NOSSOS PARCEIROS OFERECEMOS QUAISQUER GARANTIAS DE QUALQUER NATUREZA, EXPRESSAS OU IMPLÍCITAS, INCLUINDO, SEM LIMITAÇÃO, GARANTIAS DE TITULARIDADE OU GARANTIAS IMPLÍCITAS DE COMERCIABILIDADE OU ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA, COM RELAÇÃO AOS SERVIÇOS, A QUALQUER CONTEÚDO OU A QUALQUER DE NOSSOS SERVIÇOS, FERRAMENTAS, PRODUTOS OU PROPRIEDADES. VOCÊ CONCORDA EXPRESSAMENTE QUE ASSUMIRÁ TODO O RISCO QUANTO À QUALIDADE E AO DESEMPENHO DOS SERVIÇOS E À PRECISÃO OU COMPLETUDE DO SEU CONTEÚDO. A AIRFIND E NOSSOS LICENCIANTES NÃO OFERECEM QUALQUER GARANTIA (E NÃO ASSUMEM QUALQUER OBRIGAÇÃO) (I) DE QUE OS SERVIÇOS SERÃO ININTERRUPTOS, TEMPESTIVOS, SEGUROS OU LIVRES DE ERROS; (II) DE QUE QUALQUER CONTEÚDO OU RECURSO ESTARÁ SEMPRE DISPONÍVEL OU DE QUE ESTARÁ DISPONÍVEL EM QUAISQUER HORÁRIOS ESPECÍFICOS; (III) DE QUE OS RESULTADOS QUE POSSAM SER OBTIDOS COM O USO DOS SERVIÇOS SERÃO PRECISOS OU CONFIÁVEIS; (IV) DE QUE QUAISQUER ERROS NO SOFTWARE QUE COMPÕE UMA PARTE DOS SERVIÇOS SERÃO CORRIGIDOS; (V) DE QUE QUALQUER SOFTWARE QUE COMPÕE UMA PARTE DOS SERVIÇOS BAIXADO EM UM DISPOSITIVO MÓVEL, OU QUALQUER INFORMAÇÃO LIDA DE UM DISPOSITIVO MÓVEL OU NELE GRAVADA, NÃO AFETARÁ ADVERSAMENTE O DESEMPENHO, O FUNCIONAMENTO, A GARANTIA OU QUALQUER OUTRO ASPECTO DO DISPOSITIVO MÓVEL; OU (VI) DE QUE A QUALIDADE DE QUAISQUER SERVIÇOS, INFORMAÇÕES OU OUTRO MATERIAL QUE VOCÊ OBTIVER POR MEIO DOS SERVIÇOS ATENDERÁ ÀS SUAS EXPECTATIVAS. SE A LEI APLICÁVEL EXIGIR QUAISQUER GARANTIAS COM RELAÇÃO AO APLICATIVO, TODAS ESSAS GARANTIAS TÊM SUA DURAÇÃO LIMITADA A NOVENTA (90) DIAS A CONTAR DA DATA DO DOWNLOAD. QUANDO A LEI DO SEU PAÍS OU ESTADO PREVIR UM PRAZO MÍNIMO DE GARANTIA OU DE CONFORMIDADE MAIS LONGO QUE NÃO POSSA SER REDUZIDO POR CONTRATO, ESSE PRAZO MAIS LONGO SE APLICA. NENHUM CONSELHO OU INFORMAÇÃO, SEJA ORAL OU ESCRITO, OBTIDO POR VOCÊ DA AIRFIND OU POR MEIO DO APLICATIVO OU A PARTIR DELE CRIARÁ QUALQUER GARANTIA NÃO EXPRESSAMENTE PREVISTA NESTE CONTRATO.</p>
+
+<p>OS RECURSOS DE SAÚDE, DE PREVISÃO DO TEMPO E OUTROS RECURSOS INFORMATIVOS SÃO FORNECIDOS APENAS PARA INFORMAÇÃO GERAL E NÃO SUBSTITUEM ACONSELHAMENTO, DIAGNÓSTICO OU TRATAMENTO PROFISSIONAL, ALERTAS DE EMERGÊNCIA OU SERVIÇOS DE EMERGÊNCIA. NÃO CONFIE NOS SERVIÇOS PARA DECISÕES CRÍTICAS PARA A SEGURANÇA.</p>
+
+<p>NA MÁXIMA MEDIDA PERMITIDA POR LEI, A AIRFIND E NOSSAS AFILIADAS E LICENCIANTES NÃO SERÃO RESPONSÁVEIS POR QUAISQUER DANOS DIRETOS, INDIRETOS, INCIDENTAIS, ESPECIAIS, CONSEQUENCIAIS OU EXEMPLARES, INCLUINDO, ENTRE OUTROS, DANOS POR LUCROS CESSANTES, PERDA DE FUNDO DE COMÉRCIO, PERDA DE USO, PERDA DE DADOS OU OUTRAS PERDAS INTANGÍVEIS (MESMO QUE A AIRFIND, NOSSAS AFILIADAS OU LICENCIANTES TENHAM SIDO AVISADOS DA POSSIBILIDADE DE TAIS DANOS), RESULTANTES DE OU RELACIONADOS A ESTES TERMOS, AO APLICATIVO OU AOS SERVIÇOS, INCLUINDO, SEM LIMITAÇÃO: (i) O USO OU A IMPOSSIBILIDADE DE USO DO APLICATIVO OU DOS SERVIÇOS; (ii) O ACESSO NÃO AUTORIZADO AO SEU CONTEÚDO OU A ALTERAÇÃO DELE; (iii) A PERDA OU EXCLUSÃO DE QUALQUER CONTEÚDO; (iv) DECLARAÇÕES, CONDUTA OU CONTEÚDO DE QUALQUER TERCEIRO NO APLICATIVO E/OU NOS SERVIÇOS; (v) ENGANOS, INTERRUPÇÕES, ERROS, DEFEITOS, ATRASOS OU QUALQUER OUTRA FALHA DE DESEMPENHO; OU (vi) QUALQUER OUTRA QUESTÃO RELACIONADA AOS SERVIÇOS.</p>
+
+<p>ALGUNS ESTADOS E PAÍSES NÃO PERMITEM A EXCLUSÃO DE GARANTIAS IMPLÍCITAS OU A LIMITAÇÃO DE RESPONSABILIDADE POR DANOS INCIDENTAIS OU CONSEQUENCIAIS, DE MODO QUE AS LIMITAÇÕES OU EXCLUSÕES ACIMA PODEM NÃO SE APLICAR A VOCÊ. EM TAIS JURISDIÇÕES, A NOSSA RESPONSABILIDADE E A DE NOSSOS PROVEDORES DE CONTEÚDO TERCEIROS E DE SEUS RESPECTIVOS AGENTES SERÁ LIMITADA NA MAIOR MEDIDA PERMITIDA POR LEI.</p>
+
+<p>NA MÁXIMA MEDIDA PERMITIDA POR LEI, A RESPONSABILIDADE TOTAL DA AIRFIND, DE NOSSAS AFILIADAS E LICENCIANTES POR QUALQUER REIVINDICAÇÃO DECORRENTE DE OU RELACIONADA A ESTES TERMOS OU AOS SERVIÇOS, SEJA COM BASE EM CONTRATO, GARANTIA, ATO ILÍCITO (INCLUINDO NEGLIGÊNCIA, SEJA ATIVA, PASSIVA OU IMPUTADA), RESPONSABILIDADE PELO PRODUTO, RESPONSABILIDADE OBJETIVA OU OUTRA TEORIA, INCLUSIVE POR QUAISQUER GARANTIAS IMPLÍCITAS, DECORRENTE DE OU RELACIONADA AO USO OU À IMPOSSIBILIDADE DE USO DOS SERVIÇOS OU DO APLICATIVO, É LIMITADA AO VALOR, SE HOUVER, PAGO À AIRFIND PARA USAR OS SERVIÇOS E O APLICATIVO OU, QUANDO NENHUM VALOR TIVER SIDO PAGO, A US$5. EM TODOS OS CASOS, A AIRFIND, NOSSAS AFILIADAS E LICENCIANTES NÃO SERÃO RESPONSÁVEIS POR QUALQUER PERDA OU DANO QUE NÃO SEJA RAZOAVELMENTE PREVISÍVEL.</p>
+
+<p>NADA NESTES TERMOS EXCLUI OU LIMITA A NOSSA RESPONSABILIDADE POR MORTE OU LESÃO CORPORAL CAUSADA POR NOSSA NEGLIGÊNCIA, POR FRAUDE OU DECLARAÇÃO FALSA FRAUDULENTA, POR CULPA GRAVE OU DOLO, OU POR QUALQUER OUTRA RESPONSABILIDADE QUE NÃO POSSA SER EXCLUÍDA OU LIMITADA NOS TERMOS DAS LEIS DO SEU PAÍS OU ESTADO DE RESIDÊNCIA. SE VOCÊ FOR UM CONSUMIDOR NO ESPAÇO ECONÔMICO EUROPEU OU NO REINO UNIDO, VOCÊ TEM DIREITOS LEGAIS SE O CONTEÚDO DIGITAL OU OS SERVIÇOS DIGITAIS QUE FORNECEMOS NÃO ESTIVEREM EM CONFORMIDADE COM O SEU CONTRATO, INCLUSIVE QUANDO VOCÊ FORNECE DADOS PESSOAIS EM VEZ DE DINHEIRO EM TROCA, E NADA NESTES TERMOS AFETA ESSES DIREITOS. AS LIMITAÇÕES DESTA SEÇÃO 8 SE APLICAM SOMENTE NA MEDIDA PERMITIDA PELA LEI APLICÁVEL.</p>
+
+<p>A isenção de garantias e a limitação de responsabilidade estabelecidas acima são elementos fundamentais da base destes Termos entre a Airfind e você. A Airfind não seria capaz de fornecer os Serviços de forma economicamente viável sem tais limitações. A isenção de garantias e a limitação de responsabilidade revertem em benefício das afiliadas e dos licenciantes da Airfind.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-9-arbitration-governing-law">Seção 9. Arbitragem; Lei Aplicável.</h2>
+
+<p>ESTA SEÇÃO 9 SE APLICA INTEGRALMENTE SE VOCÊ RESIDE NOS ESTADOS UNIDOS. SE VOCÊ RESIDE FORA DOS ESTADOS UNIDOS, ESTA SEÇÃO 9 SE APLICA SOMENTE NA MEDIDA EM QUE OS SEUS TERMOS SEJAM PERMITIDOS PELAS LEIS IMPERATIVAS DO SEU PAÍS DE RESIDÊNCIA, E OS SUPLEMENTOS REGIONAIS DOS TERMOS CONSTANTES DA SEÇÃO 18 MODIFICAM OU AFASTAM A APLICAÇÃO DE PARTES DESTA SEÇÃO PARA A SUA REGIÃO, INCLUSIVE PRESERVANDO O SEU DIREITO DE APRESENTAR REIVINDICAÇÕES PERANTE OS TRIBUNAIS E PERANTE AS AUTORIDADES DE DEFESA DO CONSUMIDOR DO SEU PAÍS DE ORIGEM.</p>
+
+<p>(a) ANTES QUE VOCÊ OU NÓS INICIEMOS UMA ARBITRAGEM OU APRESENTEMOS UMA REIVINDICAÇÃO EM JUÍZO (EXCETO UMA AÇÃO INDIVIDUAL EM JUIZADO DE PEQUENAS CAUSAS), A PARTE QUE SUSCITAR A DISPUTA DEVE PRIMEIRO ENVIAR À OUTRA PARTE UMA NOTIFICAÇÃO POR ESCRITO DA DISPUTA, DESCREVENDO A REIVINDICAÇÃO E A REPARAÇÃO PRETENDIDA. A SUA NOTIFICAÇÃO DEVE SER ENVIADA PARA AIRFIND CORP., 3401 N. MIAMI AVENUE, SUITE 230, MIAMI, FL 33127, ATTN: LEGAL DEPARTMENT, OU POR E-MAIL PARA SUPPORT@OMNIHOME.APP. AS PARTES TENTARÃO, DE BOA-FÉ, RESOLVER A DISPUTA INFORMALMENTE POR SESSENTA (60) DIAS APÓS O RECEBIMENTO DA NOTIFICAÇÃO ANTES DE INICIAR QUALQUER PROCEDIMENTO.</p>
+
+<p>QUALQUER CONTROVÉRSIA OU REIVINDICAÇÃO DECORRENTE DE OU RELACIONADA A ESTES TERMOS QUE NÃO SEJA RESOLVIDA INFORMALMENTE SERÁ RESOLVIDA POR ARBITRAGEM VINCULANTE, A PEDIDO DE QUALQUER DAS PARTES, A SER ADMINISTRADA PELA AMERICAN ARBITRATION ASSOCIATION (“AAA”) DE ACORDO COM AS SUAS CONSUMER ARBITRATION RULES ENTÃO EM VIGOR.</p>
+
+<p>SEREMOS INTEGRALMENTE RESPONSÁVEIS PELAS TAXAS DE PROTOCOLO, DE ADMINISTRAÇÃO E DE ÁRBITRO, E ADIANTAREMOS OU REEMBOLSAREMOS A VOCÊ QUAISQUER TAXAS RAZOÁVEIS DE PROTOCOLO, DE ADMINISTRAÇÃO E DE ÁRBITRO DE QUALQUER ARBITRAGEM INICIADA DE ACORDO COM ESTE PARÁGRAFO. REEMBOLSAREMOS A VOCÊ OS SEUS HONORÁRIOS ADVOCATÍCIOS E CUSTOS RAZOÁVEIS SE O ÁRBITRO LHE CONCEDER UM VALOR IGUAL OU SUPERIOR AO VALOR QUE VOCÊ TIVER PLEITEADO EM TAL ARBITRAGEM.</p>
+
+<p>A AMERICAN ARBITRATION ASSOCIATION ADMINISTRARÁ A ARBITRAGEM, E A SENTENÇA JUDICIAL SOBRE A SENTENÇA ARBITRAL PROFERIDA PELO ÁRBITRO PODERÁ SER REGISTRADA EM QUALQUER TRIBUNAL COMPETENTE. AMBAS AS PARTES RECONHECEM QUE O CONTRATO ESTABELECIDO POR ESTES TERMOS É UMA TRANSAÇÃO QUE ENVOLVE COMÉRCIO INTERESTADUAL E, PORTANTO, É REGIDO PELO FEDERAL ARBITRATION ACT. AO CONCORDAR COM A ARBITRAGEM, AMBAS AS PARTES ESTÃO RENUNCIANDO AO SEU DIREITO DE LITIGAR EM JUÍZO, INCLUINDO QUALQUER DIREITO A JULGAMENTO POR JÚRI.</p>
+
+<p>SALVO SE VOCÊ E NÓS ACORDARMOS MUTUAMENTE DE OUTRA FORMA, QUALQUER AUDIÊNCIA NA ARBITRAGEM SERÁ REALIZADA POR TELEFONE OU VIDEOCONFERÊNCIA, A MENOS QUE VOCÊ SOLICITE UMA AUDIÊNCIA PRESENCIAL OU QUE O ÁRBITRO DETERMINE QUE UMA AUDIÊNCIA PRESENCIAL É NECESSÁRIA. QUALQUER AUDIÊNCIA PRESENCIAL OCORRERÁ NO CONDADO DA SUA RESIDÊNCIA PRINCIPAL NOS ESTADOS UNIDOS OU EM OUTRO LOCAL QUE VOCÊ E NÓS ACORDARMOS MUTUAMENTE. A SEU CRITÉRIO, VOCÊ PODERÁ PROPOR UMA AÇÃO CONTRA NÓS EM JUIZADO DE PEQUENAS CAUSAS, NÃO OBSTANTE ESTE CONTRATO. AS PARTES CONCORDAM QUE TODAS AS REIVINDICAÇÕES, SEJA EM ARBITRAGEM OU EM JUIZADO DE PEQUENAS CAUSAS, SERÃO TRATADAS INDIVIDUALMENTE E QUE NÃO HAVERÁ CONSOLIDAÇÃO DE REIVINDICAÇÕES, AÇÕES COLETIVAS, AÇÕES REPRESENTATIVAS OU AÇÕES DE PROCURADOR-GERAL PRIVADO. A AIRFIND REJEITA EXPRESSAMENTE E NÃO CONSENTE COM QUALQUER CONSOLIDAÇÃO DE REIVINDICAÇÕES OU AÇÃO COLETIVA NA ARBITRAGEM.</p>
+
+<p>NÃO OBSTANTE O DISPOSTO ACIMA, QUALQUER DAS PARTES PODERÁ BUSCAR MEDIDA LIMINAR TEMPORÁRIA OU PRELIMINAR OU OUTRA TUTELA DE EQUIDADE EM UM TRIBUNAL DE JURISDIÇÃO COMPETENTE PARA IMPEDIR A VIOLAÇÃO OU APROPRIAÇÃO INDEVIDA, EFETIVA OU IMINENTE, DE SEUS DIREITOS DE PROPRIEDADE INTELECTUAL, OU O ACESSO NÃO AUTORIZADO AOS SERVIÇOS. SE A PROIBIÇÃO DE AÇÕES COLETIVAS, REPRESENTATIVAS OU DE PROCURADOR-GERAL PRIVADO FOR CONSIDERADA INEXEQUÍVEL QUANTO A UMA DETERMINADA REIVINDICAÇÃO DE TUTELA INIBITÓRIA DE INTERESSE PÚBLICO, ESSA REIVINDICAÇÃO (E SOMENTE ESSA REIVINDICAÇÃO) SERÁ SEPARADA E PODERÁ SER PROCESSADA EM JUÍZO, E O RESTANTE DESTA SEÇÃO 9 PERMANECERÁ EM PLENO VIGOR E EFEITO.</p>
+
+<p>ESTA SEÇÃO 9 SOBREVIVE À RESCISÃO DESTES TERMOS.</p>
+
+<p>PARA INFORMAÇÕES ADICIONAIS SOBRE COMO INICIAR UMA ARBITRAGEM E COMO FUNCIONA O PROCESSO DE ARBITRAGEM, VOCÊ PODE LIGAR PARA A AMERICAN ARBITRATION ASSOCIATION NO NÚMERO 800-778-7879 OU VISITAR O SITE DELA EM WWW.ADR.ORG.</p>
+
+<p>(b) DIREITO DE OPTAR POR NÃO PARTICIPAR DA ARBITRAGEM. VOCÊ PODE OPTAR POR NÃO PARTICIPAR DESTE ACORDO DE ARBITRAGEM. SE VOCÊ O FIZER, NEM VOCÊ NEM NÓS PODEREMOS EXIGIR QUE O OUTRO PARTICIPE DE UM PROCEDIMENTO DE ARBITRAGEM. PARA OPTAR POR NÃO PARTICIPAR, VOCÊ DEVE NOS NOTIFICAR POR ESCRITO NO PRAZO MÁXIMO DE TRINTA (30) DIAS APÓS A DATA EM QUE VOCÊ ACEITAR ESTES TERMOS PELA PRIMEIRA VEZ. A SUA NOTIFICAÇÃO DE OPÇÃO POR NÃO PARTICIPAR DEVE SER ENVIADA PELO CORREIO PARA AIRFIND CORP., 3401 N. MIAMI AVENUE, SUITE 230, MIAMI, FL 33127, ATTN: LEGAL DEPARTMENT, ARBITRATION OPT-OUT, OU POR E-MAIL PARA SUPPORT@OMNIHOME.APP COM O ASSUNTO “ARBITRATION OPT-OUT”, E DEVE INCLUIR O SEU NOME, O ENDEREÇO DE E-MAIL ASSOCIADO À SUA CONTA (SE HOUVER) E UMA DECLARAÇÃO CLARA DE QUE VOCÊ DESEJA OPTAR POR NÃO PARTICIPAR DESTE ACORDO DE ARBITRAGEM. SE VOCÊ OPTAR POR NÃO PARTICIPAR DA ARBITRAGEM, TODAS AS DEMAIS DISPOSIÇÕES DESTES TERMOS CONTINUARÃO A SE APLICAR A VOCÊ.</p>
+
+<p>(c) Estes Termos e quaisquer disputas deles decorrentes, direta ou indiretamente, serão regidos e interpretados de acordo com as leis do Estado da Flórida, sem levar em conta as suas disposições sobre escolha de lei, ressalvado que o Federal Arbitration Act rege a interpretação e a execução das disposições de arbitragem desta Seção 9. Na medida em que qualquer disputa não esteja sujeita a arbitragem nos termos desta Seção 9, você e nós concordamos que ela será proposta exclusivamente perante os tribunais estaduais ou federais localizados no Condado de Miami-Dade, Flórida, e você consente com a jurisdição e o foro desses tribunais. Se você for um consumidor residente fora dos Estados Unidos, você também se beneficia das proteções das leis imperativas de defesa do consumidor do seu país de residência, e nada nesta Seção 9 priva você dessas proteções ou de qualquer direito de propor ações perante os tribunais do seu país de origem, quando esse direito for garantido por lei. CADA PARTE DESTE INSTRUMENTO RENUNCIA EXPRESSAMENTE AO DIREITO A JULGAMENTO POR JÚRI EM CONEXÃO COM QUALQUER DISPUTA OU CONTROVÉRSIA DECORRENTE DESTES TERMOS.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-10-government-users">Seção 10. Usuários Governamentais.</h2>
+
+<p>Se você estiver atuando como representante do Governo dos Estados Unidos ou de qualquer agência ou órgão dele (o “Governo Federal”), além das limitações estabelecidas nestes Termos, os seus direitos sobre os Serviços e o nosso Conteúdo são limitados como “Commercial Items” (ver 48 C.F.R. §2.101) e, especificamente, como “Commercial Computer Software” e “Commercial Computer Software Documentation” (conforme definidos e usados em 48 C.F.R. §12.212 ou 48 C.F.R. §227.7202, conforme aplicável). Nos termos do Federal Acquisition Regulation 12.212 (48 C.F.R. §12.212), o Governo Federal não terá direitos maiores do que os estabelecidos nestes Termos e não terá direitos (i) a informações técnicas que não sejam habitualmente fornecidas ao público nem (ii) de usar, modificar, reproduzir, liberar, executar, exibir ou divulgar software comercial de computador ou documentação de software comercial de computador, exceto conforme especificado neste instrumento. O uso, a duplicação e/ou a divulgação dos Serviços e do nosso Conteúdo pelo Governo Federal estão sujeitos a restrições, conforme especificamente estabelecido no subparágrafo (c)(1)(ii) da cláusula Rights in Technical Data and Computer Software em DFARS 252.227-7013 ou nos subparágrafos (c)(1) e (2) da Commercial Computer Software - Restricted Rights em 48 C.F.R. 52.227-19, conforme aplicável.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-11-children">Seção 11. Crianças.</h2>
+
+<p>Os Serviços não são destinados a crianças menores de 13 anos, e você não deve usar os Serviços se tiver menos de 13 anos de idade. Se você tiver menos de 18 anos (ou menos do que a idade de maioridade legal na sua jurisdição), você poderá usar os Serviços somente sob a supervisão e com o consentimento de um dos pais ou responsável legal que tenha lido e concordado com estes Termos em seu nome. Ao concordar com estes Termos, você declara e garante que atende a esses requisitos. Se você acreditar que uma criança menor de 13 anos está usando nossos Serviços, ou se você for um dos pais ou responsável que deseja que a conta ou as informações de um menor sejam excluídas, notifique-nos pelo e-mail Support@OmniHome.app e nós as excluiremos conforme exigido por lei.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-12-export-laws">Seção 12. Leis de Exportação.</h2>
+
+<p>Nenhuma parte dos Serviços ou do nosso Conteúdo pode ser usada, exportada, baixada ou reexportada (i) para qualquer país com o qual o Governo Federal mantenha atualmente um embargo ou que esteja sujeito a medidas restritivas abrangentes equivalentes da União Europeia ou do Reino Unido, ou (ii) para qualquer pessoa que conste atualmente da lista de Specially Designated Nationals do Departamento do Tesouro dos EUA, da Denied Persons List do Departamento de Comércio dos EUA ou das listas consolidadas de sanções da União Europeia ou do Reino Unido. Você nos declara e garante que não está localizado em qualquer desses países, não está sob o controle de qualquer deles, nem é nacional ou residente de qualquer deles, e que não consta de qualquer das listas acima.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-13-international-usage">Seção 13. Uso Internacional.</h2>
+
+<p>Os Serviços são oferecidos nos países incluídos no Território, e pretendemos cumprir as leis desses países que se aplicam à nossa prestação dos Serviços neles. Se você acessar os Serviços a partir de um país fora do Território, não fazemos qualquer declaração ou garantia de que os Serviços sejam apropriados, lícitos ou disponíveis para uso nesse país, você o faz por sua própria iniciativa e por sua conta e risco, e você é responsável por cumprir as leis locais na medida em que se apliquem ao seu acesso. Podemos limitar o acesso aos nossos Serviços, no todo ou em parte, a qualquer pessoa, área geográfica ou jurisdição que escolhermos, quando permitido pela lei aplicável.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-14-miscellaneous">Seção 14. Disposições Gerais.</h2>
+
+<p>(a) Podemos ser obrigados, por lei estadual ou federal, a notificá-lo de determinados eventos. Você, por meio deste, reconhece e consente que tais notificações produzirão efeitos quando as publicarmos nos Serviços ou as entregarmos a você por meio de uma comunicação eletrônica de acordo com a Seção 3 deste instrumento. Você pode atualizar as suas preferências de comunicação visitando os Serviços em que tiver fornecido informações de contato. Se você não nos fornecer informações precisas, não poderemos ser responsabilizados se deixarmos de notificá-lo.</p>
+
+<p>(b) O fato de deixarmos de exercer ou de fazer cumprir qualquer direito ou disposição destes Termos não constituirá renúncia a tal direito ou disposição.</p>
+
+<p>(c) Na máxima medida permitida pela lei aplicável, você concorda que qualquer reivindicação ou causa de pedir decorrente de ou relacionada ao uso dos Serviços ou a estes Termos deve ser ajuizada no prazo de um (1) ano após o surgimento de tal reivindicação ou causa de pedir, sob pena de ficar definitivamente extinta. Esta limitação se aplica somente na medida permitida pela lei aplicável; quando a lei do seu país ou estado de residência garantir um prazo mais longo que não possa ser reduzido por contrato, esse prazo mais longo se aplica.</p>
+
+<p>(d) Estes Termos, incluindo todos os termos, condições e políticas incorporados a estes Termos por referência, incluindo a Política de Privacidade, constituem o acordo integral entre você e nós e regem o seu uso dos Serviços, substituindo quaisquer acordos anteriores que você possa ter conosco.</p>
+
+<p>(e) Se qualquer parte destes Termos for considerada inválida ou inexequível nos termos da lei aplicável, a disposição inválida ou inexequível será considerada substituída por uma disposição válida e exequível que mais se aproxime da intenção da disposição original, e o restante dos Termos continuará em vigor.</p>
+
+<p>(f) Os títulos das seções destes Termos servem apenas para conveniência e não têm efeito legal ou contratual.</p>
+
+<p>(g) Quaisquer notificações destinadas a produzir efeitos jurídicos: (a) a você, podem ser feitas por e-mail, SMS, correio comum ou por meio dos Serviços, e (b) à Airfind, devem ser feitas por correspondência com aviso de recebimento na sede da Airfind, em 3401 N. Miami Avenue, Suite 230, Miami, FL 33127, Attn: Legal Department.</p>
+
+<p>(h) A Convenção das Nações Unidas sobre Contratos de Compra e Venda Internacional de Mercadorias não se aplicará a este Contrato. Caso qualquer disposição destes Termos seja considerada contrária à lei, tal disposição será interpretada de modo a refletir, tanto quanto possível, a intenção das partes, permanecendo as demais disposições em pleno vigor e efeito.</p>
+
+<p>(i) O descumprimento destes Termos pela Airfind em razão de qualquer motivo fora do controle razoável da Airfind não será considerado uma violação deste Contrato.</p>
+
+<p>(j) Estes Termos podem ser disponibilizados em outros idiomas além do inglês. Quando fornecermos uma tradução e a lei do seu país exigir que a tradução prevaleça, a tradução prevalecerá para você; caso contrário, a versão em inglês prevalecerá na medida permitida pela lei aplicável.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-15-modification-of-terms">Seção 15. Modificação dos Termos.</h2>
+
+<p>Podemos modificar estes Termos periodicamente, publicando os Termos revisados nos Serviços e atualizando a data “Vigente a partir de” no topo destes Termos. Se uma alteração for relevante, daremos aviso antes que ela entre em vigor, publicando um aviso nos Serviços ou entregando o aviso a você de acordo com a Seção 3. As alterações se aplicam apenas prospectivamente. O seu uso continuado dos Serviços após a entrada em vigor dos Termos revisados constitui a sua aceitação vinculante dos Termos revisados. Se você não concordar com uma alteração, o seu único recurso é parar de usar os Serviços e excluir o Aplicativo antes que a alteração entre em vigor. Quando a lei aplicável exigir que obtenhamos a sua aceitação expressa de uma alteração relevante, solicitaremos essa aceitação em vez de nos basearmos no seu uso continuado, e, quando a lei aplicável lhe der o direito de rescindir estes Termos ao ser avisado de uma alteração, você poderá encerrar a sua conta conforme descrito nestes Termos.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-16-california-information-or-complaints">Seção 16. Informações ou Reclamações na Califórnia.</h2>
+
+<p>Nos termos da California Civil Code Section 1789.3, os usuários da Califórnia têm direito ao seguinte aviso de direitos do consumidor: Se você tiver uma pergunta ou reclamação a respeito dos Serviços, envie-nos um e-mail para Support@OmniHome.app, ligue para (310) 499-4211 ou escreva para Airfind Corp., 3401 N. Miami Avenue, Suite 230, Miami, FL 33127, Attn: Legal Department. Se você for residente da Califórnia e desejar exercer os seus direitos de privacidade, incluindo o seu direito de optar por não participar da “venda” ou do “compartilhamento” das suas informações pessoais, siga as instruções das seções “Seus Direitos de Privacidade” e “Aviso de Privacidade da Califórnia” da nossa Política de Privacidade. Os residentes da Califórnia podem entrar em contato com a Complaint Assistance Unit da Division of Consumer Services do California Department of Consumer Affairs pelo correio, em 1625 North Market Blvd., Sacramento, CA 95834, ou por telefone, pelos números (916) 445-1254 ou (800) 952-5210.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-17-contact-us">Seção 17. Fale Conosco.</h2>
+
+<p>Se você tiver quaisquer perguntas ou comentários sobre estes Termos, nossos Serviços ou os seus direitos nos termos deste instrumento, não hesite em entrar em contato conosco em:</p>
+
+<p>Airfind Corp. (d/b/a Omni Home Apps)<br>3401 N. Miami Avenue, Suite 230<br>Miami, FL 33127<br>Telefone: (310) 499-4211<br>Support@OmniHome.app</p>
+
+<p>Se você for um cliente com deficiência visual, um cliente com outra deficiência ou um cliente que busca suporte em outro idioma, você poderá acessar estes Termos entrando em contato conosco pelo e-mail Support@OmniHome.app ou pelo telefone (310) 499-4211.</p>
+</div>
+
+<div class="reveal">
+<h2 id="section-18-regional-terms-supplements">Seção 18. Suplementos Regionais dos Termos.</h2>
+
+<p>Os suplementos a seguir se aplicam a você com base no seu país de residência. Eles modificam estes Termos para a sua região e prevalecem sobre qualquer disposição conflitante destes Termos. Quando nenhum suplemento se aplicar ao seu país, estes Termos se aplicam tal como redigidos, sujeitos a quaisquer proteções imperativas da sua lei local.</p>
+
+<p>Suplemento 1: Estados Unidos. Se você reside nos Estados Unidos, estes Termos se aplicam tal como redigidos, incluindo a Seção 9 integralmente, e nenhum outro suplemento se aplica a você.</p>
+
+<p>Suplemento 2: Canadá. Se você reside no Canadá, nada nestes Termos limita qualquer direito que você tenha nos termos da legislação de defesa do consumidor da sua província ou território, ou nos termos de outra lei canadense aplicável, que não possa ser objeto de renúncia por contrato. Se você reside em Quebec: a Seção 9 não exige que você recorra à arbitragem, e você pode apresentar qualquer reivindicação perante os tribunais de Quebec; estes Termos não implicam renúncia a qualquer de seus direitos nos termos do Quebec Consumer Protection Act; e uma versão em francês destes Termos será disponibilizada a você conforme exigido pela Charter of the French Language, e você pode solicitá-la pelo e-mail Support@OmniHome.app. As mensagens eletrônicas comerciais são enviadas de acordo com a Canada’s Anti-Spam Legislation.</p>
+
+<p>Suplemento 3: Espaço Econômico Europeu e Reino Unido. Se você reside no Espaço Econômico Europeu ou no Reino Unido, aplica-se o seguinte. (a) Direitos imperativos. Você se beneficia das leis imperativas de defesa do consumidor do país em que vive, nada nestes Termos limita esses direitos e, em caso de conflito, essas leis prevalecem sobre estes Termos. (b) Disputas. A exigência de arbitragem, a renúncia a ações coletivas e a renúncia a julgamento por júri constantes da Seção 9 não se aplicam a você. Você pode submeter qualquer disputa aos tribunais do país em que vive, e nós podemos propor ações contra você, na qualidade de consumidor, somente perante os tribunais desse país. A escolha da lei da Flórida constante da Seção 9(c) não priva você da proteção das disposições da lei do seu país de residência que não possam ser derrogadas por acordo. (c) Direitos de conformidade. Quando fornecemos conteúdo digital ou serviços digitais a você em troca de dinheiro ou de dados pessoais, você tem direitos legais de conformidade nos termos das leis que implementam a Diretiva (UE) 2019/770 ou, no Reino Unido, nos termos do Consumer Rights Act 2015, e nada na Seção 8, incluindo a limitação de noventa (90) dias, limita esses direitos. (d) Alterações e rescisão. Daremos a você aviso prévio razoável de alterações relevantes a estes Termos, e você poderá encerrar a sua conta gratuitamente antes que elas entrem em vigor. (e) Reclamações. Se você tiver uma reclamação, entre em contato conosco primeiro pelo e-mail Support@OmniHome.app. Informações sobre resolução alternativa de litígios estão disponíveis junto à sua autoridade local de defesa do consumidor, e nós informaremos a você se participamos de um determinado sistema quando formos obrigados a fazê-lo.</p>
+
+<p>Suplemento 4: Brasil. Se você reside no Brasil, aplica-se o seguinte. (a) O Código de Defesa do Consumidor brasileiro se aplica a você, e nada nestes Termos limita os seus direitos nos termos dele que não possam ser objeto de renúncia por contrato. (b) A Seção 9 não exige que você recorra à arbitragem, e você pode apresentar qualquer reivindicação perante os tribunais do seu domicílio no Brasil. (c) As limitações da Seção 8 se aplicam a você somente na medida permitida pelo Código de Defesa do Consumidor. (d) Uma versão em português destes Termos será disponibilizada; quando exigido pela lei brasileira, a versão em português prevalece para os usuários no Brasil.</p>
+
+<p>Suplemento 5: México. Se você reside no México, nada nestes Termos limita os seus direitos nos termos da Lei Federal de Proteção ao Consumidor que não possam ser objeto de renúncia por contrato. Você pode apresentar reclamações à Procuradoria Federal do Consumidor (PROFECO), e a Seção 9 não impede que você o faça ou que apresente reivindicações perante os tribunais mexicanos competentes. Uma versão em espanhol destes Termos será disponibilizada; quando exigido pela lei mexicana, a versão em espanhol prevalece para os usuários no México.</p>
+
+<p>Suplemento 6: Argentina, Chile, Colômbia e Peru. Se você reside na Argentina, no Chile, na Colômbia ou no Peru, aplica-se o seguinte. (a) Nada nestes Termos limita os seus direitos nos termos da lei de defesa do consumidor do seu país que não possam ser objeto de renúncia por contrato, incluindo a Lei 24.240 da Argentina, a Lei 19.496 do Chile, a Lei 1480 de 2011 da Colômbia e o Código de Proteção e Defesa do Consumidor do Peru. (b) A Seção 9 não exige que você recorra à arbitragem. Você pode apresentar reivindicações perante os tribunais ou as autoridades de defesa do consumidor do seu país, incluindo o SERNAC do Chile, a Superintendência de Indústria e Comércio da Colômbia e o INDECOPI do Peru, e você pode concordar com a arbitragem somente depois de surgida uma disputa, quando a sua lei assim dispuser. (c) Quando exigido pela lei do seu país, uma versão em espanhol destes Termos será disponibilizada e prevalece para os consumidores no seu país.</p>
+
+<p>Suplemento 7: Índia. Se você reside na Índia, aplica-se o seguinte. (a) Nada nestes Termos limita os seus direitos nos termos do Consumer Protection Act, 2019, e a Seção 9 não impede que você apresente reivindicações perante as comissões de consumidores indianas ou outros foros competentes. (b) Você pode enviar queixas para Support@OmniHome.app ou para o endereço indicado na Seção 17, e nós acusaremos o recebimento delas e as resolveremos nos prazos exigidos pela lei aplicável. (c) Não solicitamos números Aadhaar, e você não deve fornecê-los a nós.</p>
+</div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="../../assets/logo.png" alt="Omni Home" style="height: 34px; width: auto; margin-bottom: 20px;">
+      <p>Comprehensive Android solutions for carriers, OEMs, and the people who use their devices every day.</p>
+    </div>
+    <div>
+      <h5>Product</h5>
+      <ul>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#carriers">Carriers &amp; OEMs</a></li>
+        <li><a href="/#content">Content Home Apps</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="/privacy-policy/pt/">Política de Privacidade</a></li>
+        <li><a href="/terms-conditions/pt/">Termos e Condições</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>&copy; 2026 Omni Home. All rights reserved.</span>
+    <span>Built for the home screen.</span>
+  </div>
+</footer>
+
+<script>
+  // ─── Nav scrolled state ───
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+</script>
+</body>
+</html>
